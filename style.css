@@ -1,0 +1,21 @@
+/* Main conponents such as the body do not need identifiers like # or . */
+body{
+    background-color: #FEFFFE;
+}
+
+header{
+    width: 100%;
+    height: 150px;
+    background-color: orange;
+    padding: 0px;
+}
+
+/* The # is used for ID's. An ID should only be used once in the program */ 
+#colorMeRed{
+
+}
+
+/* The . is used for Classes. A class can be used multiple times */
+.container{
+
+}   
