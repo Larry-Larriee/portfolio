@@ -1,21 +1,51 @@
-/* Main conponents such as the body do not need identifiers like # or . */
-body{
-    background-color: #FEFFFE;
+/* Specifically edit the properties of the single element */
+#mainImage{
+
+    /* Border-radius rounds the edges of the image element */
+    border-radius: 100px;
+    /* width = 2(border-radius) will make a round image */
+    width: 200px;
+
+    float: right;
 }
 
-header{
-    width: 100%;
-    height: 150px;
-    background-color: orange;
+body{
+
+    /* Remove default margin setting */
+    margin: 0px;
     padding: 0px;
 }
 
-/* The # is used for ID's. An ID should only be used once in the program */ 
-#colorMeRed{
-
+footer{
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-/* The . is used for Classes. A class can be used multiple times */
-.container{
+/* Navagation & Opening Page -------------------------------------------------------------------------------------------------------------------------- */
 
-}   
+.navContainer{
+   background-color: #d3d3d3; 
+   margin-bottom: 30px;
+}
+
+ul {
+    margin: 0px;
+
+  }
+
+.navList{
+    /* Remove bullet points & keeps all text elements in a one-line block */
+    list-style-type: none;
+    display: inline-block;
+
+    /* Manipulate default browser settings */
+    margin: 0px;
+    padding: 14px 20px;
+
+    color: black;
+}
+
+.openingText{
+    margin-left: 10px;
+    margin-right: 10px;
+}

@@ -1,28 +1,46 @@
-<!DOCTYPE html> <html lang = "en">
+<!-- Declare that this is an HTML5 Website -->
+<!DOCTYPE html>
 
-<!-- https://webhint.io/docs/user-guide/hints/hint-meta-viewport/ -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
 
-<!-- href = link a url & rel = 'relationship' -->
-<link href = "style.css" rel="stylesheet"> <link href = "main.js" rel="js">
+<!-- The head element gives information about this page, like "title" -->
+<head>
+    <title>Prototype Phase</title>
 
-<!-- language support for utf-8 AKA basically all characters -->
-<head><title>Dashboard - Larry Larriee</title> <meta charset="utf-8"></head>
+    <!-- create website all-device compatable & characterset to international character support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
 
-<header class = "logo">
-    <h2>Logo</h2>
+    <!-- Link style.css and main.js with the respective relationships -->
+    <script> src="main.js" </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="navContainer">
+    
+    <!-- Create a list instance -->
     <ul>
-        <!-- link pages to each other -->
-        <li><a href = "index.html">Home</a></li>
-        <li><a href = "pages/timeline.html">TimeLine</a></li>
-        <li><a href = "pages/contacts.html">Contacts</a></li>
+        <li class="navList"><a href="/index.html">Home</a></li>
+        <li class="navList"><a href="/pages/contacts.html">Contacts</a></li>
+        <li class="navList"><a href="/pages/timeline.html">TimeLine</a></li>
+
     </ul>
 
+</div>
 
-</header>
+<div class="openingText">
+    <!-- Source="directory/image.file" Alternative="string text" -->
+    <img src="/miscellaneous/babyImage.jpg" alt="Main Image" id="mainImage">
+    <h3>Hi my name is Larry! Lorem vero et sit erat ut sit no. Vero te sanctus nulla suscipit dolores sanctus sed. Dolore ut accusam in ut dolore diam in ea molestie ut qui. Tempor no dolore lorem et sed quis in accusam sit te sit erat rebum lorem assum ad ut. Sed tempor diam dolore. Sed tation et clita hendrerit et dolore sit. Volutpat iusto dolor. Dolor ut erat delenit et kasd eos erat sed suscipit dolores dolor eirmod duis invidunt. Sed lorem ipsum amet veniam stet quod. Ut duis ut justo eos dolore consetetur facilisi takimata tempor. Ad sit ea lorem clita gubergren sadipscing lorem ipsum nulla. Assum et stet kasd sed ut vero invidunt illum nonumy sed vel magna est amet est ullamcorper gubergren sanctus. Consetetur amet justo vulputate nonumy tation labore suscipit labore duo dolor placerat gubergren dolor. Stet sanctus kasd dolor dolore et et mazim laoreet diam at duo enim et sanctus tempor sanctus. Et et in dolor in et esse. Tempor dolor eleifend sed qui illum velit rebum dolore lorem id in eleifend veniam eos. Veniam dolor consectetuer nulla eleifend possim consequat ea elitr magna autem laoreet amet.</h3>
+</div>
 
-<body></body>
+</body>
 
-<!-- Hide the footer for now until further development -->
-<!-- <footer><p>&copy; Larry Le 2022</p></footer>      -->
+
+<footer>
+    <!-- href = hypertext reference, "_blank" = open url on new blank page, relationship="noopener" prevents redirects -->
+    <a href="https://www.instagram.com/larry_larriee/" target="_blank" rel="noopener">instagram</a>
+</footer>
+
 </html>
