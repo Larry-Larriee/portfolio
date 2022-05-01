@@ -49,3 +49,14 @@ ul {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.TechResume{
+    margin: 50px;
+
+    height: 500px;
+}
+
+#TechResume{
+    width: 1000px;
+    height: 500px;
+}
