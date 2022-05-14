@@ -7,26 +7,58 @@ body{
     font-family: monospace, Arial, sans-serif;
 }
 
-p{
-    margin: 0;
-    padding: 0;
+p{margin: 0;padding: 0;}h1{margin: 0px;padding: 0px;}a{text-decoration: none;}
+
+/* bodyOne Div ------------------------------------------------------------------------------------------------------------------------- */
+
+.container{
+    background-color: #0e0d0dd6;
+    height: 48px;
 }
 
-/* bodyOne Div Starts Here ------------------------------------------------------------------------------------------------------------- */
+/* div centered inside main container div */
+.navContainer{
+   width: 60%;
+   margin: 0 auto;
+}
 
-.bodyOne{
+#navConfig{
+    list-style-type: none;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+.horiList {
+    display: block;
+    float: right;
+    padding: 10px;
+    margin: 5px;
+
+
+}
+
+.horiList a{
+    font-family: monospace, Arial, sans-serif;
+    font-size: small;
+    color: orange;
+}
+
+.horiList p{
+    color: white;
+}
+
+/* bodyTwo Div ------------------------------------------------------------------------------------------------------------------------- */
+
+.bodyTwo{
+    height: 395px;
+    background-color: white;
+}
+
+/* bodyThree Div ------------------------------------------------------------------------------------------------------------------------- */
+
+.bodyThree{
     background-color: #d3d3d349;
-    height: 250px;
+    height: 475px;
 }
 
-#text{
-    text-align: center;
-    font-size: 25px;
-    padding-top: 20px;
-    font-weight: bold;
-}
-
-#explainerText{
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-}
