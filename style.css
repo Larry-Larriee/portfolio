@@ -1,62 +1,32 @@
-/* Specifically edit the properties of the single element */
-#mainImage{
-
-    /* Border-radius rounds the edges of the image element */
-    border-radius: 100px;
-    /* width = 2(border-radius) will make a round image */
-    width: 200px;
-
-    float: right;
-}
-
+/* Remove all default settings for CSS ------------------------------------------------------------------------------------------------- */
 body{
+    margin: 0;
+    padding: 0;
 
-    /* Remove default margin setting */
-    margin: 0px;
-    padding: 0px;
+    /* Try to have at least two fonts in case the device cannot load the first one */
+    font-family: monospace, Arial, sans-serif;
 }
 
-footer{
-    margin-left: 10px;
-    margin-right: 10px;
+p{
+    margin: 0;
+    padding: 0;
 }
 
-/* Navagation & Opening Page -------------------------------------------------------------------------------------------------------------------------- */
+/* bodyOne Div Starts Here ------------------------------------------------------------------------------------------------------------- */
 
-.navContainer{
-   background-color: #d3d3d3; 
-   margin-bottom: 30px;
+.bodyOne{
+    background-color: #d3d3d349;
+    height: 250px;
 }
 
-ul {
-    margin: 0px;
-
-  }
-
-.navList{
-    /* Remove bullet points & keeps all text elements in a one-line block */
-    list-style-type: none;
-    display: inline-block;
-
-    /* Manipulate default browser settings */
-    margin: 0px;
-    padding: 14px 20px;
-
-    color: black;
+#text{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 20px;
+    font-weight: bold;
 }
 
-.openingText{
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.TechResume{
-    margin: 50px;
-
-    height: 500px;
-}
-
-#TechResume{
-    width: 1000px;
-    height: 500px;
+#explainerText{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
