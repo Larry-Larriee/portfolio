@@ -1,0 +1,32 @@
+/* Remove all default settings for CSS ------------------------------------------------------------------------------------------------- */
+body{
+    margin: 0;
+    padding: 0;
+
+    /* Try to have at least two fonts in case the device cannot load the first one */
+    font-family: monospace, Arial, sans-serif;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+/* bodyOne Div Starts Here ------------------------------------------------------------------------------------------------------------- */
+
+.bodyOne{
+    background-color: #d3d3d349;
+    height: 250px;
+}
+
+#text{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+#explainerText{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
