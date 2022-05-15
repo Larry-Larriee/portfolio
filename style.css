@@ -1,32 +1,81 @@
-/* Remove all default settings for CSS ------------------------------------------------------------------------------------------------- */
-body{
+/* https://fonts.google.com/ */
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+
+* {
+    /* Border-box makes everything into rectangles */
+    box-sizing: border-box;
+
     margin: 0;
     padding: 0;
-
-    /* Try to have at least two fonts in case the device cannot load the first one */
-    font-family: monospace, Arial, sans-serif;
+    background-color: rgb(246, 246, 246);
 }
 
-p{
-    margin: 0;
-    padding: 0;
+.navLinks{
+    list-style: none;
 }
 
-/* bodyOne Div Starts Here ------------------------------------------------------------------------------------------------------------- */
-
-.bodyOne{
-    background-color: #d3d3d349;
-    height: 250px;
+.navLinks li{
+    display: inline-block;
+    padding-right: 30px;
 }
 
-#text{
-    text-align: center;
-    font-size: 25px;
-    padding-top: 20px;
-    font-weight: bold;
+a {
+    color: black;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+}
+
+#headerName{
+    font-family: "Ubuntu", sans-serif;
+    font-size: large;
+}
+
+header {
+    /* Put all elements on the same line */
+    display: flex;
+
+    /* Correctly place all elements on the same x-position */
+    align-items: center;
+
+    /* Even spacing w/ left, middle, and right */
+    justify-content: space-between;
+
+    /* Top, Right, Bottom, Left */
+    margin: 20px 10%;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.container{
+    height: 500px;
+    background-color:  rgb(236, 236, 236);
+
+    display: flex;
+    box-sizing: border-box;
+}
+
+#mainText{
+    color: rgba(255, 166, 0, 0.508);
+    font-size: 50px;
+    font-weight: 1000;
+
+    font-family: "Lato", 'Times New Roman', Times, serif;
+    padding-left: 10%;
+    padding-top: 7%;
+    width: 500px;
 }
 
 #explainerText{
+    height: 250px;
+    width: 700px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+
+    padding-top: 13%;
+    font-size: large;
+}
+
+.container p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 550;
 }

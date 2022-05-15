@@ -1,43 +1,50 @@
 <!-- Declare that this is an HTML5 Website -->
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 
-<!-- The head element gives information about this page, like "title" -->
-<head>
-    <title>Prototype Phase</title>
+    <!-- The head element gives information about this page, like "title" -->
+    <head>
 
-    <!-- create website all-device compatable & characterset to international character support -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+        <!-- No corrupt char & compatiable on multiple devices -->
+        <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Larry Le | Digital Portfolio</title>
+        <meta name="description" content="Hello! This is a design Portfolio I made during my free time in highschool. If you are so inclined, please check it out :D">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
 
-    <!-- Link style.css and main.js with the respective relationships -->
-    <script> src="main.js" </script>
-    <link rel="stylesheet" href="style.css">
-</head>
+    </head>
 
-<body>
+    <body>
+        
+        <header>
+            <h3 id="headerName">Larry Le | Student CS</h3>
+            <nav>
+                <ul class="navLinks">
+                    <li><a href="/pages/navBar/works.html">My Works</a></li>
+                    <li><a href="/pages/navBar/resume.html">Resume</a></li>
+                    <li><a href="/pages/navBar/contacts.html">Contacts</a></li>
+                </ul>
+            </nav>
+            <p><a href="index.html">About</a></p>
+        </header>
+        
+        <div class="container">
+            <p class="container" id="mainText">Hello There!</p>
+            <p class="container" id="explainerText">Uhm this website's still a work in progress. Nonetheless, with AP testing over
+                I will hopefully be finished by the end of Summer 2022 :D
+                
+                <br>
+                <br>
+                
+                🏝️ Larry Le 🏝️
 
-    <div class = "bodyOne">
-        <p id = "text">Hello There!</p>
-
-        <p id = "explainerText"><br> Uhm this website's still a work in progress. Nonetheless, with AP testing over 
-                                <br> I will hopefully be finished by the end of Summer 2022 
-
-                                <br><br>
-                                🏝️ DM me on <a href="https://www.instagram.com/larry_larriee/" target="_blank" rel="noopener">Insta</a> if you're reading this. I'm really curious :D 🏝️</p>
-
-    </div>
-
-</body>
-
-<!-- 
-
-<footer>
-    <p> href = hypertext reference, "_blank" = open url on new blank page, relationship="noopener" prevents redirects </p>
-    <p> &copy Larry Le
-</footer>
-
-//--> 
-
+                <!-- Bug to fix-->
+                <!-- 🏝️ DM me on <a class="container" href="https://www.instagram.com/larry_larriee/" target="_blank" rel="noopener">Insta</a> if you're reading this. I'm really curious :D 🏝️ -->
+            </p>
+        </div>
+        
+        <script src="main.js" async defer></script>
+    </body>
 
 </html>
