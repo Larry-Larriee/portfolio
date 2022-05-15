@@ -55,10 +55,31 @@ p{margin: 0;padding: 0;}h1{margin: 0px;padding: 0px;}a{text-decoration: none;}
     background-color: white;
 }
 
+/* To all the paragraphs in the bodyTwo class */
+.bodyTwo p{
+    font-size: 50px;
+    margin-top: 75px;
+    margin-left: 75px;
+    padding: 0px;
+}
+
+.bodyTwo img{
+    width: 400px;
+    height: 400px;
+    float: right;
+
+    margin-right: 200px;
+    border-radius: 50%;
+}
+
 /* bodyThree Div ------------------------------------------------------------------------------------------------------------------------- */
 
 .bodyThree{
     background-color: #d3d3d349;
-    height: 475px;
+    height: 1475px;
+    margin: 0px;
+    padding: 0px;
 }
+
+
 
