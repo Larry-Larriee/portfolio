@@ -1,85 +1,81 @@
-/* Remove all default settings for CSS ------------------------------------------------------------------------------------------------- */
-body{
+/* https://fonts.google.com/ */
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+
+* {
+    /* Border-box makes everything into rectangles */
+    box-sizing: border-box;
+
     margin: 0;
     padding: 0;
-
-    /* Try to have at least two fonts in case the device cannot load the first one */
-    font-family: monospace, Arial, sans-serif;
+    background-color: rgb(246, 246, 246);
 }
 
-p{margin: 0;padding: 0;}h1{margin: 0px;padding: 0px;}a{text-decoration: none;}
+.navLinks{
+    list-style: none;
+}
 
-/* bodyOne Div ------------------------------------------------------------------------------------------------------------------------- */
+.navLinks li{
+    display: inline-block;
+    padding-right: 30px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+}
+
+#headerName{
+    font-family: "Ubuntu", sans-serif;
+    font-size: large;
+}
+
+header {
+    /* Put all elements on the same line */
+    display: flex;
+
+    /* Correctly place all elements on the same x-position */
+    align-items: center;
+
+    /* Even spacing w/ left, middle, and right */
+    justify-content: space-between;
+
+    /* Top, Right, Bottom, Left */
+    margin: 20px 10%;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .container{
-    background-color: #0e0d0dd6;
-    height: 48px;
+    height: 500px;
+    background-color:  rgb(236, 236, 236);
+
+    display: flex;
+    box-sizing: border-box;
 }
 
-/* div centered inside main container div */
-.navContainer{
-   width: 60%;
-   margin: 0 auto;
-}
-
-#navConfig{
-    list-style-type: none;
-
-    margin: 0px;
-    padding: 0px;
-}
-
-.horiList {
-    display: block;
-    float: right;
-    padding: 10px;
-    margin: 5px;
-
-
-}
-
-.horiList a{
-    font-family: monospace, Arial, sans-serif;
-    font-size: small;
-    color: orange;
-}
-
-.horiList p{
-    color: white;
-}
-
-/* bodyTwo Div ------------------------------------------------------------------------------------------------------------------------- */
-
-.bodyTwo{
-    height: 395px;
-    background-color: white;
-}
-
-/* To all the paragraphs in the bodyTwo class */
-.bodyTwo p{
+#mainText{
+    color: rgba(255, 166, 0, 0.508);
     font-size: 50px;
-    margin-top: 75px;
-    margin-left: 75px;
-    padding: 0px;
+    font-weight: 1000;
+
+    font-family: "Lato", 'Times New Roman', Times, serif;
+    padding-left: 10%;
+    padding-top: 7%;
+    width: 500px;
 }
 
-.bodyTwo img{
-    width: 400px;
-    height: 400px;
-    float: right;
+#explainerText{
+    height: 250px;
+    width: 700px;
+    text-align: center;
 
-    margin-right: 200px;
-    border-radius: 50%;
+    padding-top: 13%;
+    font-size: large;
 }
 
-/* bodyThree Div ------------------------------------------------------------------------------------------------------------------------- */
-
-.bodyThree{
-    background-color: #d3d3d349;
-    height: 1475px;
-    margin: 0px;
-    padding: 0px;
+.container p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 550;
 }
-
-
-
