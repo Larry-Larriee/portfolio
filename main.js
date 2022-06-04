@@ -7,6 +7,9 @@ document.onkeydown = function(key) {
     }
 }
 
-Cookies.set("username", "John");
+//Cookies.set("username", "John");
+//console.log(Cookies.get("username"));
 
-console.log(Cookies.get("username"));
+function test(){
+    window.alert("Working");
+}
