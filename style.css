@@ -1,81 +1,149 @@
-/* https://fonts.google.com/ */
-@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+/* https://fonts.google.com/ for custom fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 
-* {
+*{
     /* Border-box makes everything into rectangles */
     box-sizing: border-box;
-
     margin: 0;
     padding: 0;
-    background-color: rgb(246, 246, 246);
 }
 
+body{
+    background-color: white; 
+    /* Red: rgb(249, 60, 60) */
+    /* Grey: rgb(246, 246, 246) */
+
+    height: 20000px;
+}
+
+/* For Titles like 'My Computing History' */
+.contentTitle{
+
+    text-align: center;
+    font-size: 35px;
+    
+    font-weight: 525;
+    font-family: "Kanit", sans-serif;
+}
+
+/* Specific to the 'My Computing History' page */
+.shiftDown{
+    padding-top: 50px;
+}
+
+/* Navagation Bar --------------------------------------------------------------------------------------------------------------------- */
+
+/* Position the entire navigation bar correctly to style */
+header{
+    background-color: rgb(255, 219, 171);
+
+    /* Take leftover space and equally distrubute */
+    justify-content: space-between; 
+    
+    /* Top, Right, Bottom, Left */
+    padding: 20px 10%;
+    
+    display: flex;
+    /* gap: 5rem; */
+
+    /* Correctly place all children on the same x-position */
+    align-items: center;
+}
+
+/* Remove the bullet points from the navigation bar */
 .navLinks{
     list-style: none;
 }
 
+.navLinks li a:hover{
+    color: black;
+}
+
+.aboutLink:hover{
+    color: black;
+}
+
+/* Separate each child in the navigation bar */
 .navLinks li{
     display: inline-block;
     padding-right: 30px;
 }
 
-a {
-    color: black;
+/* Decorate each child in the navigation bar */
+li a, .aboutLink{
+    /* outline: 3px solid red; */
+
+    font-weight: 600;
+    color: white;
     text-decoration: none;
     font-family: "Lato", sans-serif;
 }
 
-#headerName{
+/* Larry Le | CS Student */
+#headerName, #headerName a{
+
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    
     font-family: "Ubuntu", sans-serif;
     font-size: large;
 }
 
-header {
-    /* Put all elements on the same line */
-    display: flex;
-
-    /* Correctly place all elements on the same x-position */
-    align-items: center;
-
-    /* Even spacing w/ left, middle, and right */
-    justify-content: space-between;
-
-    /* Top, Right, Bottom, Left */
-    margin: 20px 10%;
-}
-
-/* ------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Title Content --------------------------------------------------------------------------------------------------------------------- */
 
 .container{
-    height: 500px;
-    background-color:  rgb(236, 236, 236);
 
-    display: flex;
+    height: 625px;
+    background-color: rgb(255, 219, 171);
+    
+    /* Once flex-item, cannot change display */
+    display: block;
     box-sizing: border-box;
+
+    /* even elements in wrapper (for columns, etc) */
+    flex-basis: 1;
 }
 
-#mainText{
-    color: rgba(255, 166, 0, 0.508);
-    font-size: 50px;
-    font-weight: 1000;
+.profileImages{
 
-    font-family: "Lato", 'Times New Roman', Times, serif;
-    padding-left: 10%;
-    padding-top: 7%;
-    width: 500px;
+    float: right;
+    width: 420px;
+    border-radius: 210px;
+
+    /* Make sure image is centered */
+    margin-top: -250px;
+    margin-left: auto;
+    margin-right: 175px;
+
 }
 
-#explainerText{
-    height: 250px;
-    width: 700px;
-    text-align: center;
+.intro{
 
-    padding-top: 13%;
-    font-size: large;
+    font-family: "Kanit", sans-serif;
+    font-size: 45px;
+    padding: 100px 0% 0% 10%;
+    width: 650px;
 }
 
-.container p{
-    font-family: "Roboto", sans-serif;
-    font-weight: 550;
+.introCaption{
+
+    font-family: "Koulen", sans-serif;
+    font-size: 22px;
+    padding: 0% 0% 0% 10%;
+    width: 550px;
+    color: rgb(130, 166, 255);
 }
+
+.introDescription{
+
+    font-family: "Kanit", sans-serif;
+    font-size: 22px;
+    padding: 5% 0% 0% 10%;
+    width: 800px;
+}
+
+/* Skillset Container ---------------------------------------------------------------------------------------------------------------- */
+

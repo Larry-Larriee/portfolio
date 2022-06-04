@@ -15,36 +15,48 @@
 
     </head>
 
-    <body onload="checkCookie()">
+    <body>
         
+        <!-- The header element contains the logo and the navigation bar -->
         <header>
-            <h3 id="headerName">Larry Le | Student CS</h3>
+            <h3 id="headerName"><a class="secret" href="#" onclick="test()">Larry Le | Digital Portfolio</a></h3>
             <nav>
                 <ul class="navLinks">
-                    <li><a href="/pages/navBar/works">My Works</a></li>
-                    <li><a href="/pages/navBar/resume">Resume</a></li>
-                    <li><a href="/pages/navBar/contacts">Contacts</a></li>
+                    <li><a href="/pages/navBar/works.html">My Works</a></li>
+                    <li><a href="/pages/navBar/resume.html">Resume</a></li>
+                    <li><a href="/pages/navBar/contacts.html">Contacts</a></li>
                 </ul>
             </nav>
-            <p><a href="index">About</a></p>
+            <p><a class="aboutLink" href="index.html">About Me</a></p>
         </header>
         
+        <!-- Top page front content -->
         <div class="container">
-            <p class="container" id="mainText">Hello There!</p>
-            <p class="container" id="explainerText">Uhm this website's still a work in progress. Nonetheless, with AP testing over
-                I will hopefully be finished by the end of Summer 2022 :D
-                
-                <br>
-                <br>
-                
-                🏝️ Larry Le 🏝️
 
-                <!-- Bug to fix-->
+            <p class="intro">Hello! My Name is Larry!</p>
+            <p class="introCaption">I'm a Student at Westminster High School CA</p>
+
+            <p class="introDescription">Nowadays, I primarily focus on Programming and Engineering.</p>
+            <!-- Programming & Engineering can be diffcult. Here's a timeline of my highschool experience at WHS -->
+
+            <img class="profileImages" src="/images/profile/Larry-Larriee.JPG" alt="WHS">
+               
+                <!-- Bug to fix--> 
                 <!-- 🏝️ DM me on <a class="container" href="https://www.instagram.com/larry_larriee/" target="_blank" rel="noopener">Insta</a> if you're reading this. I'm really curious :D 🏝️ -->
             </p>
         </div>
+
+        <!-- Skills Div -->
+        <div class="skills">
+
+            <p class="contentTitle shiftDown">My Computing History</p>
+
+        </div>
         
         <script src="main.js" async defer></script>
+        
+        <!-- Import cookie library -->
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
     </body>
 
 </html>

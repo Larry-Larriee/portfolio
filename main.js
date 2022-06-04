@@ -6,3 +6,10 @@ document.onkeydown = function(key) {
         window.alert("Secret Message: Hello :D");
     }
 }
+
+//Cookies.set("username", "John");
+//console.log(Cookies.get("username"));
+
+function test(){
+    window.alert("Working");
+}
