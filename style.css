@@ -1,3 +1,4 @@
+
 /* https://fonts.google.com/ for custom fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
@@ -12,32 +13,32 @@
 
 body{
     background-color: white; 
-    /* Red: rgb(249, 60, 60) */
-    /* Grey: rgb(246, 246, 246) */
 
-    height: 20000px;
 }
 
-/* For Titles like 'My Computing History' */
-.contentTitle{
-
-    text-align: center;
-    font-size: 35px;
+.background{
     
-    font-weight: 525;
-    font-family: "Kanit", sans-serif;
+    background-image: url(/images/backgroundMain.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
-/* Specific to the 'My Computing History' page */
+/* Specific to 'My Computing Homepage' */
 .shiftDown{
-    padding-top: 50px;
+    padding-top: 7%;
+}
+
+/* Variables */
+:root{
+    --mainContentHeight: 600px;
+    --newGrey: rgb(246, 246, 246);
 }
 
 /* Navagation Bar --------------------------------------------------------------------------------------------------------------------- */
 
 /* Position the entire navigation bar correctly to style */
 header{
-    background-color: rgb(255, 219, 171);
+    /*background-color: rgb(103, 184, 234);*/
 
     /* Take leftover space and equally distrubute */
     justify-content: space-between; 
@@ -62,7 +63,7 @@ header{
 }
 
 .aboutLink:hover{
-    color: black;
+    color: orange;
 }
 
 /* Separate each child in the navigation bar */
@@ -73,12 +74,16 @@ header{
 
 /* Decorate each child in the navigation bar */
 li a, .aboutLink{
-    /* outline: 3px solid red; */
 
     font-weight: 600;
     color: white;
     text-decoration: none;
     font-family: "Lato", sans-serif;
+}
+
+/* Override white color b/c it is harder to see w/ white */
+.aboutLink{
+    color: black;
 }
 
 /* Larry Le | CS Student */
@@ -96,8 +101,7 @@ li a, .aboutLink{
 
 .container{
 
-    height: 625px;
-    background-color: rgb(255, 219, 171);
+    min-height: 575px;
     
     /* Once flex-item, cannot change display */
     display: block;
@@ -110,14 +114,15 @@ li a, .aboutLink{
 .profileImages{
 
     float: right;
-    width: 420px;
-    border-radius: 210px;
+
+    /* clamp helps with viewport issues. vw = viewport unit */
+    width: clamp(120px, 50vw, 420px);
+    border-radius: clamp(60px, 50vw, 210px);
 
     /* Make sure image is centered */
     margin-top: -250px;
     margin-left: auto;
-    margin-right: 175px;
-
+    margin-right: 15%;
 }
 
 .intro{
@@ -125,7 +130,7 @@ li a, .aboutLink{
     font-family: "Kanit", sans-serif;
     font-size: 45px;
     padding: 100px 0% 0% 10%;
-    width: 650px;
+    max-width: 650px;
 }
 
 .introCaption{
@@ -133,8 +138,8 @@ li a, .aboutLink{
     font-family: "Koulen", sans-serif;
     font-size: 22px;
     padding: 0% 0% 0% 10%;
-    width: 550px;
-    color: rgb(130, 166, 255);
+    max-width: 550px;
+    color: rgb(7, 98, 255);
 }
 
 .introDescription{
@@ -142,8 +147,58 @@ li a, .aboutLink{
     font-family: "Kanit", sans-serif;
     font-size: 22px;
     padding: 5% 0% 0% 10%;
-    width: 800px;
+    max-width: 800px;
 }
 
-/* Skillset Container ---------------------------------------------------------------------------------------------------------------- */
+/* Computer History Container ---------------------------------------------------------------------------------------------------------------- */
+
+.compHistory{
+    min-height: 500px;
+    padding-bottom: 12%;
+
+    background-color: rgb(255, 255, 255);
+}
+
+.contentTitle{
+    text-align: center;
+    font-size: 35px;
+    
+    font-weight: 525;
+    font-family: "Kanit", sans-serif;
+}
+
+.iconContainer{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.programLang{
+    margin-top: 4em;
+    max-width: clamp(100px, 50vw, 210px);
+}
+
+/* More About Me Container ---------------------------------------------------------------------------------------------------------------- */
+
+.tempContainer1{
+    background-color: var(--newGrey);
+    min-height: var(--mainContentHeight);
+}
+
+.tempContainer2{
+    background-color: white;
+    min-height: var(--mainContentHeight);
+}
+
+.tempContainer3{
+    background-color: var(--newGrey);
+    min-height: var(--mainContentHeight);
+}
+
+.tempContainer4{
+    background-color: white;
+    min-height: var(--mainContentHeight);
+}
 
