@@ -18,7 +18,7 @@ window.onscroll = function (event) {
     // Get the scroll position of the page
     var scroll = window.pageYOffset;
 
-    // Work on fade in/out text
+    // Next Goals: Work on fade in/out text
     var opacity = compHistory.style.opacity = 0.5;    
 
     if (scroll >= 190){
