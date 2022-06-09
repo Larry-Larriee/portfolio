@@ -18,6 +18,7 @@ body{
 
 .background{
     
+    /* Credit to https://hdqwalls.com/wallpaper/2880x1800/gradient-simple-background */
     background-image: url(/images/backgroundMain.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -25,7 +26,7 @@ body{
 
 /* Specific to 'My Computing Homepage' */
 .shiftDown{
-    padding-top: 7%;
+    padding-top: 5%;
 }
 
 /* Variables */
@@ -38,7 +39,6 @@ body{
 
 /* Position the entire navigation bar correctly to style */
 header{
-    /*background-color: rgb(103, 184, 234);*/
 
     /* Take leftover space and equally distrubute */
     justify-content: space-between; 
@@ -59,7 +59,7 @@ header{
 }
 
 .navLinks li a:hover{
-    color: black;
+    color: orange;
 }
 
 .aboutLink:hover{
@@ -83,7 +83,7 @@ li a, .aboutLink{
 
 /* Override white color b/c it is harder to see w/ white */
 .aboutLink{
-    color: black;
+    color: white;
 }
 
 /* Larry Le | CS Student */
@@ -101,36 +101,38 @@ li a, .aboutLink{
 
 .container{
 
-    min-height: 575px;
-    
-    /* Once flex-item, cannot change display */
-    display: block;
+    /* Everything fits in container */
     box-sizing: border-box;
+    flex-basis: 1; /* even elements in wrapper (for columns, etc) */
 
-    /* even elements in wrapper (for columns, etc) */
-    flex-basis: 1;
+    min-height: 575px;
+    display: flex;
 }
 
-.profileImages{
+.introImage {
 
-    float: right;
+    /* Take up the entire width of the container */  
+    flex: 1;
+    outline: 0px solid red;
+}
+
+.introImage img{
+
+    margin: 15%;
 
     /* clamp helps with viewport issues. vw = viewport unit */
     width: clamp(120px, 50vw, 420px);
     border-radius: clamp(60px, 50vw, 210px);
 
-    /* Make sure image is centered */
-    margin-top: -250px;
-    margin-left: auto;
-    margin-right: 15%;
 }
 
-.intro{
+.mainText{
 
     font-family: "Kanit", sans-serif;
     font-size: 45px;
     padding: 100px 0% 0% 10%;
     max-width: 650px;
+    color: white;
 }
 
 .introCaption{
@@ -139,7 +141,7 @@ li a, .aboutLink{
     font-size: 22px;
     padding: 0% 0% 0% 10%;
     max-width: 550px;
-    color: rgb(7, 98, 255);
+    color: rgb(88, 149, 255);
 }
 
 .introDescription{
@@ -148,6 +150,11 @@ li a, .aboutLink{
     font-size: 22px;
     padding: 5% 0% 0% 10%;
     max-width: 800px;
+    
+    color: white;
+    text-align: justify;
+
+    /* To Do: https://css-tricks.com/snippets/css/typewriter-effect/ */
 }
 
 /* Computer History Container ---------------------------------------------------------------------------------------------------------------- */
@@ -202,3 +209,4 @@ li a, .aboutLink{
     min-height: var(--mainContentHeight);
 }
 
+/* Talk about what you did with each of the programming languages ----------------------------------------------------------------------------------- */   

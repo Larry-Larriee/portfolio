@@ -1,3 +1,9 @@
+// VARIABLES -----------------------------------------------------------------------------------------------------------------------------
+
+const compHistory = document.getElementById('comp-color');
+
+// FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
+
 // When the user clicks a key, it sends the key to the server and runs the function below
 document.onkeydown = function(key) {
 
@@ -7,9 +13,18 @@ document.onkeydown = function(key) {
     }
 }
 
-//Cookies.set("username", "John");
-//console.log(Cookies.get("username"));
+window.onscroll = function (event) {  
 
-function test(){
-    window.alert("Working");
-}
+    // Get the scroll position of the page
+    var scroll = window.pageYOffset;
+
+    // Work on fade in/out text
+    var opacity = compHistory.style.opacity = 0.5;    
+
+    if (scroll >= 190){
+        compHistory.style.color = "black";
+    }
+    else{
+        compHistory.style.color = "white";
+    }
+} 
