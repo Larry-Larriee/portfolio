@@ -2,7 +2,22 @@
 
 const compHistory = document.getElementById('comp-color');
 
+const pageHeight = window.innerHeight;
+const navHeight = 60.8
+
 // FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
+
+// Set the page height so the background fills the whole page
+function setHeight(){
+    var height = pageHeight - navHeight;
+
+    // This is editing CSS
+    document.getElementById('container').style.minHeight = height + "px";
+}
+
+setHeight();
+
+// EVENT LISTENERS ----------------------------------------------------------------------------------------------------------------------
 
 // When the user clicks a key, it sends the key to the server and runs the function below
 document.onkeydown = function(key) {
@@ -13,6 +28,7 @@ document.onkeydown = function(key) {
     }
 }
 
+/*
 window.onscroll = function (event) {  
 
     // Get the scroll position of the page
@@ -27,4 +43,4 @@ window.onscroll = function (event) {
     else{
         compHistory.style.color = "white";
     }
-} 
+} */

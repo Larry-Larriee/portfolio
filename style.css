@@ -32,7 +32,6 @@ body{
 /* Variables */
 :root{
     --mainContentHeight: 600px;
-    --newGrey: rgb(246, 246, 246);
 }
 
 /* Navagation Bar --------------------------------------------------------------------------------------------------------------------- */
@@ -104,8 +103,6 @@ li a, .aboutLink{
     /* Everything fits in container */
     box-sizing: border-box;
     flex-basis: 1; /* even elements in wrapper (for columns, etc) */
-
-    min-height: 575px;
     display: flex;
 }
 
@@ -118,7 +115,7 @@ li a, .aboutLink{
 
 .introImage img{
 
-    margin: 15%;
+    margin: 10%;
 
     /* clamp helps with viewport issues. vw = viewport unit */
     width: clamp(120px, 50vw, 420px);
@@ -126,11 +123,16 @@ li a, .aboutLink{
 
 }
 
+.introText{
+    
+    /* Top, Right, Bottom, Left */
+    margin: 4% 0 0 10%;
+}
+
 .mainText{
 
     font-family: "Kanit", sans-serif;
     font-size: 45px;
-    padding: 100px 0% 0% 10%;
     max-width: 650px;
     color: white;
 }
@@ -139,7 +141,6 @@ li a, .aboutLink{
 
     font-family: "Koulen", sans-serif;
     font-size: 22px;
-    padding: 0% 0% 0% 10%;
     max-width: 550px;
     color: rgb(88, 149, 255);
 }
@@ -148,7 +149,7 @@ li a, .aboutLink{
 
     font-family: "Kanit", sans-serif;
     font-size: 22px;
-    padding: 5% 0% 0% 10%;
+    padding: 8% 0 0 0;
     max-width: 800px;
     
     color: white;
@@ -190,7 +191,7 @@ li a, .aboutLink{
 /* More About Me Container ---------------------------------------------------------------------------------------------------------------- */
 
 .tempContainer1{
-    background-color: var(--newGrey);
+    background-color: rgb(246, 246, 246);;
     min-height: var(--mainContentHeight);
 }
 
@@ -199,14 +200,21 @@ li a, .aboutLink{
     min-height: var(--mainContentHeight);
 }
 
-.tempContainer3{
-    background-color: var(--newGrey);
-    min-height: var(--mainContentHeight);
+
+/* Footer ---------------------------------------------------------------------------------------------------------------- */
+
+footer{
+    background-color: rgb(65, 65, 65);
+
+    /* em is relative to the font size */
+    min-height: 5em;
 }
 
-.tempContainer4{
-    background-color: white;
-    min-height: var(--mainContentHeight);
-}
+.footerText{
 
-/* Talk about what you did with each of the programming languages ----------------------------------------------------------------------------------- */   
+    font-family: "ubuntu", sans-serif;
+    font-weight: 550;
+
+    padding: 1% 0 0 10%;
+    color: white;
+}
