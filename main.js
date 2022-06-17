@@ -29,6 +29,12 @@ document.onkeydown = function(key) {
 }
 
 /*
+document.getElementById('jacobImageToClick').addEventListener('click', function(){
+    window.alert("The World Says Hello!")
+});
+*/
+
+/*
 window.onscroll = function (event) {  
 
     // Get the scroll position of the page

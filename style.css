@@ -51,6 +51,11 @@ body{
     text-align: justify;
 }
 
+/* Temp (Just for reminders) */
+strong{
+    color: blue;
+}
+
 /* Navagation Bar --------------------------------------------------------------------------------------------------------------------- */
 
 /* Position the entire navigation bar correctly to style */
@@ -283,7 +288,7 @@ li a, .aboutLink{
 /* Cyberstart  ------------------------------------------------------------------------------------------------------------------- */
 
 .cyberStart{
-    background-color: rgb(246, 246, 246);;
+    background-color: rgb(246, 246, 246);
     min-height: 600px;
 }
 
@@ -308,6 +313,91 @@ li a, .aboutLink{
 
 .cyberstartContentContainer img{
     max-width: 20%;
+}
+
+/* Exploravision ----------------------------------------------------------------------------------------------------------------- */
+
+.exploravision{
+    min-height: 600px;
+    background-color: white;
+}
+
+.exploravisionContentContainer{
+
+    display: flex;
+    flex: 1;
+
+    /* When you align items - center, using gap will not work. Refer to margining instead */
+    align-items: center;
+}
+
+.exploravisionContentContainer img{
+
+    margin-top: 5%;
+    margin-left: 10%;
+
+    max-width: 35%;
+}
+
+.exploravisionContentContainer p{
+    
+    margin-top: 5%;
+    margin-left: 5%;
+    max-width: 40%;
+
+    text-align: center;
+}
+
+/* Jacobs Teen Innovation -------------------------------------------------------------------------------------------------------- */
+
+.jtic22{
+
+    min-height: 650px;
+    background-color: rgb(246, 246, 246);
+}
+
+.jacobContentContainer{
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    justify-content: center;
+    
+    /* Because it centers with the same x-axis, this makes a great slider */
+    align-items: center;
+
+    margin-top: 3em;
+}
+
+.changingImage{
+
+    max-width: 40%;
+}
+
+.slider{
+    margin-left: 3%;
+    margin-right: 3%;
+
+    max-width: 5%;
+    border-radius: 50%;
+}
+
+.slider:hover{
+
+    /* Turns our arrow cursor into a pointer */
+    cursor: pointer;
+}
+
+.jacobDesc p{
+
+    max-width: 75%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 2em;
+    text-align: center;
 }
 
 /* Footer ------------------------------------------------------------------------------------------------------------------------ */
