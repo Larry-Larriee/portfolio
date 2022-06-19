@@ -180,6 +180,14 @@ li a, .aboutLink{
     /* To Do: https://css-tricks.com/snippets/css/typewriter-effect/ */
 }
 
+.moreInfoAtMyWorks{
+
+    max-width: 800px;
+
+    margin-top: 12%;
+    color: white;
+}
+
 /* Computer History Container ---------------------------------------------------------------------------------------------------------------- */
 
 .compHistory{
@@ -219,8 +227,6 @@ li a, .aboutLink{
 }
 
 .robloxVideo{
-
-    outline: 1px solid red;
 
     margin-left: 10%;
     margin-top: 5%;
@@ -379,7 +385,7 @@ li a, .aboutLink{
     margin-left: 3%;
     margin-right: 3%;
 
-    max-width: 5%;
+    max-width: 3%;
     border-radius: 50%;
 }
 
