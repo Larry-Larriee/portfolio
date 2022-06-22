@@ -18,8 +18,9 @@ body{
 
 .background{
     
-    /* Credit to https://hdqwalls.com/wallpaper/2880x1800/gradient-simple-background */
-    background-image: url(/images/backgroundMain.jpg);
+    background-image: linear-gradient(0deg, coral, lightcoral,coral);
+    
+    /* Only if the background is a URL */
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -72,10 +73,14 @@ header{
 
     /* Correctly place all children on the same x-position */
     align-items: center;
+
+    background-image: linear-gradient(200deg, lightcoral, lightcoral 15%,coral);
+
 }
 
 /* Remove the bullet points from the navigation bar */
 .navLinks{
+    
     list-style: none;
 }
 
@@ -90,7 +95,7 @@ header{
 /* Separate each child in the navigation bar */
 .navLinks li{
     display: inline-block;
-    padding-right: 30px;
+    padding-right: 35px;
 }
 
 /* Decorate each child in the navigation bar */
@@ -101,6 +106,7 @@ li a, .aboutLink{
     text-decoration: none;
     font-family: "Lato", sans-serif;
 }
+
 
 /* Override white color b/c it is harder to see w/ white */
 .aboutLink{
@@ -126,6 +132,7 @@ li a, .aboutLink{
     box-sizing: border-box;
     flex-basis: 1; /* even elements in wrapper (for columns, etc) */
     display: flex;
+
 }
 
 .introImage {
@@ -154,9 +161,12 @@ li a, .aboutLink{
 .mainText{
 
     font-family: "Kanit", sans-serif;
-    font-size: 45px;
-    max-width: 650px;
+    font-size: 4em;
+    max-width: 1000px;
     color: white;
+
+    text-shadow: 0px 0px 0px lightgrey;
+
 }
 
 .introCaption{
@@ -164,7 +174,7 @@ li a, .aboutLink{
     font-family: "Koulen", sans-serif;
     font-size: 22px;
     max-width: 550px;
-    color: rgb(88, 149, 255);
+    color: lightyellow;
 }
 
 .introDescription{
@@ -172,10 +182,10 @@ li a, .aboutLink{
     font-family: "Kanit", sans-serif;
     font-size: 22px;
     padding: 8% 0 0 0;
-    max-width: 800px;
+    max-width: 1000px;
     
     color: white;
-    text-align: justify;
+    text-align: left;
 
     /* To Do: https://css-tricks.com/snippets/css/typewriter-effect/ */
 }
