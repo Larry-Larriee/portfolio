@@ -19,6 +19,15 @@ setHeight();
 
 // EVENT LISTENERS ----------------------------------------------------------------------------------------------------------------------
 
+// Open social media links in new tab
+document.getElementById('githubIcon').addEventListener("click", function(){
+    window.open("https://github.com/Larry-Larriee");
+});
+
+document.getElementById('instagramIcon').addEventListener("click", function(){
+    window.open("https://www.instagram.com/larry_larriee/");    
+});
+
 // When the user clicks a key, it sends the key to the server and runs the function below
 document.onkeydown = function(key) {
 
