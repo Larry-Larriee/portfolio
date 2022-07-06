@@ -1,21 +1,30 @@
 // VARIABLES -----------------------------------------------------------------------------------------------------------------------------
 
 const compHistory = document.getElementById('comp-color');
-
 const pageHeight = window.innerHeight;
-const navHeight = 60.8
 
 // FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
 
 // Set the page height so the background fills the whole page
 function setHeight(){
+    
+    const navHeight = document.getElementById("navHeader").offsetHeight; // offsetHeight = innerHeight but for elements
     var height = pageHeight - navHeight;
 
     // This is editing CSS
     document.getElementById('container').style.minHeight = height + "px";
 }
 
-setHeight();
+function supriseText(){
+    var message = "virus() in console";
+    document.getElementById('take_a_look').innerHTML = message;
+}
+
+function virus(){
+    open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+    open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+    return "bye bye";
+}
 
 // EVENT LISTENERS ----------------------------------------------------------------------------------------------------------------------
 
@@ -33,29 +42,6 @@ document.onkeydown = function(key) {
 
     // key property (char name)
     if (key.key == "Enter") {
-        window.alert("Secret Message: Hello :D");
+        window.alert("Secret Message: Hello :)");
     }
 }
-
-/*
-document.getElementById('jacobImageToClick').addEventListener('click', function(){
-    window.alert("The World Says Hello!")
-});
-*/
-
-/*
-window.onscroll = function (event) {  
-
-    // Get the scroll position of the page
-    var scroll = window.pageYOffset;
-
-    // Next Goals: Work on fade in/out text
-    var opacity = compHistory.style.opacity = 0.5;    
-
-    if (scroll >= 190){
-        compHistory.style.color = "black";
-    }
-    else{
-        compHistory.style.color = "white";
-    }
-} */

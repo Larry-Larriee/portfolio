@@ -148,6 +148,7 @@ li a, .aboutLink{
 
 }
 
+/* The picture of me! */
 .container img{
 
     max-width: 26vw;
@@ -207,8 +208,8 @@ li a, .aboutLink{
 
 .intro img{
 
-    margin-top: 20%;
-    max-width: 8vh;
+    margin-top: 21.4vh;
+    max-width: 3.71vw;
     outline: 2px solid black;
 }
 
@@ -225,9 +226,10 @@ li a, .aboutLink{
     /* Positioned relative to absolutely to its first positioned parent 'intro' */
     position: absolute;
 
-    margin-top: 10%;
+    margin-top: 8%;
     margin-left: 10%;
 
+    min-width: 60vh;
     font-size: 4vh;
     color: brown;
     transform: rotate(-15deg);
@@ -443,6 +445,15 @@ li a, .aboutLink{
     min-height: 25vh;
 
     background-image: linear-gradient(200deg, lightcoral, lightcoral 15%,coral);
+}
+
+.forMoreInfo a{
+    /* Remove all default styling from link tag */
+    all: unset;
+}
+
+.forMoreInfo a:hover{
+    cursor: pointer;
 }
 
 .forMoreInfo p{
