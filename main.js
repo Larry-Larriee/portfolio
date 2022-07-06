@@ -16,15 +16,19 @@ function setHeight(){
 }
 
 function supriseText(){
-    var message = "virus() in console";
+    var message = "You are awesome if you are reading this";
     document.getElementById('take_a_look').innerHTML = message;
 }
 
-function virus(){
-    open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-    open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-    return "bye bye";
+/*
+
+function notAvailable(){
+    
+    // For subpages I believe still need to be worked on before the public can view them
+    window.location.replace("/pages/navBar/noAccess.html");
 }
+
+*/
 
 // EVENT LISTENERS ----------------------------------------------------------------------------------------------------------------------
 

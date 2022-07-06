@@ -155,6 +155,7 @@ li a, .aboutLink{
     max-height: 26vw;
 
     border-radius: 13vw;
+    transform: rotate(25deg);
 
     margin-top: 5%;
 
@@ -211,6 +212,8 @@ li a, .aboutLink{
     margin-top: 21.4vh;
     max-width: 3.71vw;
     outline: 2px solid black;
+
+    transform: rotate(0deg);
 }
 
 .intro img:hover{
@@ -514,4 +517,44 @@ footer{
     /* absolute: the element is positioned absolutely to its first positioned parent AKA position: relative in footer div */
     position: absolute;
     bottom: 0;
+}
+
+/* Page noAccess.html ------------------------------------------------------------------------------------------------------------- */
+
+.noAccess{
+    display: block;
+
+    min-height: 100vh;
+    background-image: linear-gradient(200deg, lightyellow, lightcoral 15%,lightyellow);
+}
+
+.noAccess h2{
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4vw;
+
+    max-width: 300px;
+    text-align: center;
+
+    padding-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.noAccess p{
+
+    font-family: sans-serif;
+    font-size: 1.5vw;
+    font-weight: 750;
+    color: white;
+
+    margin-top: 3%;
+    max-width: 69vw;
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
 }
