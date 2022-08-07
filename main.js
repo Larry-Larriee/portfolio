@@ -1,6 +1,5 @@
 // VARIABLES -----------------------------------------------------------------------------------------------------------------------------
 
-const compHistory = document.getElementById('comp-color');
 const pageHeight = window.innerHeight;
 
 // FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
@@ -15,20 +14,29 @@ function setHeight(){
     document.getElementById('container').style.minHeight = height + "px";
 }
 
-function supriseText(){
-    var message = "You are awesome if you are reading this";
-    document.getElementById('take_a_look').innerHTML = message;
-}
+// Check when the local host reaches a certain div --> play animation
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            
+            if (entry.target.className == "robloxHistory"){
+                document.querySelectorAll(".robloxContentContainer")[0].classList.add('fadeInLeft'); // [0] in this case is the div element 
+            }
 
-/*
+            else if (entry.target.className == "discordHistory"){
+                document.querySelectorAll(".discordContentContainer")[0].classList.add('fadeInRight');
+            }
 
-function notAvailable(){
-    
-    // For subpages I believe still need to be worked on before the public can view them
-    window.location.replace("/pages/navBar/noAccess.html");
-}
+            else if (entry.target.className == "cyberStart"){
+                document.querySelectorAll(".cyberstartContentContainer")[0].classList.add('fadeInLeft');
+            }
+        }
+    })
+});
 
-*/
+observer.observe(document.querySelector('.robloxHistory'));
+observer.observe(document.querySelector('.discordHistory'));
+observer.observe(document.querySelector('.cyberStart'));
 
 // EVENT LISTENERS ----------------------------------------------------------------------------------------------------------------------
 
