@@ -15,7 +15,6 @@
 
 body{
     background-color: white; 
-
 }
 
 .background{
@@ -79,7 +78,7 @@ header{
     justify-content: space-between; 
     
     /* Top, Right, Bottom, Left */
-    padding: 20px 10%;
+    padding: 10px 10% 10px 10%;
     
     display: flex;
     /* gap: 5rem; */
@@ -98,11 +97,11 @@ header{
 }
 
 .navLinks li a:hover{
-    color: orange;
+    color: lightcyan;
 }
 
 .aboutLink:hover{
-    color: orange;
+    color: lightcyan;
 }
 
 /* Separate each child in the navigation bar */
@@ -127,14 +126,13 @@ li a, .aboutLink{
 }
 
 /* Larry Le | CS Student */
-#headerName, #headerName a{
+.logoDiv img{    
+    background-color: none;
+    padding-top: 2%; /* Adjust Logo position */
 
-    text-decoration: none;
-    font-weight: 600;
-    color: white;
-    
-    font-family: "Ubuntu", sans-serif;
-    font-size: large;
+    width: 19.5vw;
+    height: 5.6vh;
+
 }
 
 /* Title Content --------------------------------------------------------------------------------------------------------------------- */
@@ -239,6 +237,45 @@ li a, .aboutLink{
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* Animation --------------------------------------------------------------------------------------------------------------------- */
+
+/* (optional) guarantee the animation to work on different browser versions with -webkit or -mz */
+.fadeInLeft{
+    animation: fadeInLeft 2s both;   
+    /* Declare indicator name for the animation */
+}
+
+.fadeInRight{
+    animation: fadeInRight 2s both;
+    /* Both = object has inital state and keeps final state after animation occurs */
+}
+
+.fadeInTop{
+    animation: fadeInTop 2s both;
+}
+
+@keyframes fadeInLeft{
+    from{
+        opacity: 0;
+        transform: translateX(-5.25vw);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight{
+    from{
+        opacity: 0;
+        transform: translateX(5.25vw);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /* Computer History Container ---------------------------------------------------------------------------------------------------------------- */
 
 .compHistory{
@@ -252,7 +289,7 @@ li a, .aboutLink{
 
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 1.63vw;
 }
 
 .programLang{
