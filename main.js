@@ -19,7 +19,10 @@ const observer = new IntersectionObserver(entries => {
             }
 
             else if (entry.target.className == "cyberStart"){
-                document.querySelectorAll(".cyberstartContentContainer")[0].classList.add('fadeInLeft');
+                document.querySelectorAll(".cyberImg")[0].classList.add('fadeIn');
+                document.querySelectorAll(".cyberImg")[1].classList.add('fadeIn');
+
+                document.querySelectorAll(".cyberText")[0].classList.add('fadeIn');
             }
         }
     })

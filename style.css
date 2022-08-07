@@ -252,8 +252,8 @@ li a, .aboutLink{
     /* Both = object has inital state and keeps final state after animation occurs */
 }
 
-.fadeInTop{
-    animation: fadeInTop 2s both;
+.fadeIn{
+    animation: fadeIn 1.8s both; 
 }
 
 @keyframes fadeInLeft{
@@ -275,6 +275,15 @@ li a, .aboutLink{
     to{
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }
 
