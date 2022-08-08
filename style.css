@@ -231,7 +231,7 @@ li a, .aboutLink{
     margin-top: 8%;
     margin-left: 10%;
 
-    min-width: 60vh;
+    width: max-content;
     font-size: 4vh;
     color: brown;
     transform: rotate(-15deg);
@@ -243,7 +243,7 @@ li a, .aboutLink{
 /* (optional) guarantee the animation to work on different browser versions with -webkit or -mz */
 .fadeInLeft{
     animation: fadeInLeft 2s both;   
-    /* Declare indicator name for the animation */
+    /* Declare indicator name for the animation and how long it lasts */
 }
 
 .fadeInRight{
@@ -263,7 +263,13 @@ li a, .aboutLink{
 
     overflow: hidden; /* Since the width is 0px at the start, there will be no text because the overflow is hidden */
     white-space: nowrap; /* Keep text on one line */
-    animation: typeWriter 2.75s both;
+    
+    /* The one second at the end is the delay before playing animation */
+    animation: typeWriter 2.75s both 0.5s;
+}
+
+.barrelRoll{
+    animation: barrelRoll 2s both infinite;
 }
 
 @keyframes fadeInLeft{
@@ -326,6 +332,15 @@ li a, .aboutLink{
         width: 100%;
         color: #FFD700;
     }   
+}
+
+@keyframes barrelRoll {
+    from{
+        transform: rotate(-15deg);
+    }
+    to{
+        transform: rotate(345deg);
+    }
 }
 
 /* Computer History Container ---------------------------------------------------------------------------------------------------------------- */
