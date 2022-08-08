@@ -6,6 +6,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&display=swap');
 
+:root{
+    --linkBlue: rgb(76, 187, 206);
+}
+
 *{
     /* Border-box makes everything into rectangles */
     box-sizing: border-box;
@@ -32,7 +36,7 @@ body{
 /* Format Headers */
 .contentTitle{
     text-align: center;
-    font-size: 35px;
+    font-size: 4.9vh;
     
     font-weight: 525;
     font-family: "Kanit", sans-serif;
@@ -41,11 +45,6 @@ body{
 /* Header ShiftDown */
 .shiftDown{
     padding-top: 3%;
-}
-
-/* Variables */
-:root{
-    --linkBlue: rgb(76, 187, 206);
 }
 
 .contentText{
@@ -94,8 +93,9 @@ header{
 }
 
 /* Remove the bullet points from the navigation bar */
-.navLinks{
+.navLinks, .aboutLink{
     
+    font-size: 1.1vw;
     list-style: none;
 }
 
@@ -110,7 +110,7 @@ header{
 /* Separate each child in the navigation bar */
 .navLinks li{
     display: inline-block;
-    padding-right: 35px;
+    padding-right: 2.5vw;
 }
 
 /* Decorate each child in the navigation bar */
@@ -176,7 +176,6 @@ li a, .aboutLink{
 
     font-family: "Kanit", sans-serif;
     font-size: 4vw;
-    max-width: 700px;
     color: white;
 
     /* offset-x | offset-y | blur-radius | color */
@@ -187,7 +186,7 @@ li a, .aboutLink{
 .introCaption{
 
     font-family: "Koulen", sans-serif;
-    font-size: 22px;
+    font-size: 3vh;
     max-width: 25vw;
     color: lightyellow;
 }
@@ -252,8 +251,19 @@ li a, .aboutLink{
     /* Both = object has inital state and keeps final state after animation occurs */
 }
 
-.fadeIn{
-    animation: fadeIn 1.8s both; 
+.fadeFromTop{
+    animation: fadeFromTop 2s both;
+}
+
+.expand{
+    animation: expand 1.8s both;
+}
+
+.typeWriter{
+
+    overflow: hidden; /* Since the width is 0px at the start, there will be no text because the overflow is hidden */
+    white-space: nowrap; /* Keep text on one line */
+    animation: typeWriter 2.75s both;
 }
 
 @keyframes fadeInLeft{
@@ -278,19 +288,50 @@ li a, .aboutLink{
     }
 }
 
-@keyframes fadeIn{
+@keyframes fadeFromTop{
     from{
         opacity: 0;
+        transform: translateY(-5.25vw);
     }
     to{
         opacity: 1;
+        transform: translateY(0);
     }
+}
+
+@keyframes expand{
+    from{
+        transform: scale(0.95);
+    }
+
+    50%{
+        transform: scale(1.05);
+    }
+
+    to{
+        transform: scale(1);
+    }
+}
+
+@keyframes typeWriter{
+    from{
+        width: 0%;
+    }
+
+    50%{
+        color: peachpuff;
+    }
+
+    to{
+        width: 100%;
+        color: #FFD700;
+    }   
 }
 
 /* Computer History Container ---------------------------------------------------------------------------------------------------------------- */
 
 .compHistory{
-    min-height: 72vh;
+    min-height: 77vh;
 
     background-color: rgb(255, 255, 255);
 }
@@ -300,13 +341,13 @@ li a, .aboutLink{
 
     justify-content: center;
     align-items: center;
-    gap: 1.63vw;
+    gap: 1.65vw;
 }
 
 .programLang{
-    margin-top: 4em;
+    margin-top: 5em;
 
-    max-width: 30vh;
+    max-width: 30.5vh;
 }
 
 /* Roblox Experience ---------------------------------------------------------------------------------------------------------------- */
@@ -317,7 +358,7 @@ li a, .aboutLink{
 
 }
 
-.robloxContentContainer{
+.robloxContentContainer{    
 
     display: flex;
     /* Take up the entire width of the container */  
@@ -510,7 +551,7 @@ li a, .aboutLink{
 .forMoreInfo p{
 
     font-family: 'Lato', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 30px;
+    font-size: 4.2vh;
     font-weight: 1000;
     color: white;
 
@@ -540,7 +581,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 3.5vh;
 }
 
 .socials p{
@@ -565,44 +606,4 @@ footer{
     /* absolute: the element is positioned absolutely to its first positioned parent AKA position: relative in footer div */
     position: absolute;
     bottom: 0;
-}
-
-/* Page noAccess.html ------------------------------------------------------------------------------------------------------------- */
-
-.noAccess{
-    display: block;
-
-    min-height: 100vh;
-    background-image: linear-gradient(200deg, lightyellow, lightcoral 15%,lightyellow);
-}
-
-.noAccess h2{
-
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 4vw;
-
-    max-width: 300px;
-    text-align: center;
-
-    padding-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.noAccess p{
-
-    font-family: sans-serif;
-    font-size: 1.5vw;
-    font-weight: 750;
-    color: white;
-
-    margin-top: 3%;
-    max-width: 69vw;
-
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-
-
-
 }

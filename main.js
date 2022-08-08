@@ -10,27 +10,30 @@ const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             
-            if (entry.target.className == "robloxHistory"){
+            if (entry.target.className == "robloxContentContainer"){
                 document.querySelectorAll(".robloxContentContainer")[0].classList.add('fadeInLeft'); // [0] in this case is the div element 
             }
 
-            else if (entry.target.className == "discordHistory"){
+            else if (entry.target.className == "discordContentContainer"){
                 document.querySelectorAll(".discordContentContainer")[0].classList.add('fadeInRight');
             }
 
-            else if (entry.target.className == "cyberStart"){
-                document.querySelectorAll(".cyberImg")[0].classList.add('fadeIn');
-                document.querySelectorAll(".cyberImg")[1].classList.add('fadeIn');
+            else if (entry.target.className == "cyberstartContentContainer"){
+                document.querySelectorAll(".cyberImg")[0].classList.add('fadeFromTop');
+                document.querySelectorAll(".cyberImg")[1].classList.add('fadeFromTop');
+            }
 
-                document.querySelectorAll(".cyberText")[0].classList.add('fadeIn');
+            else if (entry.target.className == "iconContainer"){
+                document.querySelectorAll(".iconContainer")[0].classList.add('expand');
             }
         }
     })
 });
 
-observer.observe(document.querySelector('.robloxHistory'));
-observer.observe(document.querySelector('.discordHistory'));
-observer.observe(document.querySelector('.cyberStart'));
+observer.observe(document.querySelector(".iconContainer"));
+observer.observe(document.querySelector('.robloxContentContainer'));
+observer.observe(document.querySelector('.discordContentContainer'));
+observer.observe(document.querySelector('.cyberstartContentContainer'));
 
 // EVENT LISTENERS ----------------------------------------------------------------------------------------------------------------------
 
