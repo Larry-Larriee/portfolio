@@ -1,59 +1,65 @@
 // VARIABLES -----------------------------------------------------------------------------------------------------------------------------
 
-const pageHeight = window.innerHeight;
+// offsetHeight = innerHeight but for elements // const pageHeight = window.innerHeight;
+const logoDiv = document.getElementsByClassName('logoDiv');
+
+const githubIcon = document.getElementById("githubIcon");
+const instaIcon = document.getElementById("instagramIcon");
 
 // FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
-
-// Set the page height so the background fills the whole page
-function setHeight(){
-    
-    const navHeight = document.getElementById("navHeader").offsetHeight; // offsetHeight = innerHeight but for elements
-    var height = pageHeight - navHeight;
-
-    // This is editing CSS
-    document.getElementById('container').style.minHeight = height + "px";
-}
 
 // Check when the local host reaches a certain div --> play animation
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            
-            if (entry.target.className == "robloxHistory"){
-                document.querySelectorAll(".robloxContentContainer")[0].classList.add('fadeInLeft'); // [0] in this case is the div element 
-            }
 
-            else if (entry.target.className == "discordHistory"){
-                document.querySelectorAll(".discordContentContainer")[0].classList.add('fadeInRight');
-            }
+            /* This new instance is constantly running == check if it is intersecting */
+            if (entry.isIntersecting) {
+            switch (entry.target.className){ // Switch statements are similar to if statements but cleaner
 
-            else if (entry.target.className == "cyberStart"){
-                document.querySelectorAll(".cyberstartContentContainer")[0].classList.add('fadeInLeft');
+                case "robloxContentContainer":
+                    document.querySelectorAll(".robloxContentContainer")[0].classList.add('fadeInLeft'); // [0] in this case is the div element
+                    break; // break is used to exit the switch case
+
+                case "discordContentContainer":
+                    document.querySelectorAll(".discordContentContainer")[0].classList.add('fadeInRight');
+                    break;
+                
+                case "cyberstartContentContainer":
+                    document.querySelectorAll(".cyberImg")[0].classList.add('fadeFromTop');
+                    document.querySelectorAll(".cyberImg")[1].classList.add('fadeFromTop');
+                    break;
+
+                case "iconContainer":
+                    document.querySelectorAll(".iconContainer")[0].classList.add('expand');
+                    break;
             }
         }
     })
 });
 
-observer.observe(document.querySelector('.robloxHistory'));
-observer.observe(document.querySelector('.discordHistory'));
-observer.observe(document.querySelector('.cyberStart'));
+observer.observe(document.querySelector(".iconContainer"));
+observer.observe(document.querySelector('.robloxContentContainer'));
+observer.observe(document.querySelector('.discordContentContainer'));
+observer.observe(document.querySelector('.cyberstartContentContainer'));
 
 // EVENT LISTENERS ----------------------------------------------------------------------------------------------------------------------
 
+// SOCIAL MEDIA -------------------------------------------------------------------------------------------------------------------------
+
 // Open social media links in new tab
-document.getElementById('githubIcon').addEventListener("click", function(){
+githubIcon.addEventListener("click", metaData => {
     window.open("https://github.com/Larry-Larriee");
 });
 
-document.getElementById('instagramIcon').addEventListener("click", function(){
+instaIcon.addEventListener("click", metaData =>{
     window.open("https://www.instagram.com/larry_larriee/");    
 });
 
-// When the user clicks a key, it sends the key to the server and runs the function below
-document.onkeydown = function(key) {
+// EASTER EGG ----------------------------------------------------------------------------------------------------------------------------
 
-    // key property (char name)
-    if (key.key == "Enter") {
-        window.alert("Secret Message: Hello :)");
-    }
-}
+logoDiv[0].addEventListener("click", metaData => {
+    const larry = document.getElementById("larry");
+
+    larry.classList.toggle("barrelRoll"); // Toggle class barrelRoll
+
+})
