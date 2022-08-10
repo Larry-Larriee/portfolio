@@ -61,7 +61,17 @@ instaIcon.addEventListener("click", () =>{
 
 logoDiv[0].addEventListener("click", () => {
     const larry = document.getElementById("larry");
-
-    larry.classList.toggle("barrelRoll"); // Toggle class barrelRoll
-
-})
+    
+    // Prevent spamming and glitching from occuring when the easter egg is clicked
+    if (larry.classList.contains("barrelRoll")){
+        return;
+    }
+    
+    // Remove the barrelRoll class from the larry image after the animation is complete
+    else{
+        larry.classList.add("barrelRoll");
+        setTimeout(() => {
+            larry.classList.remove("barrelRoll")
+        } , 2000); 
+    }
+}); 
