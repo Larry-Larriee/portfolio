@@ -12,7 +12,7 @@
         <meta name="description" content="To apply and further develop my web development skills, I decided to create a personal portfolio project during the Summer of 2022. Creating this website has also helped me learn more about GitHub and repositories in addition to HTML, CSS, and JavaScript.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="portfolioLogo.png">
+        <link rel="icon" href="/images/Hummingbirds/red_logo_model2.png">
 
         <script src="main.js" async defer></script> <!-- Script loads before continuting content -->
 
@@ -22,18 +22,19 @@
     
         <div class="background" id="test">
             <!-- The header element contains the logo and the navigation bar -->
-            <header id="navHeader">
+            <header>
                 <div class="logoDiv">
-                    <img alt="portfolio Logo" src="/images/FullLength_Logo.png">
+                    <img alt="portfolio Logo" src="/images/Hummingbirds/red_logo.png">
+                    <p>Larry Le | Digital Portfolio</p>
                 </div>
                 <nav>
                     <ul class="navLinks">
-                        <li><a href="/pages/navBar/works.html">My Works</a></li>
-                        <li><a href="/pages/navBar/resume.html">Resume</a></li>
-                        <li><a href="/pages/navBar/contacts.html">Contacts</a></li>
+                        <li><a href="/pages/works.html">My Works</a></li>
+                        <li><a href="/pages/resume.html">Resume</a></li>
+                        <li><a href="/pages/contacts.html">Contacts</a></li>
                     </ul>
                 </nav>
-                <p><a class="aboutLink" href="index.html">About Me</a></p>
+                <p><a class="aboutLink" href="/">About Me</a></p> <!-- / finds the root directory (default page) AKA index.html -->
             </header>
             
             <!-- Top page front content -->
@@ -48,12 +49,12 @@
                     <h2 id="take_a_look">workworkworkworkwork!</h2>
 
                     <!-- Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a> -->
-                    <img src="/images/icons/arrow_down.png" alt="downArrow">
+                    <img src="/images/icons/arrow_right.png" alt="Pointing Arrow">
                          
                     
                 </div>
                 
-                    <img src="/images/main_page/profile/beach_larry.png" alt="WHS Larry Le" id="larry">
+                    <img src="/images/main_page/profile/beach_larry.png" alt="WHS Larry Le" id="larryBeach">
 
                 
             </div>
@@ -62,7 +63,7 @@
         <!-- Computing History Div -->
         <div class="compHistory">
 
-            <p class="contentTitle shiftDown" id="comp-color">My Computing History</p>
+            <p class="contentTitle" id="comp-color">My Computing History</p>
             
             <div class="iconContainer">
                 <img class="programLang" src="/images/main_page/computing/html.png" alt="html">
@@ -80,7 +81,7 @@
         <!-- Here and below is content about me (ex. fun facts, timeline, etc) -->
         <div class="robloxHistory">
 
-            <p class="contentTitle shiftDown">Roblox Development</p>            
+            <p class="contentTitle">Roblox Development</p>            
             <div class="robloxContentContainer">
         
                 <!-- Autoplay will not work without muted -->
@@ -91,7 +92,7 @@
                 <p class="contentText robloxDesc">
                     During the summer of 2021, I found an interest in roblox game development. Using LUA and the Rovblox API Engine, I created experiences for players under the name SmallBrainMoment. 
                     One of my favorite creations is <a class="infoLink" href="https://www.roblox.com/games/7218691177/Swamp-Defense-BETA" target="_blank" rel="noopener">Swamp Defense</a>, where your goal is to survive against a hoard of angry gators!
-                    <br><br> A full list of my creations can be found <a class="infoLink" href="/pages/navBar/works.html" target="_blank" rel="nopener">here</a>.
+                    <br><br> A full list of my creations can be found <a class="infoLink" href="/pages/works.html" target="_blank" rel="nopener">here</a>.
                 </p>
 
             </div>
@@ -99,7 +100,7 @@
 
         <div class="discordHistory">
 
-            <p class="contentTitle shiftDown">Creating Discord Bots</p>
+            <p class="contentTitle">Creating Discord Bots</p>
 
             <div class="discordContentContainer">
                 <p class="contentText">Throughout the 2021-2022 school year, I dug myself into Python and the Discord, as well as Nextcord API. An exciting project of mine is called Caesar bot, which can encode and decode given strings. The documentmentation can be found on <a class="infoLink" href="https://github.com/Larry-Larriee/Caesar-Cypher" rel="noopener" target="_blank">Github</a> :)</p>
@@ -111,7 +112,7 @@
 
         <div class="cyberStart">
 
-            <p class="contentTitle shiftDown">CyberStart America</p>
+            <p class="contentTitle">CyberStart America</p>
 
             <div class="cyberstartContentContainer">
                 <img class="cyberImg" src="/images/main_page/cyberstart/NCSF_Finalist.png" alt="CyberStart">
@@ -123,7 +124,7 @@
 
         <!-- More detail about me can be found in the 'My Works' section. Either way, thanks for visiting! -->
         <div class="forMoreInfo">
-            <p>More detail about me can be found in the <a href="/pages/navBar/works.html">My Works</a> section.</p>
+            <p>More detail about me can be found in the <a href="/pages/works.html">My Works</a> section.</p>
             <p id="aboutPortfolio">This portfolio was started during the summer of 2022: thanks for visiting!</p>
 
             <!-- Footer -->

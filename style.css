@@ -11,8 +11,7 @@
 }
 
 *{
-    /* Border-box makes everything into rectangles */
-    box-sizing: border-box;
+    box-sizing: border-box; /* border-box --> all content is inside its container always */ 
     margin: 0;
     padding: 0;
 }
@@ -33,17 +32,14 @@ body{
     min-height: 100vh;
 }
 
-/* Format Headers */
+/* Format Content Headers */
 .contentTitle{
     text-align: center;
     font-size: 4.9vh;
     
     font-weight: 525;
     font-family: "Kanit", sans-serif;
-}
 
-/* Header ShiftDown */
-.shiftDown{
     padding-top: 3%;
 }
 
@@ -55,209 +51,32 @@ body{
     text-align: justify;
 }
 
-.infoLink{
+.infoLink, .infoLink:visited, .infoLink:active{
     color: var(--linkBlue);
 }
-
-.infoLink:visited{
-    color: var(--linkBlue);
-}
-
 .infoLink:hover{
     color: lightcoral;
-}
+} 
 
-.infoLink:active{
-    color: blue;
-}
-
-/* Navagation Bar --------------------------------------------------------------------------------------------------------------------- */
-
-/* Position the entire navigation bar correctly to style */
-header{
-
-    /* Take leftover space and equally distrubute */
-    justify-content: space-between; 
-    
-    /* Top, Right, Bottom, Left */
-    padding: 1.4vh 10% 1.4vh 10%;
-    
-    display: flex;
-    /* gap: 5rem; */
-
-    /* Correctly place all children on the same x-position */
-    align-items: center;
-
-    background-image: linear-gradient(200deg, lightcoral, lightcoral 15%,coral);
-
-}
-
-/* Remove the bullet points from the navigation bar */
-.navLinks, .aboutLink{
-    
-    font-size: 1.1vw;
-    list-style: none;
-}
-
-.navLinks li a:hover{
-    color: lightcyan;
-}
-
-.aboutLink:hover{
-    color: lightcyan;
-}
-
-/* Separate each child in the navigation bar */
-.navLinks li{
-    display: inline-block;
-    padding-right: 2.5vw;
-}
-
-/* Decorate each child in the navigation bar */
-li a, .aboutLink{
-
-    font-weight: 600;
-    color: white;
-    text-decoration: none;
-    font-family: "Lato", sans-serif;
-}
-
-
-/* Override white color b/c it is harder to see w/ white */
-.aboutLink{
-    color: white;
-}
-
-/* Larry Le | CS Student */
-.logoDiv img{    
-    background-color: none;
-    padding-top: 2%; /* Adjust Logo position */
-
-    width: 19.5vw;
-    height: 5.6vh;
-
-}
-
-/* Title Content --------------------------------------------------------------------------------------------------------------------- */
-
-.container{
-
-    /* Everything fits in container */
-    box-sizing: border-box;
-    flex-basis: 1; /* even elements in wrapper (for columns, etc) */
-    display: flex;
-}
-
-/* The picture of me! */
-.container img{
-
-    max-width: 26vw;
-    max-height: 26vw;
-
-    border-radius: 13vw;
-    transform: rotate(25deg);
-
-    margin-top: 5%;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    /* outline: 20px solid blue; */
-
-}
-
-.intro{
-    
-    /* Top, Right, Bottom, Left */
-    margin: 4% 0 0 10%;
-}
-
-.mainText{
-
-    font-family: "Kanit", sans-serif;
-    font-size: 4vw;
-    color: white;
-
-    /* offset-x | offset-y | blur-radius | color */
-    text-shadow: 1px 1px 7px lightgrey;
-
-}
-
-.introCaption{
-
-    font-family: "Koulen", sans-serif;
-    font-size: 3vh;
-    max-width: 25vw;
-    color: lightyellow;
-}
-
-.introDescription{
-
-    font-family:'Poppins', serif;
-    font-size: 2.5vh;
-    font-weight: 550;
-    padding: 9% 0 0 0;
-
-    /* vw: hundredths of the viewport width */
-    max-width: 50vw;
-    
-    color: white;
-    text-align: justify;
-
-    /* To Do: https://css-tricks.com/snippets/css/typewriter-effect/ */
-}
-
-.intro img{
-
-    margin-top: 21.4vh;
-    max-width: 3.71vw;
-    outline: 2px solid black;
-
-    transform: rotate(0deg);
-}
-
-.intro img:hover{
-    cursor: progress;
-}
-
-.intro img:active{
-    outline: 2px solid white;
-}
-
-.intro h2{
-
-    /* Positioned relative to absolutely to its first positioned parent 'intro' */
-    position: absolute;
-
-    margin-top: 8%;
-    margin-left: 10%;
-
-    width: max-content;
-    font-size: 4vh;
-    color: brown;
-    transform: rotate(-15deg);
-    font-family: 'Courier New', Courier, monospace;
-}
-
-/* Animation --------------------------------------------------------------------------------------------------------------------- */
+/* Animations --------------------------------------------------------------------------------------------------------------------- */
 
 /* (optional) guarantee the animation to work on different browser versions with -webkit or -mz */
 .fadeInLeft{
-    animation: fadeInLeft 1.8s both;   
+    animation: fadeInLeft 1.5s both;   
     /* Declare indicator name for the animation and how long it lasts */
 }
 
 .fadeInRight{
-    animation: fadeInRight 1.8s both;
+    animation: fadeInRight 1.5s both;
     /* Both = object has inital state and keeps final state after animation occurs */
 }
 
 .fadeFromTop{
-    animation: fadeFromTop 1.8s both;
+    animation: fadeFromTop 1.5s both;
 }
 
 .expand{
-    animation: expand 1.8s both;
+    animation: expand 1.5s both;
 }
 
 .typeWriter{
@@ -344,11 +163,192 @@ li a, .aboutLink{
     }
 }
 
+/* Navagation Bar --------------------------------------------------------------------------------------------------------------------- */
+
+/* Position the entire navigation bar correctly to style */
+header{
+
+    /* Take leftover space and equally distrubute */
+    justify-content: space-between; 
+    
+    /* Top, Right, Bottom, Left */
+    padding: 1.4vh 10% 1.4vh 10%;
+    
+    display: flex;
+    /* gap: 5rem; */
+
+    /* Correctly place all children on the same x-position */
+    align-items: center;
+
+    background-image: linear-gradient(200deg, lightcoral, lightcoral 15%,coral);
+
+}
+
+#contacts{
+    background-image: linear-gradient(200deg, lightcyan, #89CFF0, rgb(0, 0, 255));
+}
+
+/* Remove the bullet points from the navigation bar */
+.navLinks, .aboutLink{
+    
+    font-size: 1.1vw;
+    list-style: none;
+}
+
+.navLinks li a:hover, .aboutLink:hover{
+    color: lightcyan;
+}
+
+/* Separate each child in the navigation bar */
+.navLinks li{
+    display: inline-block;
+    padding-right: 2.5vw;
+}
+
+/* Decorate each child in the navigation bar */
+li a, .aboutLink{
+
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+}
+
+/* Format Logo and Text Banner */
+.logoDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Portfolio Logo */
+.logoDiv img{    
+    background-color: none;
+    margin-top: 2%; /* Adjust Logo position */
+    margin-right: 5%;
+
+    width: 6.5vh;
+    height: 5vh;
+}
+
+.logoDiv p{
+
+    font-size: 1.1vw;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+
+    white-space: nowrap; 
+    min-width: auto; /* The size of the element is determined by its text-content */
+}
+
+/* Title Content --------------------------------------------------------------------------------------------------------------------- */
+
+.container{
+
+    /* Everything fits in container */
+    box-sizing: border-box;
+    flex-basis: 1; /* even elements in wrapper (for columns, etc) */
+    display: flex;
+}
+
+.intro{
+    
+    /* Top, Right, Bottom, Left */
+    margin: 4% 0 0 10%;
+
+    position: relative;
+}
+
+.mainText{
+
+    font-family: "Kanit", sans-serif;
+    font-size: 4vw;
+    color: white;
+
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 1px 1px 7px lightgrey;
+}
+
+.introCaption{
+
+    font-family: "Koulen", sans-serif;
+    font-size: 3vh;
+    max-width: 25vw;
+    color: lightyellow;
+}
+
+.introDescription{
+
+    font-family:'Poppins', serif;
+    font-size: 2.5vh;
+    font-weight: 550;
+    padding: 9% 0 0 0;
+
+    /* vw: hundredths of the viewport width */
+    max-width: 50vw;
+    
+    color: white;
+    text-align: justify;
+
+    /* To Do: https://css-tricks.com/snippets/css/typewriter-effect/ */
+}
+
+#larryBeach{
+
+    max-width: 26vw;
+    max-height: 26vw;
+
+    border-radius: 13vw;
+    transform: rotate(25deg);
+
+    margin-left: 7%;
+    margin-top: 5%;
+}
+
+.intro img{
+
+    transform: rotate(-90deg); /* Rotate image into a down arrow */
+
+    margin-top: 20vh; 
+    width: 3vw;
+
+    outline: 2px solid white;
+    border-radius: 1.5vw;
+
+    opacity: 0.9;
+    transition: 0.5s ease; /* Reset animation position when the arrow is not clicked */
+}
+
+.intro img:hover{
+    cursor: pointer;
+}
+
+.intro img:active{
+    transition: 0.5s ease; 
+    margin-top: 24vh;
+}
+
+.intro h2{
+
+    /* Positioned relative to absolutely to its first positioned parent 'intro' */
+    position: absolute;
+
+    margin-top: 15%;
+    margin-left: 15%;
+
+    width: max-content;
+    font-size: 4vh;
+    color: rgb(233, 63, 63);
+    transform: rotate(-10deg);
+    font-family: 'Courier New', Courier, monospace;
+}
+
 /* Computer History Container ---------------------------------------------------------------------------------------------------------------- */
 
 .compHistory{
     min-height: 77vh;
-
     background-color: rgb(255, 255, 255);
 }
 
@@ -371,7 +371,6 @@ li a, .aboutLink{
 .robloxHistory{
     background-color: rgb(246, 246, 246);;
     min-height: 84vh;
-
 }
 
 .robloxContentContainer{    
@@ -379,8 +378,6 @@ li a, .aboutLink{
     display: flex;
     /* Take up the entire width of the container */  
     flex: 1;
-    
-    /*align-items: center;*/
 }
 
 .robloxVideo{
@@ -411,7 +408,6 @@ li a, .aboutLink{
 }
 
 .discordContentContainer{
-
     display: flex;
     flex: 1;
     margin-top: 4em;
@@ -460,91 +456,6 @@ li a, .aboutLink{
 
 .cyberstartContentContainer img{
     max-width: 20%;
-}
-
-/* Exploravision ----------------------------------------------------------------------------------------------------------------- */
-
-.exploravision{
-    min-height: 600px;
-    background-color: white;
-}
-
-.exploravisionContentContainer{
-
-    display: flex;
-    flex: 1;
-
-    /* When you align items - center, using gap will not work. Refer to margining instead */
-    align-items: center;
-}
-
-.exploravisionContentContainer img{
-
-    margin-top: 5%;
-    margin-left: 10%;
-
-    max-width: 35%;
-}
-
-.exploravisionContentContainer p{
-    
-    margin-top: 5%;
-    margin-left: 5%;
-    max-width: 40%;
-
-    text-align: center;
-}
-
-/* Jacobs Teen Innovation -------------------------------------------------------------------------------------------------------- */
-
-.jtic22{
-
-    min-height: 650px;
-    background-color: rgb(246, 246, 246);
-}
-
-.jacobContentContainer{
-
-    margin-left: auto;
-    margin-right: auto;
-
-    display: flex;
-    justify-content: center;
-    
-    /* Because it centers with the same x-axis, this makes a great slider */
-    align-items: center;
-
-    margin-top: 3em;
-}
-
-.changingImage{
-
-    max-width: 40%;
-}
-
-.slider{
-    margin-left: 3%;
-    margin-right: 3%;
-
-    max-width: 3%;
-    border-radius: 50%;
-}
-
-.slider:hover{
-
-    /* Turns our arrow cursor into a pointer */
-    cursor: pointer;
-}
-
-.jacobDesc p{
-
-    max-width: 75%;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    margin-top: 2em;
-    text-align: center;
 }
 
 /* For More Info Div ------------------------------------------------------------------------------------------------------------- */
@@ -622,4 +533,10 @@ footer{
     /* absolute: the element is positioned absolutely to its first positioned parent AKA position: relative in footer div */
     position: absolute;
     bottom: 0;
+}
+
+
+
+.scrollWeight{
+    min-height: 101vh;
 }

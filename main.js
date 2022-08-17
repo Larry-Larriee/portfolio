@@ -60,7 +60,7 @@ instaIcon.addEventListener("click", () =>{
 // EASTER EGG ----------------------------------------------------------------------------------------------------------------------------
 
 logoDiv[0].addEventListener("click", () => {
-    const larry = document.getElementById("larry");
+    const larry = document.getElementById("larryBeach");
     
     // Prevent spamming and glitching from occuring when the easter egg is clicked
     if (larry.classList.contains("barrelRoll")){
