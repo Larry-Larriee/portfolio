@@ -68,10 +68,8 @@ logoDiv[0].addEventListener("click", () => {
     }
     
     // Remove the barrelRoll class from the larry image after the animation is complete
-    else{
-        larry.classList.add("barrelRoll");
-        setTimeout(() => {
-            larry.classList.remove("barrelRoll")
-        } , 2000); 
-    }
+    larry.classList.add("barrelRoll");
+    setTimeout(() => {
+        larry.classList.remove("barrelRoll")
+    } , 2000); 
 }); 

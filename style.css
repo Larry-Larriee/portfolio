@@ -11,7 +11,9 @@
     --oceanBlue: #005EB8;
     --softBlue: #89CFF0;
 
-    --backgroundGrey: #F6F6F6;
+    --grey: #F6F6F6;
+    --peach: #fff8e6; 
+    --darkOrange: #ff7700;
 }
 
 *{
@@ -27,13 +29,13 @@ body{
 /* Background div includes both the nav bar and the intro content */
 #backgroundIndex{
     
-    background-image: linear-gradient(0deg, coral, lightcoral,coral);
+    background-image: linear-gradient(0deg, coral, lightcoral 20%,coral);
     
     /* Only if the background is a URL */
     background-repeat: no-repeat;
     background-size: 100%;
 
-    min-height: 100vh;
+    min-height: 95vh;
 }
 
 /* Format Content Headers */
@@ -45,6 +47,8 @@ body{
     font-family: "Kanit", sans-serif;
 
     padding-top: 3%;
+
+    color: black;
 }
 
 .contentText{
@@ -53,6 +57,8 @@ body{
     font-weight: 525;
     font-size: 1.43vw;
     text-align: justify;
+
+    color: black;
 }
 
 .infoLink, .infoLink:visited, .infoLink:active{
@@ -185,7 +191,7 @@ body{
     }
 
     50%{
-        color: peachpuff;
+        color: var(--peach);
     }
 
     to{
@@ -340,7 +346,7 @@ li a, .aboutLink{
 
     width: max-content;
     font-size: 4vh;
-    color: rgb(233, 63, 63);
+    color: #c83634;
     transform: rotate(-10deg);
     font-family: 'Courier New', Courier, monospace;
 }
@@ -352,7 +358,7 @@ li a, .aboutLink{
     color: white;
 
     /* offset-x | offset-y | blur-radius | color */
-    text-shadow: 1px 1px 7px lightgrey;
+    text-shadow: 0.1vw 0.1vh 1vh var(--darkOrange);
 }
 
 .introCaption{
@@ -414,7 +420,7 @@ li a, .aboutLink{
 /* Roblox Experience ---------------------------------------------------------------------------------------------------------------- */
 
 .robloxHistory{
-    background-color: var(--backgroundGrey);
+    background-color: var(--peach);
     min-height: 84vh;
 }
 
@@ -449,7 +455,7 @@ li a, .aboutLink{
 
 .discordHistory{
     background-color: white;
-    min-height: 94.5vh;
+    min-height: 90vh;
 }
 
 .discordContentContainer{
@@ -476,8 +482,8 @@ li a, .aboutLink{
 /* Cyberstart  ------------------------------------------------------------------------------------------------------------------- */
 
 .cyberStart{
-    background-color: var(--backgroundGrey);
-    min-height: 84vh;
+    background-color: var(--peach);
+    min-height: 80vh;
 }
 
 .cyberstartContentContainer{
@@ -485,6 +491,7 @@ li a, .aboutLink{
     display: flex;
     flex: 1;
     justify-content: center;
+    align-items: center;
 
     margin-top: 4em;
 }
@@ -618,7 +625,7 @@ footer{
     
     margin-top: 15vh;
     padding-bottom: 15vh;
-    background-color: var(--backgroundGrey);
+    background-color: var(--grey);
     display: grid; /* Similar to display: block but with flexbox-like properties */
     place-items: center;
 
