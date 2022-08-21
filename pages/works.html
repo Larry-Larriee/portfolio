@@ -1,45 +1,130 @@
+<!-- Declare that this is an HTML5 Website -->
 <!DOCTYPE html>
+
 <html lang="en">
+
+    <!-- The head element gives information about this page, like "title" -->
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Larry's Works</title>
-        <meta name="description" content="Hello! This is a design Portfolio I made during my free time in highschool. If you are so inclined, please check it out :D">
+
+        <!-- No corrupt char & compatiable on multiple devices -->
+        <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Larry Le | Contacts</title>
+        <meta name="description" content="Contact Larry Le">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="icon" href="../images/Hummingbirds/red_logo_model2.png">
+
+        <script src="../works.js" async defer></script> <!-- Script loads before continuting content -->
+
     </head>
-    <body">
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
 
-        <!-- Work on adding exploravion -->
-        <div class="exploravision">
-            <p class="contentTitle shiftDown">Exploravision Research Report</p>
+    <body>
 
-            <div class="exploravisionContentContainer">
+        <!-- The header element contains the logo and the navigation bar -->
+        <header id="works" class="">
+            <div class="logoDiv">
+                <img id="logo" alt="portfolio Logo" src="/images/Hummingbirds/darkcyan_logo.png">
+                <a href="/" id="contactLogoDiv">Larry Le | Digital Portfolio</a>
+            </div>
+            <nav>
+                <ul class="navLinks">
+                    <li><a href="/pages/works.html">My Works</a></li>
+                    <li><a href="/pages/resume.html">Resume</a></li>
+                    <li><a href="/pages/contacts.html">Contacts</a></li>
+                </ul>
+            </nav>
+            <p><a class="aboutLink" href="/">About Me</a></p> <!-- / finds the root directory (default page) AKA index.html -->
+        </header>
 
-                <img src="/images/main_page/exploravision/exploravision_honorable.jpg" alt="exploravision_award">
-                <p class="contentText">For this endevor, I worked with a team to propose an invention that would exist a decade into the future. After hours of brainstorming and research, we came up with the idea of a phone app that detects potential disease using the human eye. Recognized by Toshiba and NSTA, we were each awarded with an honorable mention award. Particulars about our innovation can be found <a href="https://docs.google.com/document/d/1maXgWN7NHj0zWgnXbFxFseLgX29u8Zd0YVOdT88Qto8/edit" target="_blank" rel="noopener">here!</a></p>
+        <p class="contentTitle">Let me tell you a bit about my journey.</p>
 
+        <main>    
+
+            <div class="timeline_content_wrapper" id="time_one">
+                <article class="date">December 2020</article>
+
+                <p class="timeline_content">
+                    
+                    My <cite>Exploring Computer Science</cite> class would introduce me to web development
+                    for the first time, teaching me about the syntax of basic HTML and CSS. 
+                    
+                    <!-- I find this time as a very important part of my life because it would ultimately help me discover my passion of creating
+                    things for myself and for others. -->
+                </p>
+            </div>
+            
+            <div class="timeline_content_wrapper" id="time_two">
+                <article class="date">January 2021</article>
+
+                <p class="timeline_content">
+                    
+                    Creation of Critiverse as a class project
+                </p>
+
+                <!-- I would go on create Critiverse for my final project, a review website that aimed to help
+                    users by giving them second opinions on the quality of products that they plan to purchase. -->
             </div>
 
-        </div>
+            <div class="timeline_content_wrapper" id="time_three">
+                <article class="date">February-March 2021</article>
 
-        <div class="jtic22">
-            <p class="contentTitle shiftDown">Jacob's Teen Innovation Challenge</p>
-            <div class="jacobContentContainer">
+                <p class="timeline_content">
+                    
+                    I would go on to learn about scratch-level javascript and create animations like The Scratch Men Awaken
+                </p>  
+            </div>
+            
+            <div class="timeline_content_wrapper" id="time_four">
+                <article class="date">April-May 2021</article>
 
-                <img class="slider" src="/images/slider_left.png" alt="slider_left">
-                <img class="changingImage" src="/images/main_page/jtic22/Storyteller_Award.png" alt="JTIC">
-                <img class="slider" src="/images/slider_right.png" alt="slider_right">
+                <p class="timeline_content">
+                    
+                    Now that I knew the disiplines of programming, I begun to become more interested in my childhood game Roblox.
+                    I came interested in how different games worked and behaved and learned about <cite>Roblox Studio</cite>    
+                </p>  
             </div>
 
-            <div class="jacobDesc">
-                <p class="contentText">Lorem dolor <strong>Note: Work on Image Slider Gallery</strong> We worked as a team on the camel cart to help reduce the difficulty of obtaining water & did a bunch of interviewing and networking. I also ran instagram page. The video demonstrates our innovation in action</p>
+            <div class="timeline_content_wrapper" id="time_five">
+                <article class="date">June 2021</article>
+
+                <p class="timeline_content">
+                    
+                    At first I felt very lost in terms of Roblox scripting. However, as I started to take free public 
+                    models on Roblox, I got more used to the environment and began learning from Youtubers like Alvinblox and TheDevKing.
+                    It's difficult to do things by yourself and these people acted as essentially mentors for me. 
+                </p>  
             </div>
-        </div>
-        <script src="../../main.js" async defer></script>
+
+            <div class="timeline_content_wrapper" id="time_six">
+                <article class="date">July 2021</article>
+
+                <p class="timeline_content">
+                    
+                    Creation of my first major Roblox Experience: Titan Legends. This game would undergo different env and changes as I learned
+                    more and more about things like animations, lighting, client and server events, player scripts, workspace scripts, and more.
+                </p>  
+            </div>
+            
+            <div class="timeline_center">
+                <article class="timeline_circle"></article>
+            </div>
+        </main>
+
+
+
+
+
+        <footer id="worksFooter">
+            <p class="whiteText" id="aboutContacts">This portfolio was started during the summer of 2022: thanks for visiting!</p>
+
+            <div class="socials">   
+                <p class="whiteText">Follow me on: </p>
+                <img src="/images/icons/instagram_white.png" alt="instagram" id="instagramIcon">
+                <img src="/images/icons/github_white.png" alt="github" id="githubIcon">
+            </div>
+
+            <h5 class="legalFooter">Copyright &copy; 2022 Larry Le Under MIT Licensing</h5>
+        </footer>
+
     </body>
 </html>
