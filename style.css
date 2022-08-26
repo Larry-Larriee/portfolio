@@ -13,11 +13,14 @@
 
     --grey: #F6F6F6;
     --darkGrey: #9f9f9f;
+    --blackish: #444444;
 
     --peach: #fff9ed; 
     --darkOrange: #ffa250;
 
     --lightishGreen: #62e799;
+    --darkerCyan: #01A6A6;
+    --darkestCyan: #019e9e;
 }
 
 *{
@@ -243,10 +246,19 @@ header{
     background-image: linear-gradient(200deg, lightcoral, lightcoral 15%,coral);
 }
 #contacts{
-    background-image: linear-gradient(200deg, var(--softBlue), var(--softBlue) 15%, var(--softBlue));
+    background: var(--softBlue);
 }
-#works{
-    background-image: linear-gradient(200deg, darkcyan, darkcyan 15%, darkcyan);
+#about{
+    transition: background 250ms ease-in;
+    background: var(--darkerCyan);
+}
+
+.nav_scrolled {
+
+    box-shadow: .1vw .1vw 1vh var(--blackish);    
+
+    transition: background 250ms ease-in;
+    background: var(--blackish) !important; /* !important --> override the id style */
 }
 
 /* Remove the bullet points from the navigation bar */
@@ -539,15 +551,6 @@ li a, .aboutLink{
     padding-top: 10vh;
 }
 
-.forMoreInfo a{
-    /* Remove all default styling from link tag */
-    all: unset;
-}
-
-.forMoreInfo a:hover{
-    cursor: pointer;
-}
-
 #aboutIndex{
     padding-top: 3vh;
     font-size: 15px;
@@ -556,11 +559,26 @@ li a, .aboutLink{
 /* Footer (inside for more info div) ------------------------------------------------------------------------------------------------ */
 
 footer{
-    
     position: relative;
-
     /* em is relative to the font size */
     min-height: 20vh;
+}
+
+#aboutFooter{
+    background-color: var(--darkerCyan);
+    min-height: 35vh;
+}
+
+#contactsFooter{
+    background-color: var(--softBlue);
+    min-height: 35vh;
+}
+
+.aboutWebsite{
+    padding-top: 5%;
+
+    text-align: center;
+    font-size: 1.5vw;
 }
 
 .socials{
@@ -571,12 +589,6 @@ footer{
     justify-content: center;
     align-items: center;
     gap: 3.5vh;
-}
-
-.socials p{
-
-    /* Footer is inside the forMoreInfo div = would have 10vh padding */
-    padding: 0;
 }
 
 .socials img{
@@ -634,6 +646,8 @@ footer{
     font-weight: 600;
     color: var(--oceanBlue);
     font-family: 'Poppins', serif;
+
+    overflow: auto;
 }
 
 .skillset{
@@ -703,70 +717,68 @@ footer{
     color:rgb(233, 63, 63);
 }
 
-#contactsFooter{
-    background-color: var(--softBlue);
-    min-height: 35vh;
+/* about Page ----------------------------------------------------------------------------------------------------------------------- */
+
+.about_me_desc_wrapper{
+    min-height: 60vh;
+    background-color: var(--darkestCyan);
+
+    margin-bottom: 10vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
 
-#aboutContacts{
-    padding-top: 5%;
-
+.about_me_desc_wrapper p{
     text-align: center;
-    font-size: 1.5vw;
-}
+    max-width: 40vw;
+    font-size: 1.6vw;
 
-/* works Page ----------------------------------------------------------------------------------------------------------------------- */
-
-#worksFooter{
-    background-color: darkcyan;
-    min-height: 35vh;
+    font-weight: 600;
+    color: white;
+    font-family: 'Poppins', serif;
 }
 
 .timeline_content_wrapper{
-    font-size: 0.95vw;
+    font-size: 1.1vw;
     line-height: 1.5;
 
-    font-weight: 600;
-    color: grey;
-    font-family: 'lato', serif;
+    font-weight: 500;
+    color: black;
+    font-family: 'Ubuntu', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 .date{
     font-family: 'Ubuntu', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
-    font-style: italic;
-    color: grey;
+    color: var(--darkerCyan);
 
-    font-size: 0.8vw;
+    font-size: 0.95vw;
     margin-bottom: 2vh;
-}
-
-.timeline_content{
-
-    padding: 3vh;
-    border-radius: 2vh;
-    box-shadow: 5px 5px lightgray;
-
-    background-color: var(--grey);
-    margin-bottom: 5%;
 }
 
 main{
     margin: 10vh 20vh 10vh 20vh;
-    gap: 3%;
+    gap: 4%;
 
     display: grid;
-    grid-template-columns: 1fr 0.1fr 1fr;
-    grid-auto-rows: 1fr;
 
+    grid-auto-rows: 1fr;
     grid-template-areas: 
     
-    "one timeline none"
-    "none2 timeline two"
-    "three timeline none3"
-    "none4 timeline four"
-    "five timeline none5"
-    "none6 timeline six";
+    "one timeline ."
+    ". timeline two"
+    "three timeline ."
+    ". timeline four"
+    "five timeline ."
+    ". timeline six"
+    ". timeline seven"
+    "eight timeline ."
+    ". timeline nine"
+    "ten timeline ."
+    ". timeline eleven"
 
 }
  
@@ -786,9 +798,10 @@ main{
     height: 2vw;
 
     border-radius: 1vw;
-    background-color: darkcyan;
+    background-color: var(--darkestCyan);
 
-    position: absolute; /* Moving the circle left 50% and translating it -50% to the left centers it relative to its parent */
+    /* Move left 50% relative to body then translateX -50% relative it itself */
+    position: absolute; 
     left: 50%;
     transform: translateX(-50%);
 }
@@ -810,4 +823,19 @@ main{
 }
 #time_six{
     grid-area: six;
+}
+#time_seven{
+    grid-area: seven;
+}
+#time_eight{
+    grid-area: eight;
+}
+#time_nine{
+    grid-area: nine;
+}
+#time_ten{
+    grid-area: ten;
+}
+#time_eleven{
+    grid-area: eleven;
 }
