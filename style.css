@@ -1,5 +1,3 @@
-/* General ------------------------------------------------------------------------------------------------------------------ */
-
 /* https://fonts.google.com/ for custom fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
@@ -17,6 +15,7 @@
 
     --peach: #fff9ed; 
     --darkOrange: #ffa250;
+    --pinkish: #ff97a9;
 
     --lightishGreen: #62e799;
     --darkerCyan: #01A6A6;
@@ -30,19 +29,24 @@
 }
 
 body{
-    background-color: white; 
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 35vh;
+}
+
+#index_case_body{
+    padding-bottom: 40vh;
 }
 
 /* Background div includes both the nav bar and the intro content */
-#backgroundIndex{
+#background_top_index{
     
     background-image: linear-gradient(0deg, coral, lightcoral 20%,coral);
-    
+    min-height: 95vh;
+
     /* Only if the background is a URL */
     background-repeat: no-repeat;
     background-size: 100%;
-
-    min-height: 95vh;
 }
 
 /* Format Content Headers */
@@ -54,7 +58,6 @@ body{
     font-family: "Kanit", sans-serif;
 
     padding-top: 3%;
-
     color: black;
 }
 
@@ -91,7 +94,6 @@ body{
 
 .whiteText{
     font-family: 'Lato', Tahoma, Geneva, Verdana, sans-serif;
-
     font-weight: 1000;
     color: white;
 }
@@ -132,6 +134,10 @@ body{
 
 .barrelRoll{
     animation: barrelRoll 2s both;
+}
+
+.fadeIn{
+    animation: fadeIn 1.5s both;
 }
 
 @keyframes fadeInLeft{
@@ -182,11 +188,9 @@ body{
     from{
         transform: scale(0.95);
     }
-
     50%{
         transform: scale(1.05);
     }
-
     to{
         transform: scale(1);
     }
@@ -196,11 +200,9 @@ body{
     from{
         width: 0%;
     }
-
     50%{
         color: var(--peach);
     }
-
     to{
         width: 100%;
         color: #FFD700;
@@ -213,6 +215,15 @@ body{
     }
     to{
         transform: rotate(385deg); /* 360deg = 385deg - 25deg */
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }
 
@@ -232,7 +243,6 @@ header{
 
     /* Correctly place all children on the same x-position */
     align-items: center;
-
 }
 
 .fixedHeader{
@@ -247,6 +257,9 @@ header{
 }
 #contacts{
     background: var(--softBlue);
+}
+#works{
+    background: var(--pinkish);
 }
 #about{
     transition: background 250ms ease-in;
@@ -423,6 +436,86 @@ li a, .aboutLink{
     margin-top: 5%;
 }
 
+/* Footer -------------------------------------------------------------------------------------------------------------------------- */
+
+footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;  
+
+    min-height: 35vh;
+}
+
+#indexFooter{
+    background: linear-gradient(200deg, lightcoral, lightcoral 15%,coral);
+    height: 40vh;
+}
+#aboutFooter{
+    background-color: var(--darkerCyan);
+}
+#contactsFooter{
+    background-color: var(--softBlue);
+}
+#worksFooter{
+    background-color: var(--pinkish);
+}
+
+.aboutWebsite{
+    padding-top: 5%;
+
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.socials{
+    padding-top: 6vh;
+    font-size: 4.2vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5vh;
+}
+
+#index_socials{
+    padding-top: 2vh;
+}
+
+.socials img{
+    max-width: 6vh;
+}
+
+.socials img:hover{
+    cursor: pointer;
+}
+
+.legalFooter{
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+
+    /* absolute: the element is positioned absolutely to its first positioned parent AKA position: relative in footer div */
+    position: absolute;
+    bottom: 0;
+}
+
+/* For More Info Div ------------------------------------------------------------------------------------------------------------------------ */
+
+.forMoreInfo{
+    height: 25vh;
+    text-align: center;
+}
+
+#moreDetailsInMyWorks{
+    font-size: 4.2vh;
+    padding-top: 10vh;
+}
+
+#aboutIndex{
+    padding-top: 3vh;
+    font-size: 15px;
+}
+
 /* Computer History Container ---------------------------------------------------------------------------------------------------------------- */
 
 .compHistory{
@@ -535,78 +628,6 @@ li a, .aboutLink{
 
 .cyberstartContentContainer img{
     max-width: 20%;
-}
-
-/* For More Info Div ------------------------------------------------------------------------------------------------------------- */
-
-.forMoreInfo{
-    min-height: 25vh;
-
-    text-align: center;
-    background-image: linear-gradient(200deg, lightcoral, lightcoral 15%,coral);
-}
-
-#moreDetailsInMyWorks, .socials{
-    font-size: 4.2vh;
-    padding-top: 10vh;
-}
-
-#aboutIndex{
-    padding-top: 3vh;
-    font-size: 15px;
-}
-
-/* Footer (inside for more info div) ------------------------------------------------------------------------------------------------ */
-
-footer{
-    position: relative;
-    /* em is relative to the font size */
-    min-height: 20vh;
-}
-
-#aboutFooter{
-    background-color: var(--darkerCyan);
-    min-height: 35vh;
-}
-
-#contactsFooter{
-    background-color: var(--softBlue);
-    min-height: 35vh;
-}
-
-.aboutWebsite{
-    padding-top: 5%;
-
-    text-align: center;
-    font-size: 1.5vw;
-}
-
-.socials{
-
-    padding-top: 8vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3.5vh;
-}
-
-.socials img{
-    max-width: 6vh;
-}
-
-.socials img:hover{
-    cursor: pointer;
-}
-
-.legalFooter{
-
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white;
-
-    /* absolute: the element is positioned absolutely to its first positioned parent AKA position: relative in footer div */
-    position: absolute;
-    bottom: 0;
 }
 
 /* Contacts Page ----------------------------------------------------------------------------------------------------------------------- */
@@ -747,7 +768,6 @@ footer{
     font-weight: 500;
     color: black;
     font-family: 'Ubuntu', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 
 .date{
@@ -761,7 +781,7 @@ footer{
 
 main{
     margin: 10vh 20vh 10vh 20vh;
-    gap: 4%;
+    gap: 2%;
 
     display: grid;
 
@@ -774,14 +794,16 @@ main{
     ". timeline four"
     "five timeline ."
     ". timeline six"
-    ". timeline seven"
-    "eight timeline ."
-    ". timeline nine"
-    "ten timeline ."
-    ". timeline eleven"
-
+    "sevenP1 timeline ."
+    "sevenP2 timeline ."
+    ". timeline eight"
+    "nineP1 timeline ."
+    "nineP2 timeline ."
+    ". timeline tenP1"
+    ". timeline tenP2"
+    "eleven timeline .";
 }
- 
+
 .timeline_center{
     background-color: var(--darkGrey);
     width: 0.5vw;
@@ -824,18 +846,28 @@ main{
 #time_six{
     grid-area: six;
 }
-#time_seven{
-    grid-area: seven;
+#time_sevenP1{
+    grid-area: sevenP1;
+}
+#time_sevenP2{
+    grid-area: sevenP2;
 }
 #time_eight{
     grid-area: eight;
 }
-#time_nine{
-    grid-area: nine;
+#time_nineP1{
+    grid-area: nineP1;
 }
-#time_ten{
-    grid-area: ten;
+#time_nineP2{
+    grid-area: nineP2;
+}
+#time_tenP1{
+    grid-area: tenP1;
+}
+#time_tenP2{
+    grid-area: tenP2;
 }
 #time_eleven{
     grid-area: eleven;
 }
+

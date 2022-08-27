@@ -28,6 +28,42 @@ const nav_observer = new IntersectionObserver((entries) => {
 
 nav_observer.observe(top_content);
 
+
+const time_content = document.querySelectorAll(".timeline_content_wrapper");
+const timeline_options = {
+    rootMargin: "-110px 0px 0px 0px"
+};
+
+const timeline_observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+
+        // Do not add an animation for the first grid element
+        if (entry.isIntersecting && entry.target.id == "time_one") {
+            return;
+        }
+
+        // Add animation for every other grid element 
+        (entry.isIntersecting) ? entry.target.classList.add("fadeIn") : entry.target.classList.remove("xx");
+
+    });
+}, timeline_options);
+
+timeline_observer.observe(time_content[0]);
+timeline_observer.observe(time_content[1]);
+timeline_observer.observe(time_content[2]);
+timeline_observer.observe(time_content[3]);
+timeline_observer.observe(time_content[4]);
+timeline_observer.observe(time_content[5]);
+timeline_observer.observe(time_content[6]);
+timeline_observer.observe(time_content[7]);
+timeline_observer.observe(time_content[8]);
+timeline_observer.observe(time_content[9]);
+timeline_observer.observe(time_content[10]);
+timeline_observer.observe(time_content[11]);
+timeline_observer.observe(time_content[12]);
+timeline_observer.observe(time_content[13]);
+
+
 //  event listeners ----------------------------------------------------------------------------------------------------------------------
 
 // Allow link towards github and instagram when the user clicks on the icons
