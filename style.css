@@ -779,7 +779,7 @@ footer{
     margin-bottom: 2vh;
 }
 
-main{
+#timeline_wrapper{
     margin: 10vh 20vh 10vh 20vh;
     gap: 2%;
 
@@ -871,3 +871,53 @@ main{
     grid-area: eleven;
 }
 
+/* Works pages -------------------------------------------------------------------------------------------------------------------------- */
+
+#works_grid_wrapper{
+    display: grid;
+    margin: 10vh 20vh 10vh 20vh;
+    gap: 1rem;    
+
+    grid-template-areas: 
+    
+    "roblox discord discord"
+    "coming_soon misc FRC"
+    "coming_soon cyber FRC";
+}
+
+.works_grid_element{
+    outline: 3px solid lightblue;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 25vh;
+    border-radius: 1rem;
+}
+
+.works_grid_element p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--oceanBlue);
+}
+
+.works_grid_element:nth-child(1){
+    grid-area: roblox;
+}
+.works_grid_element:nth-child(2){
+    grid-area: discord;
+}
+.works_grid_element:nth-child(3){
+    grid-area: cyber;
+}
+.works_grid_element:nth-child(4){
+    grid-area: misc;
+}
+.works_grid_element:nth-child(5){
+    grid-area: FRC;
+}
+.works_grid_element:nth-child(6){
+    grid-area: coming_soon;
+}
