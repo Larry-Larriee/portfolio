@@ -8,6 +8,10 @@ const instaIcon = document.getElementById("instagramIcon");
 
 // FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
 
+const observer_options = () => {
+    rootmargin = '-200px 0px 0px 0px';
+};
+
 // Check when the local host reaches a certain div --> play animation
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -17,7 +21,8 @@ const observer = new IntersectionObserver(entries => {
             switch (entry.target.className){ // Switch statements are similar to if statements but cleaner
 
                 case "robloxContentContainer":
-                    document.querySelectorAll(".robloxContentContainer")[0].classList.add('fadeInLeft'); // [0] in this case is the div element
+
+                    document.querySelectorAll(".robloxContentContainer")[0].classList.add('fadeInLeft'); 
                     break; // break is used to exit the switch case
 
                 case "discordContentContainer":
@@ -25,7 +30,7 @@ const observer = new IntersectionObserver(entries => {
                     break;
                 
                 case "cyberstartContentContainer":
-                    document.querySelectorAll(".cyberImg")[0].classList.add('fadeFromTop');
+                    document.querySelectorAll(".cyberImg")[0].classList.add('fadeFromTop'); // [0] in this case is the div element
                     document.querySelectorAll(".cyberImg")[1].classList.add('fadeFromTop');
                     break;
 
@@ -37,7 +42,7 @@ const observer = new IntersectionObserver(entries => {
             }
         }
     })
-});
+}, observer_options);
 
 observer.observe(document.querySelector(".iconContainer"));
 observer.observe(document.querySelector('.robloxContentContainer'));
