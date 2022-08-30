@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 :root{
     --babyBlue: #4CBBCE;
@@ -24,6 +25,8 @@
     --darkestCyan: #019e9e;
 
     --markerYellow: #fdda16;
+    --gold: #ffb744;
+    --lighterYellow: #ffc363;
 }
 
 *{
@@ -275,7 +278,7 @@ header{
     background: var(--softBlue);
 }
 #works{
-    background: linear-gradient(200deg, coral, lightcoral 10%,coral);
+    background: var(--lighterYellow);
 }
 #about{
     transition: background 250ms ease-in;
@@ -473,7 +476,7 @@ footer{
     background-color: var(--softBlue);
 }
 #worksFooter{
-    background: linear-gradient(200deg, coral, lightcoral 10%,coral);
+    background: var(--lighterYellow);
 }
 
 .aboutWebsite{
@@ -789,10 +792,8 @@ footer{
 
 /* about Page ----------------------------------------------------------------------------------------------------------------------- */
 
-.about_me_desc_wrapper{
+.top_page_description_wrapper{
     min-height: 60vh;
-    background-color: var(--darkestCyan);
-
     margin-bottom: 10vh;
 
     display: flex;
@@ -800,7 +801,14 @@ footer{
     align-items: center;    
 }
 
-.about_me_desc_wrapper p{
+#top_page_about_me{
+    background-color: var(--darkestCyan);
+}
+#top_page_works{
+    background:var(--gold);
+}
+
+.top_page_description_wrapper p{
     text-align: center;
     max-width: 40vw;
     font-size: 1.6vw;
@@ -922,51 +930,88 @@ footer{
 
 /* Works pages -------------------------------------------------------------------------------------------------------------------------- */
 
-#works_grid_wrapper{
-    display: grid;
-    margin: 10vh 20vh 10vh 20vh;
-    gap: 0rem;    
-
-    grid-template-areas: 
-    
-    "roblox discord discord"
-    "coming_soon misc FRC"
-    "coming_soon cyber FRC";
+.works_font{
+    font-size: 1.3rem;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.works_grid_element{
-    outline: 3px solid lightblue;
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    min-height: 25vh;
-    border-radius: 1rem;
+.filter_area_wrapper{
+    margin: 10vh 5vh 10vh 5vh;
 }
 
-.works_grid_element p{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.2em;
+.blackHeader{
+    color: var(--blackish);
     font-weight: 600;
-    color: var(--oceanBlue);
+    
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
 }
 
-.works_grid_element:nth-child(1){
-    grid-area: roblox;
+.filter_select_wrapper{
+    margin-top: 5vh; /* Gap between header and select */
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
-.works_grid_element:nth-child(2){
-    grid-area: discord;
+
+.filter_select_section{
+    border-radius: 1.5rem;
+    border: 0.15rem solid var(--darkGrey);
+
+    padding: 1vh;
+    transition: 250ms ease;
 }
-.works_grid_element:nth-child(3){
-    grid-area: cyber;
+
+.filter_select_section:hover{
+    cursor: pointer;
+    border: 0.15rem solid var(--markerYellow);
+    transition: 250ms ease;
 }
-.works_grid_element:nth-child(4){
-    grid-area: misc;
+
+.filter_select_section_clicked{
+    border: 0.15rem solid var(--markerYellow);
+
+    color: white;
+    background-color: var(--gold);
 }
-.works_grid_element:nth-child(5){
-    grid-area: FRC;
+
+/* Projects --------------------------------------------------------------------------------------------------------------------------- */
+
+.work_content_wrapper{
+    margin: 10vh 5vh 10vh 5vh;
 }
-.works_grid_element:nth-child(6){
-    grid-area: coming_soon;
+
+.work_content{
+    margin-top: 5vh;
+    gap: 2.5rem;
+    max-width: 80vw;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-auto-rows: 1fr;
+}
+
+.work_content a{
+
+    padding: 5vh 5vh 5vh 5vh;
+
+    min-height: 20vh;
+    border-radius: 1.5rem;
+    border: 0.15rem solid var(--darkGrey);
+
+    color: var(--blackish);
+    text-decoration: none;
+    transition: 250ms ease;
+}
+
+.work_content a:hover{
+    
+    background-color: var(--peach);
+    border: 0.15rem solid var(--gold);
+    transition: 250ms ease;
+}
+
+.work_content_hidden{
+    display: none;
 }

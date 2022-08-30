@@ -8,10 +8,6 @@ const instaIcon = document.getElementById("instagramIcon");
 
 // FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
 
-const observer_options = () => {
-    rootmargin = '-200px 0px 0px 0px';
-};
-
 // Check when the local host reaches a certain div --> play animation
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -42,7 +38,7 @@ const observer = new IntersectionObserver(entries => {
             }
         }
     })
-}, observer_options);
+});
 
 observer.observe(document.querySelector(".iconContainer"));
 observer.observe(document.querySelector('.robloxContentContainer'));

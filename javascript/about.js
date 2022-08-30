@@ -7,13 +7,13 @@ const logo = document.getElementById("logo");
 const cyan_bird = "../images/Hummingbirds/darkcyan_logo.png";
 const black_bird = "../images/Hummingbirds/black_logo.png";
 
-const top_content = document.querySelector(".about_me_desc_wrapper");
+const top_content = document.querySelector(".top_page_description_wrapper");
 const header = document.querySelector("header");
 
 // FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
 
 const nav_options = {
-    rootMargin: "-100px 0px 0px 0px" // -100px because it starts at the top of the element and you're going down 100px away from header
+    rootMargin: "-100px 0px 0px 0px" // -100px as you want to start 100px early
 };
 
 // Change Navbar color when scrolling to main content
