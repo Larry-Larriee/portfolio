@@ -301,7 +301,9 @@ header{
 }
 
 .navLinks li a:hover, .aboutLink:hover{
-    color: lightcyan;
+    color: var(--grey);
+
+    transition: 250ms ease;
 }
 
 /* Separate each child in the navigation bar */
@@ -311,12 +313,14 @@ header{
 }
 
 /* Decorate each child in the navigation bar */
-li a, .aboutLink{
+.navLinks li a, .aboutLink{
 
     font-weight: 600;
     color: white;
     text-decoration: none;
     font-family: "Lato", sans-serif;
+    
+    transition: 250ms ease;
 }
 
 /* Format Logo and Text Banner */
@@ -533,35 +537,6 @@ footer{
 #aboutIndex{
     padding-top: 3vh;
     font-size: 15px;
-}
-
-/* Tell Me More ------------------------------------------------------------------------------------------------------------------------------ */
-
-.moreInfo{
-    border: var(--markerYellow) 1px solid;
-    padding: 1vh;
-    background: var(--pinker);
-
-    transition: 0.5s ease;
-    color: white;
-
-    position: absolute;
-}
-
-.moreInfo:hover{
-
-    transition: background 0.5s ease;
-    background: var(--lightishRed);
-}
-
-#roblox_moreInfo{
-    right: 0vw;
-    bottom: 0vh;
-}
-
-#discord_moreInfo{
-    left: 37.8vw;
-    bottom: 0vh;
 }
 
 /* Computer History Container ---------------------------------------------------------------------------------------------------------------- */
@@ -931,7 +906,7 @@ footer{
 /* Works pages -------------------------------------------------------------------------------------------------------------------------- */
 
 .works_font{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -994,21 +969,27 @@ footer{
 
 .work_content a{
 
-    padding: 5vh 5vh 5vh 5vh;
+    padding: 2em 1em; /* Use em so that padding is relative to font size */
+    min-height: 8rem;
 
-    min-height: 20vh;
-    border-radius: 1.5rem;
-    border: 0.15rem solid var(--darkGrey);
+    border-radius: 1rem;
+    border: 0.15rem solid var(--gold);
 
     color: var(--blackish);
     text-decoration: none;
     transition: 250ms ease;
+    box-shadow: 0.1rem 0.2rem var(--gold);
+
+    line-height: 1.4;
+
 }
 
 .work_content a:hover{
     
     background-color: var(--peach);
     border: 0.15rem solid var(--gold);
+
+    color: var(--darkOrange);
     transition: 250ms ease;
 }
 
