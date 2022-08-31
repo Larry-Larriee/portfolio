@@ -80,3 +80,11 @@ filterSections[6].addEventListener("click", () => {
     filterSections[6].classList.add("filter_select_section_clicked");
     projectContent[5].classList.remove("work_content_hidden");
 });
+
+// Event Listeners ----------------------------------------------------------------------------------------------------------------------
+
+const logo = document.getElementById("logo");
+
+logo.addEventListener("click", () => {
+    window.location.replace("/");
+});

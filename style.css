@@ -72,7 +72,7 @@ body{
 
     font-family: 'kanit', serif;
     font-weight: 525;
-    font-size: 1.43vw;
+    font-size: 3vh;
     text-align: justify;
 
     color: black;
@@ -336,8 +336,8 @@ header{
     margin-top: 2%; /* Adjust Logo position */
     margin-right: 5%;
 
-    width: 6.5vh;
-    height: 5vh;
+    max-width: 5vh;
+    min-height: 5vh;
 }
 
 .logoDiv p, #contactLogoDiv{
@@ -404,11 +404,11 @@ header{
     /* Positioned relative to absolutely to its first positioned parent 'intro' */
     position: absolute;
 
-    margin-top: 15%;
-    margin-left: 15%;
+    margin-top: 15vh;
+    left: 10vw;
 
     width: max-content;
-    font-size: 4vh;
+    font-size: 2vw;
     color: #c83634;
     transform: rotate(-10deg);
     font-family: 'Courier New', Courier, monospace;
@@ -536,7 +536,7 @@ footer{
 
 #aboutIndex{
     padding-top: 3vh;
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 /* Computer History Container ---------------------------------------------------------------------------------------------------------------- */
@@ -548,6 +548,7 @@ footer{
 
 .iconContainer{
     display: flex;
+    flex-wrap: wrap;
 
     justify-content: center;
     align-items: center;
@@ -556,7 +557,6 @@ footer{
 
 .programLang{
     margin-top: 5em;
-
     max-width: 30.5vh;
 }
 
@@ -588,8 +588,6 @@ footer{
 
     position: relative;
 
-    /* Override other font-size of 22px via contentText class */
-    font-size: 2.9vh;
 
     margin-left: 5%;
     margin-right: 10%;   
@@ -656,6 +654,105 @@ footer{
 .cyberstartContentContainer img{
     max-width: 20%;
 }
+
+/* Index Media Query ------------------------------------------------------------------------------------------------------------------- */
+
+/* Changes apply if the device has a width less than or equal to 50rem */
+@media (max-width: 50rem) {
+    *{
+        animation: none !important; /* Override all animations */
+    }
+
+    /* General ------------------------------------------------------------------------------------------------------------------------ */
+    .contentText, .introCaption{
+        font-size: 1rem;
+        max-width: 100%;
+        text-align: center;
+    }
+    .contentTitle{
+        text-align: center !important;
+        font-size: 2rem;
+    }
+    .introDescription{
+        font-size: 1rem;
+        max-width: 100%;
+    }
+    .whiteText{
+        font-size: 1rem !important;
+    }
+
+    /* Index ------------------------------------------------------------------------------------------------------------------------ */
+    
+    #background_top_index{
+        min-height: max-content;
+    }
+
+    header a, header p{
+        font-size: 0.5rem !important;
+    }
+    header img{
+        max-width: 2vh !important;
+        min-height: 2vh !important;
+    }
+    .introDescription{
+        text-align: left;
+    }
+
+    .programLang{
+        max-width: 15vh;
+    }
+    .robloxHistory{
+        min-height: 100%;
+    }
+    .robloxHistory video{
+        min-height: 100%;
+        margin-left: 0;
+    }
+    .robloxContentContainer{
+        flex-wrap: wrap;
+        justify-content: center;
+
+        margin: 0;
+        padding-bottom: 5vh;
+        text-align: center;
+    }
+    
+    .discordHistory{
+        min-height: max-content;
+    }
+    .discordContentContainer{
+        margin-top: 3%;
+        padding-bottom: 5vh;
+
+        display: grid;
+        place-items: center;
+
+        grid-template-areas: 
+        "img"
+        "text";
+    }
+    .discordContentContainer img{
+        grid-area: img;
+        margin: 0;
+    }
+    .discordContentContainer p{
+        grid-area: text;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .cyberStart{
+        min-height: max-content;
+    }
+    .cyberstartContentContainer{
+        padding-bottom: 5vh;
+        position: relative;
+    }
+    .cyberstartContentContainer p{
+        max-width: 100%;
+    }
+}
+
 
 /* Contacts Page ----------------------------------------------------------------------------------------------------------------------- */
 
@@ -996,3 +1093,6 @@ footer{
 .work_content_hidden{
     display: none;
 }
+
+/* Project Layout -------------------------------------------------------------------------------------------------------------------- */
+
