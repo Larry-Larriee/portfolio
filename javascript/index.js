@@ -17,7 +17,8 @@ const observer = new IntersectionObserver(entries => {
             switch (entry.target.className){ // Switch statements are similar to if statements but cleaner
 
                 case "robloxContentContainer":
-                    document.querySelectorAll(".robloxContentContainer")[0].classList.add('fadeInLeft'); // [0] in this case is the div element
+
+                    document.querySelectorAll(".robloxContentContainer")[0].classList.add('fadeInLeft'); 
                     break; // break is used to exit the switch case
 
                 case "discordContentContainer":
@@ -25,7 +26,7 @@ const observer = new IntersectionObserver(entries => {
                     break;
                 
                 case "cyberstartContentContainer":
-                    document.querySelectorAll(".cyberImg")[0].classList.add('fadeFromTop');
+                    document.querySelectorAll(".cyberImg")[0].classList.add('fadeFromTop'); // [0] in this case is the div element
                     document.querySelectorAll(".cyberImg")[1].classList.add('fadeFromTop');
                     break;
 
@@ -48,18 +49,18 @@ observer.observe(document.querySelector('.cyberstartContentContainer'));
 
 // SOCIAL MEDIA -------------------------------------------------------------------------------------------------------------------------
 
-// Open social media links in new tab
-githubIcon.addEventListener("click", () => {
+// Check if the github icon has loaded to prevent null error
+githubIcon?.addEventListener("click", () => {
     window.open("https://github.com/Larry-Larriee");
 });
 
-instaIcon.addEventListener("click", () =>{
+instaIcon?.addEventListener("click", () =>{
     window.open("https://www.instagram.com/larry_larriee/");    
 });
 
 // EASTER EGG ----------------------------------------------------------------------------------------------------------------------------
 
-logoDiv[0].addEventListener("click", () => {
+logoDiv[0]?.addEventListener("click", () => {
     const larry = document.getElementById("larryBeach");
     
     // Prevent spamming and glitching from occuring when the easter egg is clicked
@@ -68,7 +69,7 @@ logoDiv[0].addEventListener("click", () => {
     }
     
     // Remove the barrelRoll class from the larry image after the animation is complete
-    larry.classList.add("barrelRoll");
+    larry?.classList.add("barrelRoll");
     setTimeout(() => {
         larry.classList.remove("barrelRoll")
     } , 2000); 
