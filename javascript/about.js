@@ -38,7 +38,7 @@ const timeline_observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
 
         // Do not add an animation for the first grid element
-        if (entry.isIntersecting && entry.target.id == "time_one") {
+        if (entry.isIntersecting && entry.target.id === "time_one") {
             return;
         }
 

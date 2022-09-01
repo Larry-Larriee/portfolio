@@ -7,14 +7,14 @@ const projectContent = document.querySelectorAll(".work_content_wrapper");
 
 // Allow only one button to be active at a time 
 function remove_class(){
-    for (var section = 0; section < filterSections.length; section += 1){
+    for (let section = 0; section < filterSections.length; section += 1){
         filterSections[section].classList.remove("filter_select_section_clicked");
     }
 }
 
 // Hides all of the projects
 function filter_content(){
-    for (var content = 0; content < projectContent.length; content += 1){
+    for (let content = 0; content < projectContent.length; content += 1){
         projectContent[content].classList.add("work_content_hidden");
     }
 }
@@ -28,7 +28,7 @@ filterSections[0].addEventListener("click", () => {
     filterSections[0].classList.add("filter_select_section_clicked");
 
     // Reveal all projects
-    for (var i = 0; i < projectContent.length; i += 1){
+    for (let i = 0; i < projectContent.length; i += 1){
         projectContent[i].classList.remove("work_content_hidden");
     }
 });
