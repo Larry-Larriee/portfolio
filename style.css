@@ -455,8 +455,12 @@ header{
     border-radius: 13vw;
     transform: rotate(25deg);
 
-    margin-left: 7%;
-    margin-top: 5%;
+    margin-left: 7vw;
+    margin-top: 15vh;
+}
+
+.hamburger{
+    display: none;
 }
 
 /* Footer -------------------------------------------------------------------------------------------------------------------------- */
@@ -529,7 +533,7 @@ footer{
     text-align: center;
 }
 
-#moreDetailsInMyWorks{
+.forMoreInfo p{
     font-size: 4.2vh;
     padding-top: 10vh;
 }
@@ -557,7 +561,7 @@ footer{
 
 .programLang{
     margin-top: 5em;
-    max-width: 30.5vh;
+    max-width: 28vh;
 }
 
 /* Roblox Experience ---------------------------------------------------------------------------------------------------------------- */
@@ -658,48 +662,94 @@ footer{
 /* Index Media Query ------------------------------------------------------------------------------------------------------------------- */
 
 /* Changes apply if the device has a width less than or equal to 50rem */
-@media (max-width: 50rem) {
+@media (max-width: 44.5rem) {
     *{
         animation: none !important; /* Override all animations */
     }
 
-    /* General ------------------------------------------------------------------------------------------------------------------------ */
-    .contentText, .introCaption{
-        font-size: 1rem;
+    /* Navigation burger */
+    .hamburger{
+        display: flex;
+    }
+
+    /* Remove hyperlinks on nav to center hummingbird image and setup burger */
+    nav, #about_me_navigation_link{ 
+        display: none;
+    }
+
+    header img{
+        max-width: 1.5rem !important;
+        min-height: 1.5rem !important;
+    }
+
+    /* For main text */
+    .contentText{
+        margin: 2rem 1rem 2rem 1rem !important;
+        
+        font-size: 0.9rem;
         max-width: 100%;
         text-align: center;
     }
+
+    /* For Main Title Headers */
     .contentTitle{
         text-align: center !important;
         font-size: 2rem;
-    }
-    .introDescription{
-        font-size: 1rem;
-        max-width: 100%;
-    }
-    .whiteText{
-        font-size: 1rem !important;
+
+        margin-bottom: 2rem;
     }
 
-    /* Index ------------------------------------------------------------------------------------------------------------------------ */
-    
+    /* For footer */
+    .whiteText{
+        font-size: 1rem !important;
+        margin: 0rem 1rem 0rem 1rem;
+    }
+    .legalFooter{
+        display: none;
+    }
+}
+
+/* Index Page ---------------------------------------------------------------------------------------------------------------------- */
+@media (max-width: 44.5rem) {
+
     #background_top_index{
         min-height: max-content;
     }
 
-    header a, header p{
-        font-size: 0.5rem !important;
+    .logoDiv p{
+        display: none; /* Remove Larry Le | Digital Portoflio */
     }
-    header img{
-        max-width: 2vh !important;
-        min-height: 2vh !important;
+
+    #larryBeach{
+        margin: 2rem 1rem 2rem 0rem;
+    }
+
+    .introCaption, #indexMainText{
+        font-size: 1.1rem;
+        max-width: 100%;
+
+        margin-top: 2rem;
     }
     .introDescription{
         text-align: left;
+        font-size: 1rem;
+        max-width: 100%;
+
+        padding: 2rem 0rem 2.5rem 0rem;
     }
 
+    .introWrapper h2{
+        display: none;
+    }
+
+    #pointing_arrow{
+        display: none;
+    }
+
+    /* Main Content */
     .programLang{
         max-width: 15vh;
+        margin-top: 4em;
     }
     .robloxHistory{
         min-height: 100%;
@@ -713,7 +763,6 @@ footer{
         justify-content: center;
 
         margin: 0;
-        padding-bottom: 5vh;
         text-align: center;
     }
     
@@ -722,7 +771,6 @@ footer{
     }
     .discordContentContainer{
         margin-top: 3%;
-        padding-bottom: 5vh;
 
         display: grid;
         place-items: center;
@@ -745,6 +793,9 @@ footer{
         min-height: max-content;
     }
     .cyberstartContentContainer{
+        margin: 0;
+
+
         padding-bottom: 5vh;
         position: relative;
     }

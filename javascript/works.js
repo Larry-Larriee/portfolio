@@ -85,6 +85,18 @@ filterSections[6].addEventListener("click", () => {
 
 const logo = document.getElementById("logo");
 
-logo.addEventListener("click", () => {
+const githubIcon = document.getElementById("githubIcon");
+const instaIcon = document.getElementById("instagramIcon");
+
+logo?.addEventListener("click", () => {
     window.location.replace("/");
+});
+
+// Check if the github icon has loaded to prevent null error
+githubIcon?.addEventListener("click", () => {
+    window.open("https://github.com/Larry-Larriee");
+});
+
+instaIcon?.addEventListener("click", () =>{
+    window.open("https://www.instagram.com/larry_larriee/");
 });
