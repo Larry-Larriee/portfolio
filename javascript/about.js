@@ -79,3 +79,12 @@ githubIcon.addEventListener("click", () => {
 logo.addEventListener("click", () => {
     window.location.replace("/");
 });
+
+// MOBILE MENU --------------------------------------------------------------------------------------------------------------------------
+
+const hambuger_icon = document.querySelector('.hamburger_icon');
+
+hambuger_icon?.addEventListener('click', () => {
+    const mobile_nav = document.querySelector('.mobile_nav');
+    mobile_nav.classList.toggle("content_hidden");
+});

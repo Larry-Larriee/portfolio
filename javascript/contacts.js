@@ -52,3 +52,12 @@ iconWrapper[2].addEventListener("click", () => {
 iconWrapper[3].addEventListener("click", () => {
     window.open("https://www.instagram.com/larry_larriee/");    
 });
+
+// MOBILE MENU --------------------------------------------------------------------------------------------------------------------------
+
+const hambuger_icon = document.querySelector('.hamburger_icon');
+
+hambuger_icon?.addEventListener('click', () => {
+    const mobile_nav = document.querySelector('.mobile_nav');
+    mobile_nav.classList.toggle("content_hidden");
+});
