@@ -21,20 +21,36 @@
     <body>
 
         <!-- The header element contains the logo and the navigation bar -->
-        <header id="about" class="fixedHeader">
-            <div class="logoDiv">
-                <img id="logo" alt="portfolio Logo" src="/images/Hummingbirds/darkcyan_logo.png">
-                <a href="/" id="contactLogoDiv">Larry Le | Digital Portfolio</a>
+        <header class="about fixedHeader">
+
+            <!-- Regular navigation for desktops ---------------------------------------------------------------------------------------- -->
+            <div class="nav_wrapper">
+                <img alt="mobile menu icon" src="/images/icons/mobile-menu.png" class="hamburger_icon">
+
+                <div class="logoDiv">
+                    <img alt="portfolio Logo" src="/images/Hummingbirds/darkcyan_logo.png" id="logo">
+                    <a href="/" class="logo_text"><p>Larry Le | Digital Portfolio</p></a>
+                </div>
+
+                <nav>
+                    <ul class="navLinks">
+                        <li><a href="/pages/works.html">My Works</a></li>
+                        <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
+                        <li><a href="/pages/contacts.html">Contacts</a></li>
+                    </ul>
+                </nav>
+                <p><a class="aboutLink" href="/about.html" id="about_me_navigation_link">About Me</a></p> 
             </div>
-            <nav>
-                <ul class="navLinks">
-                    <li><a href="/pages/works.html">My Works</a></li>
-                    <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
-                    <li><a href="/pages/contacts.html">Contacts</a></li>
-                </ul>
-            </nav>
-            <p><a class="aboutLink" href="about.html">About Me</a></p> 
+
+            <!-- Mobile navigation that fires through media query ----------------------------------------------------------------------- -->
+            <ul class="mobile_nav content_hidden">
+                <li><a href="/pages/works.html">My Works</a></li>
+                <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
+                <li><a href="/pages/contacts.html">Contacts</a></li>
+                <li><a href="/about.html">About Me</a></li>
+            </ul>
         </header>
+
 
         <div class="top_page_description_wrapper" id="top_page_about_me">
             <p class="fadeFromTop">

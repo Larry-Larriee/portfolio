@@ -117,6 +117,10 @@ body{
     background-color: var(--markerYellow);
 }
 
+.content_hidden{
+    display: none !important;
+}
+
 /* Animations --------------------------------------------------------------------------------------------------------------------- */
 
 /* (optional) guarantee the animation to work on different browser versions with -webkit or -mz */
@@ -249,19 +253,19 @@ body{
 /* Navagation Bar --------------------------------------------------------------------------------------------------------------------- */
 
 /* Position the entire navigation bar correctly to style */
-header{
+.nav_wrapper{
 
     /* Take leftover space and equally distrubute */
     justify-content: space-between; 
     
     /* Top, Right, Bottom, Left */
     padding: 1.4vh 10% 1.4vh 10%;
-    
     display: flex;
-    /* gap: 5rem; */
 
     /* Correctly place all children on the same x-position */
     align-items: center;
+
+    transition: 100ms ease-in;
 }
 
 .fixedHeader{
@@ -271,16 +275,16 @@ header{
     z-index: 1;
 }
 
-#index{
+.index{
     background-image: linear-gradient(200deg, lightcoral, lightcoral 15%,coral);
 }
-#contacts{
+.contacts{
     background: var(--softBlue);
 }
-#works{
+.works{
     background: var(--lighterYellow);
 }
-#about{
+.about{
     transition: background 250ms ease-in;
     background: var(--darkerCyan);
 }
@@ -340,7 +344,7 @@ header{
     min-height: 5vh;
 }
 
-.logoDiv p, #contactLogoDiv{
+.logoDiv p, .logo_text{
 
     font-size: 1.1vw;
     font-weight: 600;
@@ -455,8 +459,8 @@ header{
     border-radius: 13vw;
     transform: rotate(25deg);
 
-    margin-left: 7%;
-    margin-top: 5%;
+    margin-left: 7vw;
+    margin-top: 15vh;
 }
 
 /* Footer -------------------------------------------------------------------------------------------------------------------------- */
@@ -484,7 +488,7 @@ footer{
 }
 
 .aboutWebsite{
-    padding-top: 5%;
+    padding-top: 3.5rem;
 
     text-align: center;
     font-size: 1.5vw;
@@ -529,7 +533,7 @@ footer{
     text-align: center;
 }
 
-#moreDetailsInMyWorks{
+.forMoreInfo p{
     font-size: 4.2vh;
     padding-top: 10vh;
 }
@@ -557,7 +561,7 @@ footer{
 
 .programLang{
     margin-top: 5em;
-    max-width: 30.5vh;
+    max-width: 28vh;
 }
 
 /* Roblox Experience ---------------------------------------------------------------------------------------------------------------- */
@@ -657,63 +661,137 @@ footer{
 
 /* Index Media Query ------------------------------------------------------------------------------------------------------------------- */
 
+.hamburger_icon{
+    display: none;
+}
+.mobile_nav{
+    display: none;
+}
+
 /* Changes apply if the device has a width less than or equal to 50rem */
-@media (max-width: 50rem) {
+@media (max-width: 44.5rem) {
     *{
         animation: none !important; /* Override all animations */
     }
 
-    /* General ------------------------------------------------------------------------------------------------------------------------ */
-    .contentText, .introCaption{
-        font-size: 1rem;
+    /* For main text */
+    .contentText{
+        margin: 2rem 1rem 2rem 1rem !important;
+        
+        font-size: 0.9rem;
         max-width: 100%;
         text-align: center;
     }
+
+    /* For Main Title Headers */
     .contentTitle{
         text-align: center !important;
         font-size: 2rem;
-    }
-    .introDescription{
-        font-size: 1rem;
-        max-width: 100%;
-    }
-    .whiteText{
-        font-size: 1rem !important;
+
+        margin-bottom: 2rem;
     }
 
-    /* Index ------------------------------------------------------------------------------------------------------------------------ */
+    /* For footer */
+    .whiteText{
+        font-size: 1rem !important;
+        margin: 0rem 1rem 0rem 1rem;
+    }
+    .legalFooter{
+        display: none;
+    }
+}
+
+/* Navigation burger */
+/* Hide mobile menu for screens bigger than 44.5rem */
+@media (max-width: 44.5rem){
+
+    .hamburger_icon{
+        display: flex;
+    }
+    header img{
+        max-width: 1.5rem !important;
+        min-height: 1.5rem !important;
+    }
+
+    /* Remove hyperlinks on nav to center hummingbird image and setup burger */
+    nav, #about_me_navigation_link{ 
+        display: none;
+    }
+
+    /* give body a min height of 100vh and fill that 100vh with the header */
+    .hamburger_icon_clicked_body{
+        overflow: hidden; /* Make body unscrollable */
+    }
+
+    .mobile_nav{
+        display: flex;
+        padding: 3vh 10% 3vh 10%;
     
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .mobile_nav li{
+        list-style: none;
+    }
+    .mobile_nav a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+
+        font-weight: 600;
+        font-family: 'Ubuntu', sans-serif;
+    }
+}
+
+/* Index Page ---------------------------------------------------------------------------------------------------------------------- */
+@media (max-width: 44.5rem) {
+
     #background_top_index{
         min-height: max-content;
     }
 
-    header a, header p{
-        font-size: 0.5rem !important;
+    /* Remove Larry Le | Digital Portoflio, workworkwork, and the down arrow for space */
+    .logoDiv p, .introWrapper h2, #pointing_arrow{
+        display: none; 
     }
-    header img{
-        max-width: 2vh !important;
-        min-height: 2vh !important;
+
+    #larryBeach{
+        margin: 2rem 1rem 2rem 0rem;
+    }
+
+    .introCaption, #indexMainText{
+        font-size: 1.1rem;
+        max-width: 100%;
+
+        margin-top: 2rem;
     }
     .introDescription{
         text-align: left;
+        font-size: 1rem;
+        max-width: 100%;
+
+        padding: 2rem 0rem 2.5rem 0rem;
     }
 
+    /* Main Content */
     .programLang{
         max-width: 15vh;
+        margin-top: 4em;
     }
+
     .robloxHistory{
-        min-height: 100%;
+        min-height: max-content;
     }
     .robloxHistory video{
         min-height: 100%;
         margin-left: 0;
+        max-width: 12rem;
     }
     .robloxContentContainer{
         flex-wrap: wrap;
         justify-content: center;
 
         margin: 0;
-        padding-bottom: 5vh;
         text-align: center;
     }
     
@@ -722,7 +800,6 @@ footer{
     }
     .discordContentContainer{
         margin-top: 3%;
-        padding-bottom: 5vh;
 
         display: grid;
         place-items: center;
@@ -734,6 +811,10 @@ footer{
     .discordContentContainer img{
         grid-area: img;
         margin: 0;
+        
+        width: 100%;
+        max-width: 15rem;
+        min-height: 10rem;
     }
     .discordContentContainer p{
         grid-area: text;
@@ -745,6 +826,8 @@ footer{
         min-height: max-content;
     }
     .cyberstartContentContainer{
+        margin: 0;
+
         padding-bottom: 5vh;
         position: relative;
     }
@@ -753,18 +836,17 @@ footer{
     }
 }
 
-
 /* Contacts Page ----------------------------------------------------------------------------------------------------------------------- */
 
 .iconWrapper{
     display: flex;
     align-items: center;
 
-    margin-left: 8.2%;
+    margin: 1.5rem 0rem 0rem 9rem;
+    gap: 1.8rem;
 }
 
 .iconWrapper img{
-    margin: 2% 0 0 2%; 
     max-width: 2.5vw;
 
     transform: rotate(0deg);
@@ -779,9 +861,9 @@ footer{
 }
 
 #contactInfo{
-    width: 50vh;
+    width: max-content;
     outline: 2px solid lightgrey;
-    padding: 3vh;
+    padding: 3vh 6vh 3vh 6vh;
     box-shadow: 2vh 2vh var(--softBlue);
 
     margin: 3%;
@@ -860,6 +942,74 @@ footer{
 .withYouWrapper a:hover{
     transition: ease 0.25s;
     color:rgb(233, 63, 63);
+}
+
+@media (max-width: 44.5rem) {
+    
+    .iconWrapper{
+        margin: 1.5rem 0rem 1.5rem 2.4rem;
+        gap: 1rem;
+    }
+    .iconWrapper img{
+        max-width: 1.4rem;
+    }
+    
+    #contactInfo{
+        width: max-content;
+        outline: 2px solid lightgrey;
+        padding: 3vh 5vh 3vh 5vh;
+        box-shadow: 2vh 2vh var(--softBlue);
+    
+        margin: 3%;
+        text-align: center;
+    
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--oceanBlue);
+        font-family: 'Poppins', serif;
+    }
+
+    .skillset{
+        margin-top: 3rem;
+        padding-bottom: 2.5rem;
+    }
+    .blueHeader{
+        font-size: 1.2rem;
+        text-align: center;
+
+        margin: 2.5rem !important;
+    }
+    .skillWrapper{
+        max-width: max-content;
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: flex-start;
+        gap: 1.5rem;
+
+        margin-left: 2.5rem;
+    }
+
+    .skillWrapper article{
+        display: flex;
+        flex-wrap: nowrap;
+
+        align-items: center;
+        gap: 2rem;
+
+    }
+    .skillWrapper img{
+        width: 3rem;
+    }
+    .skillWrapper p{
+        margin: 0;
+        font-size: 1.1rem;
+    }
+
+    .withYouWrapper a{
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
 }
 
 /* about Page ----------------------------------------------------------------------------------------------------------------------- */
@@ -1000,6 +1150,46 @@ footer{
     grid-area: eleven;
 }
 
+@media (max-width: 44.5rem) {
+
+    .top_page_description_wrapper p{
+        max-width: max-content;
+        font-size: 1rem;
+        margin: 0rem 3rem 0rem 3rem;
+    }
+
+    #timeline_wrapper{
+        margin: 2rem 2rem 2rem 2rem;
+        grid-auto-rows: auto;
+
+        grid-template-areas: 
+        
+        "timeline one"        
+        "timeline two"
+        "timeline three"
+        "timeline four"
+        "timeline five"
+        "timeline six"
+        "timeline sevenP1"
+        "timeline sevenP2"
+        "timeline eight"
+        "timeline nineP1"
+        "timeline nineP2"
+        "timeline tenP1"
+        "timeline tenP2"
+        "timeline eleven";
+    }
+    
+    .timeline_content_wrapper{
+        font-size: 1rem;
+        overflow: wrap;
+    }
+    .date{
+        font-size: 0.9rem;
+    }
+
+}
+
 /* Works pages -------------------------------------------------------------------------------------------------------------------------- */
 
 .works_font{
@@ -1090,8 +1280,12 @@ footer{
     transition: 250ms ease;
 }
 
-.work_content_hidden{
-    display: none;
+@media (max-width: 44.5rem) {
+
+    .work_content{
+        grid-template-columns: 1fr; /* Only one row instead of three */
+        max-width: 25rem;
+    }
 }
 
 /* Project Layout -------------------------------------------------------------------------------------------------------------------- */
