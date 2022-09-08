@@ -43,7 +43,7 @@ const timeline_observer = new IntersectionObserver((entries) => {
         }
 
         // Add animation for every other grid element 
-        (entry.isIntersecting) ? entry.target.classList.add("fadeIn") : entry.target.classList.remove("xx");
+        (entry.isIntersecting) ? entry.target.classList.add("fadeIn") : null;
 
     });
 }, timeline_options);
