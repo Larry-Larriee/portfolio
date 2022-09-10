@@ -6,6 +6,7 @@ const githubIcon = document.getElementById("githubIcon");
 const instaIcon = document.getElementById("instagramIcon");
 
 const background_video = document.querySelector("video");
+const project_sections = document.querySelectorAll(".project_section_wrapper");
 
 // BACKGROUND AUTOPLAY ------------------------------------------------------------------------------------------------------------------
 
@@ -13,7 +14,7 @@ const video_controls = {
     rootMargin: "-150px 0px 0px 0px"
 };
 
-const observer = new IntersectionObserver((entries) => {
+const video_observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         
         if (entry.isIntersecting) {
@@ -27,7 +28,32 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, video_controls);
 
-observer.observe(background_video);
+video_observer.observe(background_video);
+
+const content_options = {
+    rootMargin: "0% 0% -30% 0%" /* 0% top, 0% right, -30% bottom, 0% left */
+                                /* target element is +30% when the bottom of the target element touching top of parent */
+};
+
+const content_observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+
+            // Add animation for all children in content section
+            for (var i = 0; i < entry.target.children.length; i += 1){
+
+                /* Must hide content if we use -50% as we dont want animation to play AFTER content already visible */
+                entry.target.children[i].classList.remove("content_hidden");
+
+                entry.target.children[i].classList.add("fadeFromBottom");
+            }
+        }
+    });
+}, content_options);
+
+content_observer.observe(project_sections[0]);
+content_observer.observe(project_sections[1]);
+content_observer.observe(project_sections[2]);
 
 // EVENT LISTENERS -----------------------------------------------------------------------------------------------------------------------
 

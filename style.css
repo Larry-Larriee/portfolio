@@ -616,11 +616,6 @@ footer{
     max-width: 28vh;
 }
 
-/* Roblox Experience ---------------------------------------------------------------------------------------------------------------- */
-
-
-
-
 /* Index Media Query ------------------------------------------------------------------------------------------------------------------- */
 
 .hamburger_icon{
@@ -640,8 +635,8 @@ footer{
     .contentText{
         margin: 2rem 1rem 2rem 1rem !important;
         
-        font-size: 0.9rem;
-        max-width: 100%;
+        font-size: 1rem;
+        max-width: 20rem;
         text-align: center;
     }
 
@@ -650,7 +645,7 @@ footer{
         text-align: center !important;
         font-size: 2rem;
 
-        margin-bottom: 2rem;
+        padding: 2rem 0rem 1rem 0rem !important;
     }
 
     /* For footer */
@@ -735,66 +730,89 @@ footer{
         padding: 2rem 0rem 2.5rem 0rem;
     }
 
-    /* Main Content */
-    .programLang{
-        max-width: 15vh;
-        margin-top: 4em;
-    }
-
-    .robloxHistory{
-        min-height: max-content;
-    }
-    .robloxHistory video{
-        min-height: 100%;
-        margin-left: 0;
-        max-width: 12rem;
-    }
-    .robloxContentContainer{
+    .iconContainer{
+        display: flex;
         flex-wrap: wrap;
+
         justify-content: center;
+        align-items: center;
 
-        margin: 0;
-        text-align: center;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
     }
-    
-    .discordHistory{
-        min-height: max-content;
-    }
-    .discordContentContainer{
-        margin-top: 3%;
 
+    .iconContainer img{ 
+        margin-top: 2rem; /* Referencing the children of a class has more priority than referencing the child's class */
+        max-width: 20vh;
+    }
+
+    /* Main Content */
+    .mainContentContainer{
+        gap: 1rem;
+    }
+
+    .mainContentContainer video{
+        max-width: 16rem;
+        min-height: 10rem;   
+        object-fit: cover;
+
+        border-radius: 1rem;
+    }
+
+    #roblox_content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #discord_content{
         display: grid;
-        place-items: center;
-
         grid-template-areas: 
+        
         "img"
         "text";
+
+        place-items: center;
+        gap: 1rem;
     }
-    .discordContentContainer img{
+    #discord_image{
         grid-area: img;
-        margin: 0;
-        
-        width: 100%;
-        max-width: 15rem;
-        min-height: 10rem;
     }
-    .discordContentContainer p{
+    #discord_text{
         grid-area: text;
-        margin: 0;
-        max-width: 100%;
     }
 
-    .cyberStart{
-        min-height: max-content;
+    #discord_content img{
+        max-width: 16rem;
+        border-radius: 1rem;
     }
-    .cyberstartContentContainer{
-        margin: 0;
+    #cyberstart_content {
+        display: grid;
+        grid-template-areas: 
 
-        padding-bottom: 5vh;
-        position: relative;
+        "cyber_image_finalist cyberstart_content_text"
+        "cyber_image_semifinalist cyberstart_content_text";
+
+        min-height: 28rem;
+        width: 100%;
+        margin: 0;
+        gap: 0rem;
+
+        place-items: center;
     }
-    .cyberstartContentContainer p{
-        max-width: 100%;
+
+    #cyberstart_content img{
+        max-width: 7rem;
+    }
+    #cyberstart_content img:nth-child(0){
+        grid-area: cyber_image_finalist;
+    }
+    #cyberstart_content img:nth-last-child(1){
+        grid-area: cyber_image_semifinalist;
+    }
+
+    #cyberstart_content p{
+        max-width: 12rem;
+        grid-area: cyberstart_content_text;
     }
 }
 
@@ -1289,6 +1307,7 @@ footer{
     z-index: -1;
 
     object-fit: cover; /* Video will fill to fit container, cropping if needed */
+    opacity: 0.95;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------ */
