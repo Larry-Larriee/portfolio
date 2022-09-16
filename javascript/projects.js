@@ -18,8 +18,8 @@ const video_observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         
         if (entry.isIntersecting) {
-            background_video.autoplay = true;
             background_video.play();
+            
         } else {
             background_video.pause();
             background_video.currentTime = 0;
@@ -40,7 +40,7 @@ const content_observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
 
             // Add animation for all children in content section
-            for (var i = 0; i < entry.target.children.length; i += 1){
+            for (let i = 0; i < entry.target.children.length; i += 1){
 
                 /* Must hide content if we use -50% as we dont want animation to play AFTER content already visible */
                 entry.target.children[i].classList.remove("content_hidden");
@@ -68,4 +68,13 @@ githubIcon?.addEventListener("click", () => {
 
 instaIcon?.addEventListener("click", () =>{
     window.open("https://www.instagram.com/larry_larriee/");    
+});
+
+// MOBILE MENU --------------------------------------------------------------------------------------------------------------------------
+
+const hambuger_icon = document.querySelector('.hamburger_icon');
+
+hambuger_icon?.addEventListener('click', () => {
+    const mobile_nav = document.querySelector('.mobile_nav');
+    mobile_nav.classList.toggle("content_hidden");
 });

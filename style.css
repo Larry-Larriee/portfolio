@@ -27,7 +27,7 @@
     --markerYellow: #fdda16;
     --gold: #ffb744;
     --lighterYellow: #ffc363;
-    --yellowFaded: #ffb744a8;
+    --yellowFaded: #ffb744ca;
 }
 
 *{
@@ -510,10 +510,13 @@ footer{
 
 .socials img{
     max-width: 6vh;
+    transition: 650ms ease-out;
 }
-
 .socials img:hover{
     cursor: pointer;
+
+    transition: 650ms ease-out;
+    transform: rotate(360deg);
 }
 
 .legalFooter{
@@ -574,6 +577,8 @@ footer{
 
     max-width: 35vw;
     min-height: 42vh;
+
+    border-radius: 1rem;
 }
 #discord_description{
     max-width: 50%;
@@ -765,20 +770,8 @@ footer{
     }
 
     #discord_content{
-        display: grid;
-        grid-template-areas: 
-        
-        "img"
-        "text";
-
-        place-items: center;
-        gap: 1rem;
-    }
-    #discord_image{
-        grid-area: img;
-    }
-    #discord_text{
-        grid-area: text;
+        display: flex;
+        flex-direction: row-reverse; /* Reverse the order of the text and image */
     }
 
     #discord_content img{
@@ -894,10 +887,11 @@ footer{
 }
 
 .withYouWrapper{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     place-items: center;
 
-    margin-bottom: 13%;
+    min-height: 25rem;
 }
 
 .withYouWrapper h1{
@@ -917,6 +911,7 @@ footer{
     outline: 2px solid lightgrey;
 
     transition: ease 0.25s;
+    margin-top: 3%;
 }
 
 .withYouWrapper a:hover{
@@ -1285,7 +1280,7 @@ footer{
     background: var(--yellowFaded);
     padding: 2vh;
 }
-.project_metadata{
+.project_metadata p{
     font-size: 1rem;
 }
 
@@ -1299,7 +1294,7 @@ footer{
 
 }
 
-.project_background, .project_background video{
+.project_background, .project_background video, .project_background img{
     width: 100%; /* 100% of the parent */
     height: 100%;
 
@@ -1307,7 +1302,7 @@ footer{
     z-index: -1;
 
     object-fit: cover; /* Video will fill to fit container, cropping if needed */
-    opacity: 0.95;
+    
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------ */
@@ -1345,6 +1340,53 @@ footer{
 }
 .project_section_image img{
     max-width: 35vw;
-    min-height: 30vh;
+    min-height: 37.5vh;
     border-radius: 1rem;
+
+    transition: 500ms ease;
+}
+
+.project_section_image img:hover{
+    cursor: pointer;
+    transition: 500ms ease;
+
+    transform: scale(1.1);
+}
+
+@media (max-width: 44.5rem) {
+
+    .top_page_project_wrapper{
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 4rem;
+        min-height: 60vh; /* Cut top content size to make the project_background better */ 
+    }
+    .project_description_introduction, .project_header_title{
+        max-width: 20rem;
+    }
+    .project_background video{
+        object-fit: fill;
+    }
+
+    .project_section_wrapper{
+        gap: 3.5rem;
+        display: grid;
+
+        grid-template-areas: 
+        "text" 
+        "image";
+    }
+    .project_section_image{
+        grid-area: image;
+    }
+    .project_section_features_wrapper{
+        grid-area: text;
+    }
+    .project_section_image img{
+        max-width: 20rem;
+    }
+    .project_section_features_wrapper h1{
+        font-size: 2.5rem;
+    }
 }

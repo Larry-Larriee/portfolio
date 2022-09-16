@@ -1,0 +1,148 @@
+<!-- Declare that this is an HTML5 Website -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <!-- The head element gives information about this page, like "title" -->
+    <head>
+
+        <!-- No corrupt char & compatiable on multiple devices -->
+        <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Larry Le | Contacts</title>
+        <meta name="description" content="Contact Larry Le">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="icon" href="/images/Hummingbirds/red_logo_model2.png">
+
+        <script src="/javascript/projects.js" async defer></script> <!-- Script loads before continuting content -->
+
+    </head>
+
+    <body>
+        <!-- The header element contains the logo and the navigation bar -->
+        <header class="works">
+
+            <!-- Regular navigation for desktops ---------------------------------------------------------------------------------------- -->
+            <div class="nav_wrapper">
+                <img alt="mobile menu icon" src="/images/icons/mobile-menu.png" class="hamburger_icon">
+
+                <div class="logoDiv">
+                    <img alt="portfolio Logo" src="/images/Hummingbirds/yellower_logo.png" id="logo">
+                    <a href="/" class="logo_text"><p>Larry Le | Digital Portfolio</p></a>
+                </div>
+
+                <nav>
+                    <ul class="navLinks">
+                        <li><a href="/pages/works.html">My Works</a></li>
+                        <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
+                        <li><a href="/pages/contacts.html">Contacts</a></li>
+                    </ul>
+                </nav>
+                <p><a class="aboutLink" href="/about.html" id="about_me_navigation_link">About Me</a></p> 
+            </div>
+
+            <!-- Mobile navigation that fires through media query ----------------------------------------------------------------------- -->
+            <ul class="mobile_nav content_hidden">
+                <li><a href="/pages/works.html">My Works</a></li>
+                <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
+                <li><a href="/pages/contacts.html">Contacts</a></li>
+                <li><a href="/about.html">About Me</a></li>
+            </ul>
+        </header>
+
+        <div class="top_page_project_wrapper">
+            
+            <div class="project_background">
+                <video loop autoplay muted>
+                    <source src="/videos/museum_fade_6.mp4" type="video/mp4" >
+                </video>
+            </div>
+            
+            <h1 class="project_header_title whiteText fadeInLeft">
+                Roblox Studio: Museum of LUA
+
+                <div class="project_metadata whiteText">
+                    <p>Date: July 2021</p>
+                    <p>Skills & Languages Used: LUA, Roblox Studio Environment</p> <!-- Such as github, vscode, roblox studio -->
+                </div>
+            </h1>
+            
+            <article class="project_description_introduction whiteText fadeInRight">
+                The Museum of LUA is educational game showcasing the different properties of Roblox Studio that allow us to create amazing experiences!
+            </article>
+        </div>
+        
+        <div class="project_section_wrapper">
+            <div class="project_section_features_wrapper content_hidden">
+                
+                <h1>What Can It Do?</h1>
+                
+                <article class="features_description">
+                    <p>
+                        This creation is uncopylocked, meaning anyone from Roblox can fork the game and look inside the program. From cloning to animation
+                        to data-saving and more, the Museum of LUA can guide and assist individuals that want to code on Roblox by revealing the different
+                        things they can learn and apply to their own game.  
+                    </p>    
+                </article>
+            </div>
+
+            <div class="project_section_image content_hidden">
+                <img alt="project image" src="/images/projects/Roblox/Museum_Image.png">
+            </div>
+        </div>
+
+        <div class="project_section_wrapper grey_content_background">
+            
+            <div class="project_section_image content_hidden">
+                <img class="zoom_image" alt="project image" src="/images/projects/Roblox/CFrame_Script.png">
+            </div>
+
+            <div class="project_section_features_wrapper content_hidden">
+                
+                <h1>How Do You Do That?</h1>
+                
+                <article class="features_description">
+                    <p>
+                        I wanted to script this experience to help others learn, but also to document the personal learning that I was doing. Many these lessons 
+                        came from TheDevKing, an experienced Roblox developer who I knew could help me become more knowledgeable with LUA. If there
+                        was something I didn't understand, I would also go on the Roblox DevForums and ask others about the material. 
+                    </p>    
+                </article>
+            </div>
+        </div>  
+
+        <div class="project_section_wrapper">
+
+            <div class="project_section_features_wrapper content_hidden">
+                
+                <h1>Key Takeaways</h1>
+                
+                <section class="project_key_takeaways">
+                    <p>
+                        In general, Roblox Development has really taught me how to discipline myself to keep pushing past concepts that I did not totally understand
+                        at first. It's also very easy to publish your game on Roblox for anyone to play, which allowed me to get feedback from my friends on what 
+                        else I should be adding to the game. Of course, my games are not perfect and there are likely still bugs, but for me, Roblox Studio was a huge 
+                        step in the right direction for my personal development.
+                    </p>    
+                </section>
+            </div>
+        </div>
+
+    </body>
+
+
+
+    <footer id="worksFooter">
+
+        <p class="whiteText aboutWebsite">This portfolio was started during the summer of 2022: thanks for visiting!</p>
+
+        <div class="socials">   
+            <p class="whiteText">Follow me on: </p>
+            <img src="/images/icons/instagram_white.png" alt="instagram" id="instagramIcon">
+            <img src="/images/icons/github_white.png" alt="github" id="githubIcon">
+        </div>
+
+        <h5 class="legalFooter">Copyright &copy; 2022 Larry Le Under MIT Licensing</h5>
+    </footer>
+
+</html>

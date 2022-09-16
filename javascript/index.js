@@ -20,15 +20,15 @@ const observer = new IntersectionObserver(entries => {
             /* This new instance is constantly running == check if it is intersecting */
             if (entry.isIntersecting) {
             
-                (entry.target.id == "roblox_content")? entry.target.classList.add("fadeInLeft") : null;
-                (entry.target.id == "discord_content")? entry.target.classList.add("fadeInRight") : null;
+                (entry.target.id === "roblox_content")? entry.target.classList.add("fadeInLeft") : null;
+                (entry.target.id === "discord_content")? entry.target.classList.add("fadeInRight") : null;
 
-                if (entry.target.id == "cyberstart_content"){
+                if (entry.target.id === "cyberstart_content"){
                     document.querySelectorAll(".cyberImg")[0].classList.add('fadeInLeft');
                     document.querySelectorAll(".cyberImg")[1].classList.add('fadeInRight');
                 }
 
-                (entry.target.className == "iconContainer")? entry.target.classList.add("expand") : null;
+                (entry.target.className === "iconContainer")? entry.target.classList.add("expand") : null;
         }
     })
 }, observer_controls);
