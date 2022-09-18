@@ -772,6 +772,9 @@ footer{
     #discord_content{
         display: flex;
         flex-direction: row-reverse; /* Reverse the order of the text and image */
+
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
     #discord_content img{
