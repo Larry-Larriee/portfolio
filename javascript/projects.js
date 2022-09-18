@@ -5,10 +5,13 @@ const logo = document.getElementById("logo");
 const githubIcon = document.getElementById("githubIcon");
 const instaIcon = document.getElementById("instagramIcon");
 
-const background_video = document.querySelector("video");
-const project_sections = document.querySelectorAll(".project_section_wrapper");
+const project_header_title = document.querySelector(".project_header_title");
+const project_header_description = document.querySelector(".project_description_introduction");
 
 // BACKGROUND AUTOPLAY ------------------------------------------------------------------------------------------------------------------
+
+const background_video = document.querySelector("video");
+const project_sections = document.querySelectorAll(".project_section_wrapper");
 
 const video_controls = {
     rootMargin: "-150px 0px 0px 0px"
@@ -18,17 +21,27 @@ const video_observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         
         if (entry.isIntersecting) {
-            background_video.play();
+            background_video.play(); // Play the video and have top header animations
             
+            project_header_title.classList.add("fadeInLeft");
+            project_header_description.classList.add("fadeInRight");
+
         } else {
             background_video.pause();
-            background_video.currentTime = 0;
+            background_video.currentTime = 0; // Reset video (for black screen) and remove top header animations to reuse again later if needed
+
+            project_header_title.classList.remove("fadeInLeft");
+            project_header_description.classList.remove("fadeInRight");
         } 
 
     });
 }, video_controls);
 
-video_observer.observe(background_video);
+if (background_video){
+    video_observer.observe(background_video);
+}
+
+// PAGE INTERSECTION OBSERVER -----------------------------------------------------------------------------------------------------------
 
 const content_options = {
     rootMargin: "0% 0% -30% 0%" /* 0% top, 0% right, -30% bottom, 0% left */
@@ -57,7 +70,7 @@ content_observer.observe(project_sections[2]);
 
 // EVENT LISTENERS -----------------------------------------------------------------------------------------------------------------------
 
-logo.addEventListener("click", () => {
+logo?.addEventListener("click", () => {
     window.location.replace("/");
 });
 

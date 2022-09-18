@@ -27,7 +27,7 @@
     --markerYellow: #fdda16;
     --gold: #ffb744;
     --lighterYellow: #ffc363;
-    --yellowFaded: #ffb744ca;
+    --yellowFaded: #ffb744e8;
 }
 
 *{
@@ -432,7 +432,7 @@ body{
 
     font-family: "Koulen", sans-serif;
     font-size: 3vh;
-    max-width: 25vw;
+    max-width: max-content;
     color: var(--peach);
 }
 
@@ -1302,7 +1302,7 @@ footer{
     z-index: -1;
 
     object-fit: cover; /* Video will fill to fit container, cropping if needed */
-    
+    opacity: 0.95;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------ */
@@ -1344,6 +1344,7 @@ footer{
     border-radius: 1rem;
 
     transition: 500ms ease;
+    border: 0.1rem solid black;
 }
 
 .project_section_image img:hover{
