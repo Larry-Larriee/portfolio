@@ -10,37 +10,52 @@ const project_header_description = document.querySelector(".project_description_
 
 // BACKGROUND AUTOPLAY ------------------------------------------------------------------------------------------------------------------
 
-const background_video = document.querySelector("video");
+var background = document.querySelector("video");
 const project_sections = document.querySelectorAll(".project_section_wrapper");
 
-const video_controls = {
+const controls = {
     rootMargin: "-150px 0px 0px 0px"
 };
 
-const video_observer = new IntersectionObserver((entries) => {
+const background_observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         
         if (entry.isIntersecting) {
-            background_video.play(); // Play the video and have top header animations
-            
-            project_header_title.classList.add("fadeInLeft");
-            project_header_description.classList.add("fadeInRight");
+            if (background === document.querySelector("video")){
+                
+                background.play(); // Play the video and have top header animations
+                
+                project_header_title.classList.add("fadeInLeft");
+                project_header_description.classList.add("fadeInRight");
+            }
+            else if (background === document.getElementById("background_image")){
 
-        } else {
-            background_video.pause();
-            background_video.currentTime = 0; // Reset video (for black screen) and remove top header animations to reuse again later if needed
+                project_header_title.classList.add("fadeInLeft");
+                project_header_description.classList.add("fadeInRight");
+            }
+        }
 
-            project_header_title.classList.remove("fadeInLeft");
-            project_header_description.classList.remove("fadeInRight");
-        } 
-
+        else {
+            if (background === document.querySelector("video")){
+                background.pause();
+                background.currentTime = 0; // Reset video (for black screen) and remove top header animations to reuse again later if needed
+            }
+            else if (background === document.getElementById("background_image")){
+                project_header_title.classList.remove("fadeInLeft");
+                project_header_description.classList.remove("fadeInRight");
+            }
+        }
     });
-}, video_controls);
+}, controls);
 
-if (background_video){
-    video_observer.observe(background_video);
+
+if (background){
+    background_observer.observe(background);
 }
-
+else{
+    var background = document.getElementById("background_image");
+    background_observer.observe(background);
+}
 // PAGE INTERSECTION OBSERVER -----------------------------------------------------------------------------------------------------------
 
 const content_options = {
