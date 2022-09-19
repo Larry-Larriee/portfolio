@@ -10,7 +10,7 @@ const project_header_description = document.querySelector(".project_description_
 
 // BACKGROUND AUTOPLAY ------------------------------------------------------------------------------------------------------------------
 
-var background = document.querySelector("video");
+let background = document.querySelector("video");
 const project_sections = document.querySelectorAll(".project_section_wrapper");
 
 const controls = {
@@ -48,14 +48,14 @@ const background_observer = new IntersectionObserver((entries) => {
     });
 }, controls);
 
-
 if (background){
     background_observer.observe(background);
 }
 else{
-    var background = document.getElementById("background_image");
+    let background = document.getElementById("background_image"); // Redeclare background variable to be the image instead of video
     background_observer.observe(background);
 }
+
 // PAGE INTERSECTION OBSERVER -----------------------------------------------------------------------------------------------------------
 
 const content_options = {

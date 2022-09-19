@@ -21,8 +21,8 @@ const observer = new IntersectionObserver(entries => {
             if (entry.isIntersecting) {
             
                 (entry.target.id === "roblox_content")? entry.target.classList.add("fadeInLeft") :  false;
-                (entry.target.id === "discord_content")? entry.target.classList.add("fadeInRight") : null;
-                (entry.target.className === "iconContainer")? entry.target.classList.add("expand") : null;
+                (entry.target.id === "discord_content")? entry.target.classList.add("fadeInRight") : false;
+                (entry.target.className === "iconContainer")? entry.target.classList.add("expand") : false;
 
                 if (entry.target.id === "cyberstart_content"){
                     document.querySelectorAll(".cyberImg")[0].classList.add('fadeInLeft');
