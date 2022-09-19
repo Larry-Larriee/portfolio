@@ -8,43 +8,36 @@ const instaIcon = document.getElementById("instagramIcon");
 
 // FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
 
+const observer_controls = {
+    rootMargin: "-100px 0px 0px 0px"
+};
+
+
 // Check when the local host reaches a certain div --> play animation
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
 
             /* This new instance is constantly running == check if it is intersecting */
             if (entry.isIntersecting) {
-            switch (entry.target.className){ // Switch statements are similar to if statements but cleaner
+            
+                (entry.target.id === "roblox_content")? entry.target.classList.add("fadeInLeft") :  false;
+                (entry.target.id === "discord_content")? entry.target.classList.add("fadeInRight") : false;
+                (entry.target.className === "iconContainer")? entry.target.classList.add("expand") : false;
 
-                case "robloxContentContainer":
-
-                    document.querySelectorAll(".robloxContentContainer")[0].classList.add('fadeInLeft'); 
-                    break; // break is used to exit the switch case
-
-                case "discordContentContainer":
-                    document.querySelectorAll(".discordContentContainer")[0].classList.add('fadeInRight');
-                    break;
-                
-                case "cyberstartContentContainer":
-                    document.querySelectorAll(".cyberImg")[0].classList.add('fadeFromTop'); // [0] in this case is the div element
-                    document.querySelectorAll(".cyberImg")[1].classList.add('fadeFromTop');
-                    break;
-
-                case "iconContainer":
-                    document.querySelectorAll(".iconContainer")[0].classList.add('expand');
-                    break;
-
-                // no default
-            }
+                if (entry.target.id === "cyberstart_content"){
+                    document.querySelectorAll(".cyberImg")[0].classList.add('fadeInLeft');
+                    document.querySelectorAll(".cyberImg")[1].classList.add('fadeInRight');
+                }
         }
     })
-});
+}, observer_controls);
+
+const mainContentContainer = document.querySelectorAll(".mainContentContainer");
 
 observer.observe(document.querySelector(".iconContainer"));
-observer.observe(document.querySelector('.robloxContentContainer'));
-observer.observe(document.querySelector('.discordContentContainer'));
-observer.observe(document.querySelector('.cyberstartContentContainer'));
-
+observer.observe(mainContentContainer[0]);
+observer.observe(mainContentContainer[1]);
+observer.observe(mainContentContainer[2]);
 
 // EVENT LISTENERS ----------------------------------------------------------------------------------------------------------------------
 

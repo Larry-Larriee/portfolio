@@ -1,16 +1,13 @@
 // VARIABLES -----------------------------------------------------------------------------------------------------------------------------
 
-const filterSections = document.querySelectorAll(".filter_select_section");
+const filterSectionsButtons = document.querySelectorAll(".filter_select_section");
+const clickedFilter = "filter_select_section_clicked";
+const contentHidden = "content_hidden";
+
 const projectContent = document.querySelectorAll(".work_content_wrapper");
+const projectButtons = document.querySelectorAll(".work_content");
 
 // FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
-
-// Allow only one button to be active at a time 
-function remove_class(){
-    for (let section = 0; section < filterSections.length; section += 1){
-        filterSections[section].classList.remove("filter_select_section_clicked");
-    }
-}
 
 // Hides all of the projects
 function filter_content(){
@@ -19,66 +16,97 @@ function filter_content(){
     }
 }
 
-// Note: There are seven buttons but only six categories of projects ----------------------------------------------------------------------
-
-filterSections[0].addEventListener("click", () => {
-    remove_class();
-    filter_content();
-
-    filterSections[0].classList.add("filter_select_section_clicked");
-
-    // Reveal all projects
-    for (let i = 0; i < projectContent.length; i += 1){
-        projectContent[i].classList.remove("content_hidden");
+function remove_class(nameOfClass, target){
+    for (let section = 0; section < target.length; section += 1){
+        target[section].classList.remove(nameOfClass);
     }
-});
+}
 
-filterSections[1].addEventListener("click", () => {
-    remove_class();
+// Note: There are seven buttons but six categories of projects and one featured -------------------------------------------------------
+
+const featured = filterSectionsButtons[0];
+const roblox = filterSectionsButtons[1];
+const web = filterSectionsButtons[2];
+const robotics = filterSectionsButtons[3];
+const discord = filterSectionsButtons[4];
+const cybersecurity = filterSectionsButtons[5];
+const cad = filterSectionsButtons[6];
+
+featured.addEventListener("click", () => {
+    remove_class(clickedFilter, filterSectionsButtons);
     filter_content();
 
-    filterSections[1].classList.add("filter_select_section_clicked");
+    featured.classList.add(clickedFilter);
+
+    // Reveal all projects (wrapper containing all the projects)
+    remove_class(contentHidden, projectContent);
+
+    // Hide select projects from the featured section ONLY
+    const critiverse = document.getElementById("critiverse");
+    
+    critiverse.classList.add("content_hidden");
+});
+
+roblox.addEventListener("click", () => {
+    remove_class(clickedFilter, filterSectionsButtons);
+    filter_content();
+
+    roblox.classList.add("filter_select_section_clicked");
     projectContent[0].classList.remove("content_hidden");
+    remove_class(contentHidden, projectButtons[0].children); 
+
 });
 
-filterSections[2].addEventListener("click", () => {
-    remove_class();
+web.addEventListener("click", () => {
+    remove_class(clickedFilter, filterSectionsButtons);
     filter_content();
 
-    filterSections[2].classList.add("filter_select_section_clicked");
+    web.classList.add("filter_select_section_clicked");
     projectContent[1].classList.remove("content_hidden");
+
+    // Remove the content_hidden class from all the children of the projectButtons[1] element
+    remove_class(contentHidden, projectButtons[1].children); 
+
 });
 
-filterSections[3].addEventListener("click", () => {
-    remove_class();
+robotics.addEventListener("click", () => {
+    remove_class(clickedFilter, filterSectionsButtons);
     filter_content();
 
-    filterSections[3].classList.add("filter_select_section_clicked");
+    robotics.classList.add("filter_select_section_clicked");
     projectContent[2].classList.remove("content_hidden");
+    remove_class(contentHidden, projectButtons[2].children); 
+
 });
 
-filterSections[4].addEventListener("click", () => {
-    remove_class();
+discord.addEventListener("click", () => {
+    remove_class(clickedFilter, filterSectionsButtons);
     filter_content();
 
-    filterSections[4].classList.add("filter_select_section_clicked");
+    discord.classList.add("filter_select_section_clicked");
     projectContent[3].classList.remove("content_hidden");
+    remove_class(contentHidden, projectButtons[3].children); 
+
 });
 
-filterSections[5].addEventListener("click", () => {
-    remove_class();
+cybersecurity.addEventListener("click", () => {
+    remove_class(clickedFilter, filterSectionsButtons);
     filter_content();
 
-    filterSections[5].classList.add("filter_select_section_clicked");
+    cybersecurity.classList.add("filter_select_section_clicked");
     projectContent[4].classList.remove("content_hidden");
+    remove_class(contentHidden, projectButtons[4].children); 
+
 });
 
-filterSections[6].addEventListener("click", () => {
-    remove_class();
+cad.addEventListener("click", () => {
+    remove_class(clickedFilter, filterSectionsButtons);
     filter_content();
 
-    filterSections[6].classList.add("filter_select_section_clicked");
+    cad.classList.add("filter_select_section_clicked");
     projectContent[5].classList.remove("content_hidden");
+    remove_class(contentHidden, projectButtons[5].children); 
+
 });
 
 // Event Listeners ----------------------------------------------------------------------------------------------------------------------
