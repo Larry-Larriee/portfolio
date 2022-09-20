@@ -1,60 +1,80 @@
 // VARIABLES -----------------------------------------------------------------------------------------------------------------------------
 
-const logo = document.getElementById("logo");
-
 const githubIcon = document.getElementById("githubIcon");
 const instaIcon = document.getElementById("instagramIcon");
+
+const logo = document.getElementById("logo");
 
 const project_header_title = document.querySelector(".project_header_title");
 const project_header_description = document.querySelector(".project_description_introduction");
 
+const project_sections = document.querySelectorAll(".project_section_wrapper");
+
 // BACKGROUND AUTOPLAY ------------------------------------------------------------------------------------------------------------------
 
-let background = document.querySelector("video");
-const project_sections = document.querySelectorAll(".project_section_wrapper");
+var background; // New background variable
+
+// If there is a video, set background to video, else set background to img
+(document.querySelector("video")) ? background = document.querySelector("video") : background = document.getElementById("background_image");
 
 const controls = {
     rootMargin: "-150px 0px 0px 0px"
 };
 
+// Hide project headers (hidden in the first place to prevent animation from starting AFTER the
+// header has loaded) 
+project_header_title.classList.add("content_hidden");
+project_header_description.classList.add("content_hidden");
+
+// Unhide the project headers and add animation 
+function project_header_fadeIn(){
+
+    project_header_title.classList.remove("content_hidden");
+    project_header_description.classList.remove("content_hidden");
+
+    project_header_title.classList.add("fadeInLeft");
+    project_header_description.classList.add("fadeInRight");
+}
+function project_header_fadeOut(){
+
+    project_header_title.classList.add("content_hidden");
+    project_header_description.classList.add("content_hidden");
+
+    project_header_title.classList.remove("fadeInLeft");
+    project_header_description.classList.remove("fadeInRight");
+}
+
 const background_observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         
         if (entry.isIntersecting) {
-            if (background === document.querySelector("video")){
+            if (background == document.querySelector("video")){
                 
                 background.play(); // Play the video and have top header animations
-                
-                project_header_title.classList.add("fadeInLeft");
-                project_header_description.classList.add("fadeInRight");
+                project_header_fadeIn();
             }
-            else if (background === document.getElementById("background_image")){
-
-                project_header_title.classList.add("fadeInLeft");
-                project_header_description.classList.add("fadeInRight");
+            else if (background == document.getElementById("background_image")){
+                project_header_fadeIn();
             }
         }
-
         else {
-            if (background === document.querySelector("video")){
+            if (background == document.querySelector("video")){
                 background.pause();
-                background.currentTime = 0; // Reset video (for black screen) and remove top header animations to reuse again later if needed
+                background.currentTime = 0; 
+                // Reset video (for black screen) and remove top header animations to reuse again later if needed
+                
+                project_header_fadeOut();
             }
-            else if (background === document.getElementById("background_image")){
-                project_header_title.classList.remove("fadeInLeft");
-                project_header_description.classList.remove("fadeInRight");
+            else if (background == document.getElementById("background_image")){
+                project_header_fadeOut();
             }
         }
     });
 }, controls);
 
-if (background){
-    background_observer.observe(background);
-}
-else{
-    let background = document.getElementById("background_image"); // Redeclare background variable to be the image instead of video
-    background_observer.observe(background);
-}
+
+background_observer.observe(background);
+
 
 // PAGE INTERSECTION OBSERVER -----------------------------------------------------------------------------------------------------------
 
@@ -70,7 +90,7 @@ const content_observer = new IntersectionObserver((entries) => {
             // Add animation for all children in content section
             for (let i = 0; i < entry.target.children.length; i += 1){
 
-                /* Must hide content if we use -50% as we dont want animation to play AFTER content already visible */
+                /* Must hide content if we use -30% as we dont want animation to play AFTER content already visible */
                 entry.target.children[i].classList.remove("content_hidden");
 
                 entry.target.children[i].classList.add("fadeFromBottom");

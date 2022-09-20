@@ -12,6 +12,10 @@ const let_me_know_button = document.querySelector("#letMeKnowButton")
 
 // FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
 
+const spawn_control = {
+    rootMargin: "0px 0px -100px 0px"
+};
+
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -19,18 +23,20 @@ const observer = new IntersectionObserver(entries => {
             switch (entry.target.id){
 
                 case "skillWrapper":
+                    skillWrapper.classList.remove("content_hiding");
                     skillWrapper.classList.add('fadeFromBottom');
                     break;
                 
                 case "letMeKnowButton":
-                    let_me_know_button.classList.add('fadeFromBottom');
+                    let_me_know_button.classList.remove("content_hiding");
+                    let_me_know_button.classList.add('fadeIn');
                     break;
 
                 // no default
             }    
         }
     })
-});
+}, spawn_control);
 
 observer.observe(skillWrapper);
 observer.observe(let_me_know_button);

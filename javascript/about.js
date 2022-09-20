@@ -31,7 +31,7 @@ nav_observer.observe(top_content);
 
 const time_content = document.querySelectorAll(".timeline_content_wrapper");
 const timeline_options = {
-    rootMargin: "-110px 0px 0px 0px"
+    rootMargin: "0% 0% -15% 0%"
 };
 
 const timeline_observer = new IntersectionObserver((entries) => {
@@ -41,10 +41,12 @@ const timeline_observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting && entry.target.id === "time_one") {
             return;
         }
-
+               
         // Add animation for every other grid element 
-        (entry.isIntersecting) ? entry.target.classList.add("fadeIn") : false;
-
+        else if (entry.isIntersecting) {
+            entry.target.classList.remove("content_hiding");
+            entry.target.classList.add("fadeIn");
+        }
     });
 }, timeline_options);
 

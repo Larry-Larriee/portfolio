@@ -123,6 +123,9 @@ body{
 .content_hidden{
     display: none !important;
 }
+.content_hiding{
+    visibility: hidden !important;
+}
 
 /* Animations --------------------------------------------------------------------------------------------------------------------- */
 
@@ -163,7 +166,7 @@ body{
 }
 
 .fadeIn{
-    animation: fadeIn 1.5s both;
+    animation: fadeIn 1s both;
 }
 
 @keyframes fadeInLeft{
