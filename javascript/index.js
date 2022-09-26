@@ -9,22 +9,44 @@ const instaIcon = document.getElementById("instagramIcon");
 // FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
 
 const observer_controls = {
-    rootMargin: "-100px 0px 0px 0px"
+    rootMargin: "0% 0% -15% 0%"
 };
 
+function revealContent(targetEntry){
+    targetEntry.classList.remove("content_hiding");
+}
 
 // Check when the local host reaches a certain div --> play animation
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
 
             /* This new instance is constantly running == check if it is intersecting */
-            if (entry.isIntersecting) {
-            
-                (entry.target.id === "roblox_content")? entry.target.classList.add("fadeInLeft") :  false;
-                (entry.target.id === "discord_content")? entry.target.classList.add("fadeInRight") : false;
-                (entry.target.className === "iconContainer")? entry.target.classList.add("expand") : false;
+            if (entry.isIntersecting) {            
+                const targetEntry = entry.target;
+
+                if (targetEntry.id === "iconContainer") {
+                    revealContent(targetEntry);
+                    entry.target.classList.add("expand");
+                }
+                
+                if (targetEntry.id === "roblox_content") {
+                    revealContent(targetEntry);
+                    entry.target.classList.add("fadeInLeft");
+                }
+                
+                if (targetEntry.id === "discord_content") {
+                    revealContent(targetEntry);
+                    entry.target.classList.add("fadeInRight");
+                }
+
+                if (targetEntry.id === "iconContainer") {
+                    revealContent(targetEntry);
+                    entry.target.classList.add("expand");
+                }
 
                 if (entry.target.id === "cyberstart_content"){
+                    revealContent(targetEntry);
+
                     document.querySelectorAll(".cyberImg")[0].classList.add('fadeInLeft');
                     document.querySelectorAll(".cyberImg")[1].classList.add('fadeInRight');
                 }
