@@ -64,9 +64,8 @@ body{
 .contentText{
 
     font-family: 'kanit', serif;
-    font-weight: 525;
-    font-size: 3vh;
-    text-align: justify;
+    font-size: 2.5vh;
+    text-align: left;
 
     color: black;
 }
@@ -121,17 +120,17 @@ body{
 
 /* (optional) guarantee the animation to work on different browser versions with -webkit or -mz */
 .fadeInLeft{
-    animation: fadeInLeft 1.5s both;   
+    animation: fadeInLeft 1.2s both;   
     /* Declare indicator name for the animation and how long it lasts */
 }
 
 .fadeInRight{
-    animation: fadeInRight 1.5s both;
+    animation: fadeInRight 1.2s both;
     /* Both = object has inital state and keeps final state after animation occurs */
 }
 
 .fadeFromTop{
-    animation: fadeFromTop 1.5s both;
+    animation: fadeFromTop 1.2s both;
 }
 
 .fadeFromBottom{
@@ -163,7 +162,7 @@ body{
 @keyframes fadeInLeft{
     from{
         opacity: 0;
-        transform: translateX(-3.25vw);
+        transform: translateX(-3vw);
     }
     to{
         opacity: 1;
@@ -174,7 +173,7 @@ body{
 @keyframes fadeInRight{
     from{
         opacity: 0;
-        transform: translateX(3.25vw);
+        transform: translateX(3vw);
     }
     to{
         opacity: 1;
@@ -185,7 +184,7 @@ body{
 @keyframes fadeFromTop{
     from{
         opacity: 0;
-        transform: translateY(-3.25vw);
+        transform: translateY(-3vw);
     }
     to{
         opacity: 1;
@@ -196,7 +195,7 @@ body{
 @keyframes fadeFromBottom{
     from{
         opacity: 0;
-        transform: translateY(6.4vh);
+        transform: translateY(6vh);
     }
     to{
         opacity: 1;
@@ -544,57 +543,52 @@ footer{
     height: 100%;
     min-height: 80vh;
 }
-#robloxWrapper, #cyberstartWrapper{
+.subjectWrapperPeach{
     background-color: var(--peach);
 }
 
-.mainContentContainer{
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    gap: 5rem;
-    flex: 1;
-
-    margin: 4% 10% 0% 10%;
-}
-#roblox_description{
-
-    align-self: flex-start; /* Aligns the element to the top of its container */
-}
-.mainContentContainer video{
-
-    max-width: 35vw;
-    min-height: 42vh;
-
-    border-radius: 1rem;
-}
-#discord_description{
-    max-width: 50%;
-}
-
-.mainContentContainer img{
-
-    max-width: 20%;
-}
-
-#discord_content{
-    gap: 6rem;
-}
-#discord_content img{
-    max-width: 40%;
-    border-radius: 1rem;
-}
-
-#cyberstart_content{
-    margin: 4% 3% 0% 3%; 
+.featured-projects-wrapper-mainpage{
     
+    padding: 5vh 15vh 5vh 15vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5vw;
 }
-#cyberstart_content p{
-    max-width: 40%;
-    text-align: center;
+.featured-projects-wrapper-mainpage img{
+
+    max-width: 20vw;
+    max-height: 20vh;
 }
+
+.project-mainpage{
+
+    border: 0.5vh solid var(--blackish);
+    border-radius: 3vh;
+
+    max-width: 25vw;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+
+    align-items: center;
+    
+    padding: 1vw;
+    background: #ffe8bc;
+
+    text-decoration: none;
+    transition: 1s ease;
+
+}
+
+.project-mainpage:hover{
+    box-shadow: 2px 2px 8px var(--blackish);
+    transition: 200ms ease;
+
+    background: #ffd68b;
+}
+
 
 /* Computer History Container ---------------------------------------------------------------------------------------------------------------- */
 
@@ -608,7 +602,8 @@ footer{
 
 .iconContainer img{
     margin-top: 5em;
-    max-width: 28vh;
+    min-width: 25vh;
+    max-width: 25vh;
 }
 
 /* Index Media Query ------------------------------------------------------------------------------------------------------------------- */
