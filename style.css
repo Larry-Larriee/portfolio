@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Oswald&family=Passions+Conflict&family=Roboto:wght@300&family=Ubuntu&display=swap');
 
 :root{
     --babyBlue: #4CBBCE;
@@ -14,7 +15,8 @@
     --darkGrey: #9f9f9f;
     --blackish: #444444;
 
-    --peach: #fff2d7; 
+    --peach: #ffe8bc;
+    --darkerPeach: #ffd991; 
     --darkOrange: #ffa250;
     --pinkish: #ff97a9;
     --pinker: #ff8383;
@@ -35,17 +37,12 @@
     box-sizing: border-box; /* border-box --> all content is inside its container always */ 
     margin: 0;
     padding: 0;
-
 }
 
 
 body{
     position: relative;
     min-height: 100vh;
-    padding-bottom: 35vh;
-}
-
-#index_case_body{
     padding-bottom: 40vh;
 }
 
@@ -459,7 +456,21 @@ footer{
     width: 100%;
     bottom: 0;  
 
-    min-height: 35vh;
+    min-height: 40vh;
+}
+
+.footer-content-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    min-height: 40vh;
+}
+
+.footer-content-wrapper img{
+
+    max-width: 8vh;
+    min-height: 8vh;
 }
 
 #indexFooter{
@@ -476,36 +487,49 @@ footer{
     background: var(--lighterYellow);
 }
 
-.aboutWebsite{
-    padding-top: 3.5rem;
+.footer-logo{
+    display: flex;
+    gap: 1vw;
 
-    text-align: center;
-    font-size: 1.5vw;
+    font-size: 3.5vh;
+
+    align-items: center;
+    justify-content: center;
 }
 
 .socials{
-    padding-top: 6vh;
-    font-size: 4.2vh;
+
+    gap: 0.75vw;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3.5vh;
+    justify-content: flex-end;
 }
-
-#index_socials{
-    padding-top: 2vh;
-}
-
 .socials img{
-    max-width: 6vh;
-    transition: 650ms ease-out;
-}
-.socials img:hover{
-    cursor: pointer;
 
-    transition: 650ms ease-out;
-    transform: rotate(360deg);
+    max-width: 2vw;
+    min-height: 2vh;
+}
+
+.about-website{
+    font-size: 3.5vh;
+    max-width: 35vw;
+}
+
+.footer-navigation ul{
+
+    list-style: none;
+    display: flex;
+
+    gap: 1.5vh;
+    font-size: 2.5vh;
+    flex-direction: column;
+}
+
+.footer-navigation a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
 }
 
 .legalFooter{
@@ -535,60 +559,164 @@ footer{
     font-size: 1rem;
 }
 
-/* Index Content Containers ------------------------------------------------------------------------------------------------------------------- */
+/* Content Containers MainPage ------------------------------------------------------------------------------------------------------------------- */
 
-.subjectWrapper{
-    background-color: white;
-
-    height: 100%;
-    min-height: 80vh;
-}
-.subjectWrapperPeach{
+.subjectWrapperPeach{ 
     background-color: var(--peach);
 }
+.subjectWrapper{
+    min-height: 80vh;
+} 
 
 .featured-projects-wrapper-mainpage{
     
-    padding: 5vh 15vh 5vh 15vh;
+    padding: 7vh 20vh 7vh 20vh;
+    gap: 5vw;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 5vw;
-}
-.featured-projects-wrapper-mainpage img{
-
-    max-width: 20vw;
-    max-height: 20vh;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .project-mainpage{
 
-    border: 0.5vh solid var(--blackish);
-    border-radius: 3vh;
-
-    max-width: 25vw;
-
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-
-    align-items: center;
-    
-    padding: 1vw;
-    background: #ffe8bc;
-
     text-decoration: none;
-    transition: 1s ease;
+    padding: 2vh;
+    border-radius: 1vw;
+    background: var(--darkerPeach);
+    border: 0.2vw solid var(--darkOrange);    
+    
+    /* Move all children to the left */
+    display: flex;
+    align-items: flex-start;
 
+    gap: 2vh;
+    flex-direction: column;
+
+    transition: 200ms ease;
+    box-shadow: 0 0 0 var(--darkOrange);
 }
 
 .project-mainpage:hover{
-    box-shadow: 2px 2px 8px var(--blackish);
-    transition: 200ms ease;
 
-    background: #ffd68b;
+    transition: 200ms ease;
+    box-shadow: 0.1vh 0.1vh 1vh 0.3vh var(--darkOrange);
 }
 
+.project-mainpage-description, .project-mainpage-title{
+    color: black;
+    font-weight: 500;
+    font-family: 'kanit', serif;
+}
+.project-mainpage-title{
+    font-size: 4vh;
+}
+
+.project-mainpage img{
+
+    max-width: 20vw;
+    max-height: 20vh;
+
+    border: 0.2vw solid var(--darkOrange);
+    border-radius: 10vw;
+    background: var(--darkOrange);
+}
+
+.project-mainpage-languages{
+    display: flex;
+    gap: 1vw;
+}
+.project-mainpage-languages p{
+
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background: var(--blackish);
+
+    border-radius: 2vh;
+    padding: calc(0.2rem + 0.4vh);
+}
+
+.all-projects-link-wrapper{
+    padding: 0vh 20vh 7vh 20vh;
+}
+
+.all-projects-link{
+
+    font-family: "Roboto", sans-serif;
+    background: var(--darkerPeach);
+    border: 0.2vw solid var(--darkOrange);
+
+    border-radius: 1rem;
+    display: flex;
+    max-width: max-content;
+
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+
+    padding: 1vh 1vw 1vh 1vw;
+    text-decoration: none;
+    transition: 200ms ease;    
+    
+}
+.all-projects-link{
+    text-decoration: none;
+
+    color: var(--blackish);
+}
+.all-projects-link:hover{
+
+    transition: 200ms ease;
+    box-shadow: 0.1vh 0.1vh 1vh var(--darkOrange);
+}
+
+.all-projects-link img{
+
+    max-width: 2vw;
+    max-height: 2vw;
+}
+
+/* Need a Website? ------------------------------------------------------------------------------------------------------------------- */
+
+#web-builder-service{
+
+    min-height: 70vh;
+}
+
+.need-a-website-link-to-contacts{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+
+    margin-top: 15vh;
+}
+
+.need-a-website-link-to-contacts p{
+    font-family: "Roboto", sans-serif;
+    font-size: 3vh;
+}
+
+.need-a-website-link-to-contacts a{
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+
+    color: var(--babyBlue);
+    font-size: 3.5vh;
+
+    transition: 200ms ease;
+    padding: 1vw;
+    border-radius: 1rem;
+    border: 0.2vw solid var(--babyBlue);
+}
+.need-a-website-link-to-contacts a:hover{
+    color: white;
+    transition: 200ms ease;
+
+    background: var(--oceanBlue);
+    border: 0.2vw solid var(--oceanBlue);
+}
 
 /* Computer History Container ---------------------------------------------------------------------------------------------------------------- */
 

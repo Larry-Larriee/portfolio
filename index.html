@@ -62,7 +62,7 @@
                     <p class="introSchoolCaption">I am a Student From HBUHSD in Southern California</p>
 
                     <p class="introDescription">
-                        I mainly work with front-end software development along with robotics and cybersecurity. From Discord and Roblox 
+                        I work on software development, along with robotics and cybersecurity. From Discord bots and Roblox 
                         development to dynamic web applications and FIRST robotics and Linux, I'm a computer science and engineering hobbyist.
                     </p>
 
@@ -95,37 +95,65 @@
 
             <p class="contentTitle">Featured Projects</p>
 
-            <div class="featured-projects-wrapper-mainpage">
+            <div class="featured-projects-wrapper-mainpage content_hiding">
                 
                 <a class="project-mainpage" href="#">
+                    <h1 class="project-mainpage-title">Swamp Defense</h1>
                     <img src="/images/main_page/roblox-project-icon.png" alt="swamp defense image">
-                    <p class="project-mainpage-languages contentText">LUA, Roblox Studio</p>
+                    
+                    <div class="project-mainpage-languages">
+                        <p>LUA</p>
+                        <p>Roblox Studio</p>
+                    </div>
+                    
+                    <p class="project-mainpage-description contentText">Swamp Defense is an endless single-player endurance game where you defend a Flordia man's home and get rewarded for it. Go get em tiger!</p>                
+                    
+                </a>
 
-                    <p class="project-mainpage-description contentText">Using LUA and the Rovblox API Engine, I created experiences for players under the name SmallBrainMoment. One of my favorite creations is Swamp Defense, where your goal is to survive against a hoard of angry gators!</p>                    
+                <a class="project-mainpage" href="#">
+                    <h1 class="project-mainpage-title">Cyberlions Central</h1>
+                    <img src="/images/main_page/cyberlions-project-icon.png" alt="Cyberlions website image">
+
+                    <div class="project-mainpage-languages">
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JavaScript</p>
+                        <p>Github</p>
+                    </div>
+
+                    <p class="project-mainpage-description contentText">I worked with my local robotics team and help design, prototype, and launch a website to raise team publicity.</p>                    
+                
                 </a>
 
                 <a class="project-mainpage"  href="#">
+                    <h1 class="project-mainpage-title">Caesar Bot</h1>
                     <img src="/images/main_page/discord-project-icon.png" alt="caesar bot image">
-                    <p class="project-mainpage-languages contentText">Python, Nextcord API Wrapper</p>
 
-                    <p class="project-mainpage-description contentText">I dug myself into Python and the Discord, as well as Nextcord API. An exciting project of mine is called Caesar bot, which can encode and decode given strings. The documentmentation can be found on Github :)</p>                    
-                </a>
+                    <div class="project-mainpage-languages">
+                        <p>Python</p>
+                        <p>Nextcord</p>
+                        <p>Discord</p>
+                        <p>Github</p>
+                    </div>
 
-                <a class="project-mainpage" href="#">
-                    <img src="/images/main_page/cyberlions-project-icon.png" alt="Cyberlions website image">
-                    <p class="project-mainpage-languages contentText">HTML, CSS, JS, BootStrap</p>
-
-                    <p class="project-mainpage-description contentText">I worked with my local robotics team and help design, prototype, and launch a website to get them more publicity.</p>                    
+                    <p class="project-mainpage-description contentText">All Hail Caesar! With the power of the Roman ruler's bot figure, you now possess the ability to encode and decode strings with Caesar Cipher!</p>                    
                 </a>
             </div>
 
+            <div class="all-projects-link-wrapper">
+                <a class="all-projects-link" href="#">
+                    <p>More Projects</p>
+                    <img alt="arrow sideways" src="/images/icons/arrow_sideways.png">
+                </a>
+            </div>
         </div>
 
-        <div class="subjectWrapper">
-            
+        <div class="subjectWrapper" id="web-builder-service">
             <p class="contentTitle">Do You Need a Website Built?</p>
 
-            <div class="need-a-website-link-to-contacts">
+            <div class="need-a-website-link-to-contacts content_hiding">
+                <p>I would be more than happy to work with you.</p>
+
                 <a href="/pages/contacts.html">Let Me Know!</a>
             </div>
 
@@ -136,16 +164,33 @@
     <!-- Footer -->
     <footer id="indexFooter">
         
-        <!-- More detail about me can be found in the 'My Works' section. Either way, thanks for visiting! -->
-        <div class="forMoreInfo">
-            <p class="whiteText">More detail about me can be found in the My Works section.</p>
-            <p class="whiteText" id="aboutIndex">This portfolio was started during the summer of 2022: thanks for visiting!</p>
-        </div>
+        <div class="footer-content-wrapper">
+            <div class="footer-personal-branding">
+                <div class="footer-logo">
+                    <img alt="portfolio Logo" src="/images/Hummingbirds/red_logo.png" id="logo">
+                    <p class="whiteText">Larry Le | Digital Portfolio</p>
+                </div>
 
-        <div class="socials" id="index_socials">   
-            <p class="whiteText">Follow me on: </p>
-            <img src="/images/icons/instagram_white.png" alt="instagram" id="instagramIcon">
-            <img src="/images/icons/github_white.png" alt="github" id="githubIcon">
+                <div class="socials">
+                    <img src="/images/icons/github_white.png" alt="github" id="icon">
+                    <img src="/images/icons/linkedin_white.png" alt="linkedIn" id="icon">
+                    <img src="/images/icons/discord_white.png" alt="discord" id="icon">
+                    <img src="/images/icons/instagram_white.png" alt="instagram" id="icon">
+                </div>
+            </div>
+            <div class="whiteText about-website">
+                <p>This portfolio was started during the summer of 2022: thanks for visiting!</p>
+            </div>
+
+            <div class="footer-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/pages/works.html">My Works</a></li>
+                    <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
+                    <li><a href="/pages/contacts.html">Contacts</a></li>
+                    <li><a href="/about.html" id="about_me_navigation_link">About Me</a></li>
+                </ul>
+            </div>
         </div>
 
         <div class="legalFooter">                

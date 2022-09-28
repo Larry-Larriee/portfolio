@@ -9,7 +9,7 @@ const instaIcon = document.getElementById("instagramIcon");
 // FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
 
 const observer_controls = {
-    rootMargin: "0% 0% -15% 0%"
+    rootMargin: "0% 0% -20% 0%"
 };
 
 function revealContent(targetEntry){
@@ -24,42 +24,19 @@ const observer = new IntersectionObserver(entries => {
             if (entry.isIntersecting) {            
                 const targetEntry = entry.target;
 
-                if (targetEntry.id === "iconContainer") {
-                    revealContent(targetEntry);
-                    entry.target.classList.add("expand");
-                }
-                
-                if (targetEntry.id === "roblox_content") {
-                    revealContent(targetEntry);
-                    entry.target.classList.add("fadeInLeft");
-                }
-                
-                if (targetEntry.id === "discord_content") {
-                    revealContent(targetEntry);
-                    entry.target.classList.add("fadeInRight");
-                }
-
-                if (targetEntry.id === "iconContainer") {
-                    revealContent(targetEntry);
-                    entry.target.classList.add("expand");
-                }
-
-                if (entry.target.id === "cyberstart_content"){
-                    revealContent(targetEntry);
-
-                    document.querySelectorAll(".cyberImg")[0].classList.add('fadeInLeft');
-                    document.querySelectorAll(".cyberImg")[1].classList.add('fadeInRight');
-                }
+                revealContent(targetEntry);
+                targetEntry.classList.add('fadeFromBottom');
         }
     })
 }, observer_controls);
 
-const mainContentContainer = document.querySelectorAll(".mainContentContainer");
+const iconContainer = document.querySelector(".iconContainer");
+const projects = document.querySelector(".featured-projects-wrapper-mainpage");
+const website_builder = document.querySelector(".need-a-website-link-to-contacts");
 
-observer.observe(document.querySelector(".iconContainer"));
-observer.observe(mainContentContainer[0]);
-observer.observe(mainContentContainer[1]);
-observer.observe(mainContentContainer[2]);
+observer.observe(iconContainer);
+observer.observe(projects);
+observer.observe(website_builder);
 
 // EVENT LISTENERS ----------------------------------------------------------------------------------------------------------------------
 
