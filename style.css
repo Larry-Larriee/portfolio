@@ -44,6 +44,7 @@ body{
     position: relative;
     min-height: 100vh;
     padding-bottom: 40vh;
+
 }
 
 /* Format Content Headers */
@@ -293,20 +294,20 @@ body{
     list-style: none;
 }
 
-.navLinks li a:hover, .aboutLink:hover{
-    color: var(--grey);
-
-    transition: 250ms ease;
-}
-
 /* Separate each child in the navigation bar */
 .navLinks li{
     display: inline-block;
     padding-right: 2.5vw;
 }
 
+.navLinks li a:hover, .aboutLink:hover{
+    color: var(--oceanBlue);
+
+    transition: 250ms ease;
+}
+
 /* Decorate each child in the navigation bar */
-.navLinks li a, .aboutLink{
+.navLinks a, .aboutLink{
 
     font-weight: 600;
     color: white;
@@ -467,34 +468,40 @@ footer{
     min-height: 40vh;
 }
 
-.footer-content-wrapper img{
-
-    max-width: 8vh;
-    min-height: 8vh;
-}
-
-#indexFooter{
-    background: linear-gradient(200deg, lightcoral, lightcoral 15%,coral);
-    height: 40vh;
-}
-#aboutFooter{
-    background-color: var(--darkerCyan);
-}
-#contactsFooter{
-    background-color: var(--softBlue);
-}
-#worksFooter{
-    background: var(--lighterYellow);
-}
-
 .footer-logo{
     display: flex;
     gap: 1vw;
 
     font-size: 3.5vh;
 
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
+
+.footer-logo img{
+
+    max-width: 7vh;
+    min-height: 7vh;
+
+    transition: 1s ease;
+}
+.footer-logo img:hover{
+
+    transition: 1s ;
+    transform: perspective(100px) rotateY(360deg); /* perspective is how far the image is from the user */
+}
+
+.indexFooter{
+    background: linear-gradient(200deg, lightcoral, lightcoral 15%,coral);
+}
+.aboutFooter{
+    background-color: var(--darkerCyan);
+}
+.contactsFooter{
+    background-color: var(--softBlue);
+}
+.worksFooter{
+    background: var(--lighterYellow);
 }
 
 .socials{
@@ -506,31 +513,49 @@ footer{
 }
 .socials img{
 
-    max-width: 2vw;
-    min-height: 2vh;
+    cursor: pointer;
+    max-width: 1.75vw;
+    min-height: 1.75vh;
+
+    transition: 250ms ease;
+}
+
+.socials img:hover{
+    transition: 250ms ease;
+    transform: rotate(30deg);
 }
 
 .about-website{
-    font-size: 3.5vh;
+    font-size: 3vh;
     max-width: 35vw;
 }
 
 .footer-navigation ul{
 
     list-style: none;
-    display: flex;
-
+    display: grid;
+    grid-template-columns: 1fr;
+    
     gap: 1.5vh;
-    font-size: 2.5vh;
-    flex-direction: column;
 }
 
 .footer-navigation a{
+
+    font-size: 2.5vh;
+
     text-decoration: none;
     color: white;
     font-weight: 600;
     font-family: "Roboto", sans-serif;
+
+    transition: 250ms ease;
 }
+.footer-navigation a:hover{
+
+    color: var(--oceanBlue);
+    transition: 250ms ease;
+}
+
 
 .legalFooter{
 
@@ -540,23 +565,6 @@ footer{
     /* absolute: the element is positioned absolutely to its first positioned parent AKA position: relative in footer div */
     position: absolute;
     bottom: 0;
-}
-
-/* For More Info Div ------------------------------------------------------------------------------------------------------------------------ */
-
-.forMoreInfo{
-    height: 25vh;
-    text-align: center;
-}
-
-.forMoreInfo p{
-    font-size: 4.2vh;
-    padding-top: 10vh;
-}
-
-#aboutIndex{
-    padding-top: 3vh;
-    font-size: 1rem;
 }
 
 /* Content Containers MainPage ------------------------------------------------------------------------------------------------------------------- */

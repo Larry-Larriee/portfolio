@@ -3,8 +3,10 @@
 // offsetHeight = innerHeight but for elements // const pageHeight = window.innerHeight;
 const logoDiv = document.getElementsByClassName('logoDiv');
 
-const githubIcon = document.getElementById("githubIcon");
-const instaIcon = document.getElementById("instagramIcon");
+const githubIcon = document.getElementById("github");
+const instaIcon = document.getElementById("instagram");
+const discordIcon = document.getElementById("discord");
+const linkedinIcon = document.getElementById("linkedin");
 
 // FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
 
@@ -53,10 +55,18 @@ hambuger_icon?.addEventListener('click', () => {
 
 // Check if the github icon has loaded to prevent null error
 githubIcon?.addEventListener("click", () => {
-    window.open("https://github.com/Larry-Larriee");
+    window.open("https://github.com/Larry-Larriee")
 });
 
-instaIcon?.addEventListener("click", () =>{
+linkedinIcon?.addEventListener("click", () => {
+    window.open("https://www.linkedin.com/in/larry-le-94b565244/")
+});
+
+discordIcon?.addEventListener("click", () => {
+    window.open("https://discordapp.com/users/490277278136270874");
+});
+
+instaIcon?.addEventListener("click", () => {
     window.open("https://www.instagram.com/larry_larriee/");    
 });
 
