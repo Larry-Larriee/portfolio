@@ -39,15 +39,15 @@ const observer = new IntersectionObserver(entries => {
                     case "featured-projects-wrapper-mainpage":
                         revealContent(targetEntry);
 
-                        const project_mainpage = document.querySelectorAll(".project-mainpage");
+                        let project_mainpage = document.querySelectorAll(".project-mainpage");
                         for (let i = 0; i < 3; i++) {
 
                             revealContent(project_mainpage[i]);
 
-                            project_mainpage[i].classList.add("fade-featured-projects-"+ i);                           
+                            project_mainpage[i].classList.add(`fade-featured-projects-${i}`); // f-strings
                         }
 
-                        const all_projects_link_wrapper = document.querySelector(".all-projects-link-wrapper");
+                        let all_projects_link_wrapper = document.querySelector(".all-projects-link-wrapper");
                         revealContent(all_projects_link_wrapper);
                         all_projects_link_wrapper.classList.add("all-projects-link-animation");
 

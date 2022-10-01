@@ -1,5 +1,7 @@
 // VARIABLES -----------------------------------------------------------------------------------------------------------------------------
 
+const logo = document.getElementById("logo");
+
 const cyan_bird = "../images/Hummingbirds/darkcyan_logo.png";
 const black_bird = "../images/Hummingbirds/black_logo.png";
 
@@ -64,7 +66,6 @@ timeline_observer.observe(time_content[13]);
 
 //  event listeners ----------------------------------------------------------------------------------------------------------------------
 
-const logo = document.getElementById("logo");
 const footerMainLogo = document.getElementById("footer-hummingbird-logo");
 
 const githubIcon = document.getElementById("github");

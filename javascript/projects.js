@@ -43,24 +43,24 @@ const background_observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         
         if (entry.isIntersecting) {
-            if (background == document.querySelector("video")){
+            if (background === document.querySelector("video")){
                 
                 background.play(); // Play the video and have top header animations
                 project_header_fadeIn();
             }
-            else if (background == document.getElementById("background_image")){
+            else if (background === document.getElementById("background_image")){
                 project_header_fadeIn();
             }
         }
         else {
-            if (background == document.querySelector("video")){
+            if (background === document.querySelector("video")){
                 background.pause();
                 background.currentTime = 0; 
                 // Reset video (for black screen) and remove top header animations to reuse again later if needed
                 
                 project_header_fadeOut();
             }
-            else if (background == document.getElementById("background_image")){
+            else if (background === document.getElementById("background_image")){
                 project_header_fadeOut();
             }
         }
