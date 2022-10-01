@@ -1,9 +1,7 @@
 // VARIABLES -----------------------------------------------------------------------------------------------------------------------------
 
-const instaIcon = document.getElementById("instagramIcon");
-const githubIcon = document.getElementById("githubIcon");
-
 const logo = document.getElementById("logo");
+
 const cyan_bird = "../images/Hummingbirds/darkcyan_logo.png";
 const black_bird = "../images/Hummingbirds/black_logo.png";
 
@@ -31,7 +29,7 @@ nav_observer.observe(top_content);
 
 const time_content = document.querySelectorAll(".timeline_content_wrapper");
 const timeline_options = {
-    rootMargin: "-110px 0px 0px 0px"
+    rootMargin: "0% 0% -15% 0%"
 };
 
 const timeline_observer = new IntersectionObserver((entries) => {
@@ -41,10 +39,12 @@ const timeline_observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting && entry.target.id === "time_one") {
             return;
         }
-
+               
         // Add animation for every other grid element 
-        (entry.isIntersecting) ? entry.target.classList.add("fadeIn") : false;
-
+        else if (entry.isIntersecting) {
+            entry.target.classList.remove("content_hiding");
+            entry.target.classList.add("fadeIn");
+        }
     });
 }, timeline_options);
 
@@ -66,17 +66,35 @@ timeline_observer.observe(time_content[13]);
 
 //  event listeners ----------------------------------------------------------------------------------------------------------------------
 
-// Allow link towards github and instagram when the user clicks on the icons
-instaIcon.addEventListener("click", () =>{
+const footerMainLogo = document.getElementById("footer-hummingbird-logo");
+
+const githubIcon = document.getElementById("github");
+const instaIcon = document.getElementById("instagram");
+const discordIcon = document.getElementById("discord");
+const linkedinIcon = document.getElementById("linkedin");
+
+logo?.addEventListener("click", () => {
+    window.location.replace("/");
+});
+
+// Check if the github icon has loaded to prevent null error
+githubIcon?.addEventListener("click", () => {
+    window.open("https://github.com/Larry-Larriee")
+});
+
+linkedinIcon?.addEventListener("click", () => {
+    window.open("https://www.linkedin.com/in/larry-le-94b565244/")
+});
+
+discordIcon?.addEventListener("click", () => {
+    window.open("https://discordapp.com/users/490277278136270874");
+});
+
+instaIcon?.addEventListener("click", () => {
     window.open("https://www.instagram.com/larry_larriee/");    
 });
 
-githubIcon.addEventListener("click", () => {
-    window.open("https://github.com/Larry-Larriee");
-});
-
-// Go back to main page
-logo.addEventListener("click", () => {
+footerMainLogo?.addEventListener("click", () => {
     window.location.replace("/");
 });
 

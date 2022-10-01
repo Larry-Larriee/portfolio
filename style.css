@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Oswald&family=Passions+Conflict&family=Roboto:wght@300&family=Ubuntu&display=swap');
 
 :root{
     --babyBlue: #4CBBCE;
@@ -14,11 +15,13 @@
     --darkGrey: #9f9f9f;
     --blackish: #444444;
 
-    --peach: #fff2d7; 
+    --peach: #ffe8bc;
+    --darkerPeach: #ffd991; 
     --darkOrange: #ffa250;
     --pinkish: #ff97a9;
     --pinker: #ff8383;
     --lightishRed: #ff5151;
+    --newLightCoral: linear-gradient(0deg, coral, lightcoral 20%,coral);
 
     --lightishGreen: #62e799;
     --darkerCyan: #01A6A6;
@@ -34,29 +37,14 @@
     box-sizing: border-box; /* border-box --> all content is inside its container always */ 
     margin: 0;
     padding: 0;
-
 }
 
 
 body{
     position: relative;
     min-height: 100vh;
-    padding-bottom: 35vh;
-}
-
-#index_case_body{
     padding-bottom: 40vh;
-}
 
-/* Background div includes both the nav bar and the intro content */
-#background_top_index{
-    
-    background-image: linear-gradient(0deg, coral, lightcoral 20%,coral);
-    min-height: 95vh;
-
-    /* Only if the background is a URL */
-    background-repeat: no-repeat;
-    background-size: 100%;
 }
 
 /* Format Content Headers */
@@ -74,9 +62,8 @@ body{
 .contentText{
 
     font-family: 'kanit', serif;
-    font-weight: 525;
-    font-size: 3vh;
-    text-align: justify;
+    font-size: 2.5vh;
+    text-align: left;
 
     color: black;
 }
@@ -123,22 +110,25 @@ body{
 .content_hidden{
     display: none !important;
 }
+.content_hiding{
+    visibility: hidden !important;
+}
 
 /* Animations --------------------------------------------------------------------------------------------------------------------- */
 
 /* (optional) guarantee the animation to work on different browser versions with -webkit or -mz */
 .fadeInLeft{
-    animation: fadeInLeft 1.5s both;   
+    animation: fadeInLeft 1.2s both;   
     /* Declare indicator name for the animation and how long it lasts */
 }
 
 .fadeInRight{
-    animation: fadeInRight 1.5s both;
+    animation: fadeInRight 1.2s both;
     /* Both = object has inital state and keeps final state after animation occurs */
 }
 
 .fadeFromTop{
-    animation: fadeFromTop 1.5s both;
+    animation: fadeFromTop 1.2s both;
 }
 
 .fadeFromBottom{
@@ -155,7 +145,8 @@ body{
     white-space: nowrap; /* Keep text on one line */
     
     /* The one second at the end is the delay before playing animation */
-    animation: typeWriter 2.5s both 0.5s;
+    animation: typeWriter 4s both 0.5s;
+
 }
 
 .barrelRoll{
@@ -163,13 +154,13 @@ body{
 }
 
 .fadeIn{
-    animation: fadeIn 1.5s both;
+    animation: fadeIn 1s both;
 }
 
 @keyframes fadeInLeft{
     from{
         opacity: 0;
-        transform: translateX(-3.25vw);
+        transform: translateX(-3vw);
     }
     to{
         opacity: 1;
@@ -180,7 +171,7 @@ body{
 @keyframes fadeInRight{
     from{
         opacity: 0;
-        transform: translateX(3.25vw);
+        transform: translateX(3vw);
     }
     to{
         opacity: 1;
@@ -191,7 +182,7 @@ body{
 @keyframes fadeFromTop{
     from{
         opacity: 0;
-        transform: translateY(-3.25vw);
+        transform: translateY(-3vw);
     }
     to{
         opacity: 1;
@@ -202,7 +193,7 @@ body{
 @keyframes fadeFromBottom{
     from{
         opacity: 0;
-        transform: translateY(6.4vh);
+        transform: translateY(6vh);
     }
     to{
         opacity: 1;
@@ -212,9 +203,11 @@ body{
 
 @keyframes expand{
     from{
-        transform: scale(0.80);
+        opacity: 0;
+        transform: scale(0.70);
     }
     to{
+        opacity: 1;
         transform: scale(1);
     }
 }
@@ -223,12 +216,9 @@ body{
     from{
         width: 0%;
     }
-    50%{
-        color: var(--peach);
-    }
+
     to{
         width: 100%;
-        color: #FFD700;
     }   
 }
 
@@ -247,6 +237,63 @@ body{
     }
     to{
         opacity: 1;
+    }
+}
+
+.fade-featured-projects-0{
+    animation: fade-featured-projects-1 1.2s both;
+}
+
+.fade-featured-projects-1{
+    animation: fade-featured-projects-2 1.2s both 0.5s; /* 0.5s = delay */
+}
+
+.fade-featured-projects-2{
+    animation: fade-featured-projects-3 1.2s both 1s;
+}
+
+.all-projects-link-animation{
+    animation: all-projects-link-animation 1.2s both 1.5s;
+}
+
+@keyframes fade-featured-projects-1{
+    from{
+        opacity: 0;
+        transform: translateY(6vh);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fade-featured-projects-2{
+    from{
+        opacity: 0;
+        transform: translateY(6vh);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fade-featured-projects-3{
+    from{
+        opacity: 0;
+        transform: translateY(6vh);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes all-projects-link-animation{
+    from{
+        opacity: 0;
+        transform: translateX(-3vw);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -304,20 +351,20 @@ body{
     list-style: none;
 }
 
-.navLinks li a:hover, .aboutLink:hover{
-    color: var(--grey);
-
-    transition: 250ms ease;
-}
-
 /* Separate each child in the navigation bar */
 .navLinks li{
     display: inline-block;
     padding-right: 2.5vw;
 }
 
+.navLinks li a:hover, .aboutLink:hover{
+    color: var(--oceanBlue);
+
+    transition: 250ms ease;
+}
+
 /* Decorate each child in the navigation bar */
-.navLinks li a, .aboutLink{
+.navLinks a, .aboutLink{
 
     font-weight: 600;
     color: white;
@@ -363,9 +410,22 @@ body{
 
 /* Title Content --------------------------------------------------------------------------------------------------------------------- */
 
-.container{
+.emoji-styling{
+    text-shadow: none;
+}
 
-    /* Everything fits in container */
+/* Background div includes both the nav bar and the intro content */
+#background_top_index{
+    
+    background: var(--newLightCoral);
+    min-height: 95vh;
+
+    /* Only if the background is a URL */
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.container{
     box-sizing: border-box;
     flex-basis: 1; /* even elements in wrapper (for columns, etc) */
     display: flex;
@@ -379,9 +439,7 @@ body{
     position: relative;
 }
 
-
-.introWrapper img{
-
+#pointing_arrow{
     transform: rotate(-90deg); /* Rotate image into a down arrow */
 
     margin-top: 20vh; 
@@ -392,43 +450,30 @@ body{
 
     opacity: 0.9;
     transition: 0.5s ease; /* Reset animation position when the arrow is not clicked */
-}
 
-.introWrapper img:hover{
+    position: relative;
+    bottom: 10vh;
+    left: 0;
+}
+#pointing_arrow:hover{
     cursor: pointer;
 }
-
-.introWrapper img:active{
+#pointing_arrow:active{
     transition: 0.5s ease; 
     margin-top: 24vh;
 }
 
-.introWrapper h2{
-
-    /* Positioned relative to absolutely to its first positioned parent 'intro' */
-    position: absolute;
-
-    margin-top: 15vh;
-    left: 10vw;
-
-    width: max-content;
-    font-size: 2vw;
-    color: #c83634;
-    transform: rotate(-10deg);
-    font-family: 'Courier New', Courier, monospace;
-}
-
-#indexMainText{
+.introductionCaption{
 
     font-family: "Kanit", sans-serif;
-    font-size: 4vw;
+    font-size: 8vh;
     color: white;
 
     /* offset-x | offset-y | blur-radius | color */
-    text-shadow: 0.1vw 0.1vh 1vh var(--darkOrange);
+    text-shadow: 1px 1px 1px var(--grey);
 }
 
-.introCaption{
+.introSchoolCaption{
 
     font-family: "Koulen", sans-serif;
     font-size: 3vh;
@@ -439,7 +484,7 @@ body{
 .introDescription{
 
     font-family:'Poppins', serif;
-    font-size: 2.5vh;
+    font-size: 3vh;
     font-weight: 550;
     padding: 9% 0 0 0;
 
@@ -447,7 +492,6 @@ body{
     max-width: 50vw;
     
     color: white;
-    text-align: justify;
 
     /* To Do: https://css-tricks.com/snippets/css/typewriter-effect/ */
 }
@@ -470,54 +514,106 @@ footer{
     width: 100%;
     bottom: 0;  
 
-    min-height: 35vh;
+    min-height: 40vh;
 }
 
-#indexFooter{
-    background: linear-gradient(200deg, lightcoral, lightcoral 15%,coral);
-    height: 40vh;
+.footer-content-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    min-height: 40vh;
 }
-#aboutFooter{
+
+.footer-personal-branding{
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5vh;
+}
+
+.footer-logo{
+    display: flex;
+    gap: 1vw;
+
+    font-size: 3.75vh;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo img{
+    max-width: 8.5vh;
+    max-height: 8.5vh;
+
+    cursor: pointer;
+}
+
+.indexFooter{
+    background: linear-gradient(200deg, lightcoral, lightcoral 15%,coral);
+}
+.aboutFooter{
     background-color: var(--darkerCyan);
 }
-#contactsFooter{
+.contactsFooter{
     background-color: var(--softBlue);
 }
-#worksFooter{
+.worksFooter{
     background: var(--lighterYellow);
 }
 
-.aboutWebsite{
-    padding-top: 3.5rem;
-
-    text-align: center;
-    font-size: 1.5vw;
-}
-
 .socials{
-    padding-top: 6vh;
-    font-size: 4.2vh;
+
+    gap: 0.75vw;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3.5vh;
+    justify-content: flex-end;
 }
-
-#index_socials{
-    padding-top: 2vh;
-}
-
 .socials img{
-    max-width: 6vh;
-    transition: 650ms ease-out;
-}
-.socials img:hover{
-    cursor: pointer;
 
-    transition: 650ms ease-out;
-    transform: rotate(360deg);
+    cursor: pointer;
+    max-width: 1.75vw;
+    min-height: 1.75vh;
+
+    transition: 250ms ease;
 }
+
+.socials img:hover{
+    transition: 250ms ease;
+    transform: rotate(30deg);
+}
+
+.about-website{
+    font-size: 3vh;
+    max-width: 35vw;
+}
+
+.footer-navigation ul{
+
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    gap: 1.5vh;
+}
+
+.footer-navigation a{
+
+    font-size: 2.5vh;
+
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+
+    transition: 250ms ease;
+}
+.footer-navigation a:hover{
+
+    color: var(--oceanBlue);
+    transition: 250ms ease;
+}
+
 
 .legalFooter{
 
@@ -529,81 +625,164 @@ footer{
     bottom: 0;
 }
 
-/* For More Info Div ------------------------------------------------------------------------------------------------------------------------ */
+/* Content Containers MainPage ------------------------------------------------------------------------------------------------------------------- */
 
-.forMoreInfo{
-    height: 25vh;
-    text-align: center;
-}
-
-.forMoreInfo p{
-    font-size: 4.2vh;
-    padding-top: 10vh;
-}
-
-#aboutIndex{
-    padding-top: 3vh;
-    font-size: 1rem;
-}
-
-/* Index Content Containers ------------------------------------------------------------------------------------------------------------------- */
-
-.subjectWrapper{
-    background-color: white;
-
-    height: 100%;
-    min-height: 80vh;
-}
-#robloxWrapper, #cyberstartWrapper{
+.subjectWrapperPeach{ 
     background-color: var(--peach);
 }
+.subjectWrapper{
+    min-height: 80vh;
+} 
 
-.mainContentContainer{
+.featured-projects-wrapper-mainpage{
+    
+    padding: 7vh 20vh 7vh 20vh;
+    gap: 5vw;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.project-mainpage{
+
+    text-decoration: none;
+    padding: 2vh;
+    border-radius: 1vw;
+    background: var(--darkerPeach);
+    border: 0.2vw solid var(--darkOrange);    
+    
+    /* Move all children to the left */
     display: flex;
+    align-items: flex-start;
+
+    gap: 2vh;
+    flex-direction: column;
+
+    transition: 200ms ease;
+    box-shadow: 0 0 0 var(--darkOrange);
+}
+
+.project-mainpage:hover{
+
+    transition: 200ms ease;
+    box-shadow: 0.05vh 0.05vh 0.5vh 0.1vh var(--darkOrange);
+}
+
+.project-mainpage-description, .project-mainpage-title{
+    color: black;
+    font-weight: 500;
+    font-family: 'kanit', serif;
+}
+.project-mainpage-title{
+    font-size: 4vh;
+}
+
+.project-mainpage img{
+
+    max-width: 20vw;
+    max-height: 20vh;
+
+    border: 0.2vw solid var(--darkOrange);
+    border-radius: 10vw;
+    background: var(--darkOrange);
+}
+
+.project-mainpage-languages{
+    display: flex;
+    gap: 1vw;
+    flex-wrap: wrap;
+}
+.project-mainpage-languages p{
+
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background: var(--blackish);
+
+    border-radius: 2vh;
+    padding: calc(0.2rem + 0.4vh);
+}
+
+.all-projects-link-wrapper{
+    padding: 0vh 20vh 7vh 20vh;
+}
+
+.all-projects-link{
+
+    font-family: "Roboto", sans-serif;
+    background: var(--darkerPeach);
+    border: 0.2vw solid var(--darkOrange);
+
+    border-radius: 1rem;
+    display: flex;
+    max-width: max-content;
 
     justify-content: center;
     align-items: center;
+    gap: 1vw;
 
-    gap: 5rem;
-    flex: 1;
-
-    margin: 4% 10% 0% 10%;
-}
-#roblox_description{
-
-    align-self: flex-start; /* Aligns the element to the top of its container */
-}
-.mainContentContainer video{
-
-    max-width: 35vw;
-    min-height: 42vh;
-
-    border-radius: 1rem;
-}
-#discord_description{
-    max-width: 50%;
-}
-
-.mainContentContainer img{
-
-    max-width: 20%;
-}
-
-#discord_content{
-    gap: 6rem;
-}
-#discord_content img{
-    max-width: 40%;
-    border-radius: 1rem;
-}
-
-#cyberstart_content{
-    margin: 4% 3% 0% 3%; 
+    padding: 1vh 1vw 1vh 1vw;
+    text-decoration: none;
+    transition: 200ms ease;    
     
 }
-#cyberstart_content p{
-    max-width: 40%;
-    text-align: center;
+.all-projects-link{
+    text-decoration: none;
+
+    color: var(--blackish);
+}
+.all-projects-link:hover{
+
+    transition: 200ms ease;
+    box-shadow: 0.05vh 0.05vh 0.5vh 0.1vh var(--darkOrange);
+}
+
+.all-projects-link img{
+
+    max-width: 2vw;
+    max-height: 2vw;
+}
+
+/* Need a Website? ------------------------------------------------------------------------------------------------------------------- */
+
+#web-builder-service{
+
+    min-height: 70vh;
+}
+
+.need-a-website-link-to-contacts{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+
+    margin-top: 15vh;
+}
+
+.need-a-website-link-to-contacts p{
+    font-family: "Roboto", sans-serif;
+    font-size: 3vh;
+}
+
+.need-a-website-link-to-contacts a{
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+
+    color: var(--babyBlue);
+    font-size: 3.5vh;
+
+    transition: 200ms ease;
+    padding: 1vw;
+    border-radius: 1rem;
+    border: 0.2vw solid var(--babyBlue);
+}
+.need-a-website-link-to-contacts a:hover{
+    color: white;
+    transition: 200ms ease;
+
+    background: var(--oceanBlue);
+    border: 0.2vw solid var(--oceanBlue);
 }
 
 /* Computer History Container ---------------------------------------------------------------------------------------------------------------- */
@@ -618,7 +797,8 @@ footer{
 
 .iconContainer img{
     margin-top: 5em;
-    max-width: 28vh;
+    min-width: 25vh;
+    max-width: 25vh;
 }
 
 /* Index Media Query ------------------------------------------------------------------------------------------------------------------- */
@@ -632,9 +812,6 @@ footer{
 
 /* Changes apply if the device has a width less than or equal to 50rem */
 @media (max-width: 44.5rem) {
-    *{
-        animation: none !important; /* Override all animations */
-    }
 
     /* For main text */
     .contentText{
@@ -659,6 +836,26 @@ footer{
         margin: 0rem 1rem 0rem 1rem;
     }
     .legalFooter{
+        display: none;
+    }
+
+    footer > *{
+        padding: 0rem 1rem 0rem 1rem;
+        gap: 1rem;
+    }
+
+    .footer-navigation{
+        min-width: 25vw;
+    }
+
+    .footer-logo img{
+        max-width: 10vw;
+    }
+
+    .about-website{
+        display: none;
+    }
+    .socials{
         display: none;
     }
 }
@@ -709,7 +906,7 @@ footer{
 @media (max-width: 44.5rem) {
 
     #background_top_index{
-        min-height: max-content;
+        min-height: 95vh;
     }
 
     /* Remove Larry Le | Digital Portoflio, workworkwork, and the down arrow for space */
@@ -721,12 +918,10 @@ footer{
         margin: 2rem 1rem 2rem 0rem;
     }
 
-    .introCaption, #indexMainText{
-        font-size: 1.1rem;
-        max-width: 100%;
-
-        margin-top: 2rem;
+    .introductionCaption{
+        font-size: 2rem;
     }
+
     .introDescription{
         text-align: left;
         font-size: 1rem;
@@ -748,67 +943,36 @@ footer{
 
     .iconContainer img{ 
         margin-top: 2rem; /* Referencing the children of a class has more priority than referencing the child's class */
-        max-width: 20vh;
+        min-width: 15vh;
+        max-width: 15vh;
     }
 
-    /* Main Content */
-    .mainContentContainer{
-        gap: 1rem;
-    }
+    /* Featured Projects ----------------------------------------------------------------------------------------------------- */
 
-    .mainContentContainer video{
-        max-width: 16rem;
-        min-height: 10rem;   
-        object-fit: cover;
-
-        border-radius: 1rem;
-    }
-
-    #roblox_content{
+    .featured-projects-wrapper-mainpage{
+        padding: 1.5rem;
+        
         display: flex;
-        flex-direction: column;
-    }
-
-    #discord_content{
-        display: flex;
-        flex-direction: row-reverse; /* Reverse the order of the text and image */
-
         flex-wrap: wrap;
-        gap: 1rem;
+
+        gap: 3rem;
     }
 
-    #discord_content img{
-        max-width: 16rem;
-        border-radius: 1rem;
+    .project-mainpage{
+
+        border-radius: 2rem;
     }
-    #cyberstart_content {
-        display: grid;
-        grid-template-areas: 
+    .project-mainpage-description{
 
-        "cyber_image_finalist cyberstart_content_text"
-        "cyber_image_semifinalist cyberstart_content_text";
-
-        min-height: 28rem;
-        width: 100%;
-        margin: 0;
-        gap: 0rem;
-
-        place-items: center;
+        margin: 0.75rem !important;
     }
 
-    #cyberstart_content img{
-        max-width: 7rem;
-    }
-    #cyberstart_content img:nth-child(0){
-        grid-area: cyber_image_finalist;
-    }
-    #cyberstart_content img:nth-last-child(1){
-        grid-area: cyber_image_semifinalist;
+    .all-projects-link-wrapper{
+        display: none;
     }
 
-    #cyberstart_content p{
-        max-width: 12rem;
-        grid-area: cyberstart_content_text;
+    .need-a-website-link-to-contacts p{
+        text-align: center;
     }
 }
 
@@ -819,11 +983,11 @@ footer{
     align-items: center;
 
     margin: 1.5rem 0rem 0rem 9rem;
-    gap: 1.8rem;
+    gap: 1.5rem;
 }
 
 .iconWrapper img{
-    max-width: 2.5vw;
+    max-width: 2vw;
 
     transform: rotate(0deg);
     transition: 0.5s ease;
@@ -887,39 +1051,6 @@ footer{
 
 .skillWrapper img{
     width: 6vw;
-}
-
-.withYouWrapper{
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-
-    min-height: 25rem;
-}
-
-.withYouWrapper h1{
-    margin-top: 4%;
-    margin-bottom: 2.5%;
-}
-
-.withYouWrapper a{
-
-    background-color: white;
-
-    font-family: 'Poppins', Courier, monospace;
-    color: var(--babyBlue);
-
-    text-decoration: none;
-    padding: 1%;
-    outline: 2px solid lightgrey;
-
-    transition: ease 0.25s;
-    margin-top: 3%;
-}
-
-.withYouWrapper a:hover{
-    transition: ease 0.25s;
-    color:rgb(233, 63, 63);
 }
 
 @media (max-width: 44.5rem) {
