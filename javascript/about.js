@@ -1,9 +1,5 @@
 // VARIABLES -----------------------------------------------------------------------------------------------------------------------------
 
-const instaIcon = document.getElementById("instagramIcon");
-const githubIcon = document.getElementById("githubIcon");
-
-const logo = document.getElementById("logo");
 const cyan_bird = "../images/Hummingbirds/darkcyan_logo.png";
 const black_bird = "../images/Hummingbirds/black_logo.png";
 
@@ -68,17 +64,36 @@ timeline_observer.observe(time_content[13]);
 
 //  event listeners ----------------------------------------------------------------------------------------------------------------------
 
-// Allow link towards github and instagram when the user clicks on the icons
-instaIcon.addEventListener("click", () =>{
+const logo = document.getElementById("logo");
+const footerMainLogo = document.getElementById("footer-hummingbird-logo");
+
+const githubIcon = document.getElementById("github");
+const instaIcon = document.getElementById("instagram");
+const discordIcon = document.getElementById("discord");
+const linkedinIcon = document.getElementById("linkedin");
+
+logo?.addEventListener("click", () => {
+    window.location.replace("/");
+});
+
+// Check if the github icon has loaded to prevent null error
+githubIcon?.addEventListener("click", () => {
+    window.open("https://github.com/Larry-Larriee")
+});
+
+linkedinIcon?.addEventListener("click", () => {
+    window.open("https://www.linkedin.com/in/larry-le-94b565244/")
+});
+
+discordIcon?.addEventListener("click", () => {
+    window.open("https://discordapp.com/users/490277278136270874");
+});
+
+instaIcon?.addEventListener("click", () => {
     window.open("https://www.instagram.com/larry_larriee/");    
 });
 
-githubIcon.addEventListener("click", () => {
-    window.open("https://github.com/Larry-Larriee");
-});
-
-// Go back to main page
-logo.addEventListener("click", () => {
+footerMainLogo?.addEventListener("click", () => {
     window.location.replace("/");
 });
 

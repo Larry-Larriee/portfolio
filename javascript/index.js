@@ -8,6 +8,8 @@ const instaIcon = document.getElementById("instagram");
 const discordIcon = document.getElementById("discord");
 const linkedinIcon = document.getElementById("linkedin");
 
+const footerMainLogo = document.getElementById("footer-hummingbird-logo");
+
 // FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
 
 const observer_controls = {
@@ -26,8 +28,41 @@ const observer = new IntersectionObserver(entries => {
             if (entry.isIntersecting) {            
                 const targetEntry = entry.target;
 
-                revealContent(targetEntry);
-                targetEntry.classList.add('fadeFromBottom');
+                switch (targetEntry.classList[0]) { // Get the first classname (usually the first and default styler for that element)
+
+                    case "iconContainer":
+
+                        revealContent(targetEntry);
+                        targetEntry.classList.add('fadeFromBottom');                        
+                        break;
+                    
+                    case "featured-projects-wrapper-mainpage":
+                        revealContent(targetEntry);
+
+                        const project_mainpage = document.querySelectorAll(".project-mainpage");
+                        for (let i = 0; i < 3; i++) {
+
+                            revealContent(project_mainpage[i]);
+
+                            project_mainpage[i].classList.add("fade-featured-projects-"+ i);                           
+                        }
+
+                        const all_projects_link_wrapper = document.querySelector(".all-projects-link-wrapper");
+                        revealContent(all_projects_link_wrapper);
+                        all_projects_link_wrapper.classList.add("all-projects-link-animation");
+
+                        break;
+
+                    case "need-a-website-link-to-contacts":
+
+                        revealContent(targetEntry);
+                        targetEntry.classList.add('fadeFromBottom');                        
+                        break;
+
+                    // no default
+                }
+                
+
         }
     })
 }, observer_controls);
@@ -68,6 +103,10 @@ discordIcon?.addEventListener("click", () => {
 
 instaIcon?.addEventListener("click", () => {
     window.open("https://www.instagram.com/larry_larriee/");    
+});
+
+footerMainLogo?.addEventListener("click", () => {
+    window.location.replace("/");
 });
 
 // EASTER EGG ----------------------------------------------------------------------------------------------------------------------------

@@ -43,10 +43,11 @@
 
             <!-- Mobile navigation that fires through media query ----------------------------------------------------------------------- -->
             <ul class="mobile_nav content_hidden">
+                <li><a href="/index.html">Home</a></li>
                 <li><a href="/pages/works.html">My Works</a></li>
                 <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
                 <li><a href="/pages/contacts.html">Contacts</a></li>
-                <li><a href="/about.html">About Me</a></li>
+                <li><a href="/about.html" id="about_me_mobile_navigation_link">About Me</a></li>
             </ul>
         </header>
 
@@ -135,17 +136,42 @@
 
     </body>
 
-    <footer id="worksFooter">
+    <!-- Footer -->
+    <footer class="worksFooter">
+        
+        <div class="footer-content-wrapper">
+            <div class="footer-personal-branding">
+                <div class="footer-logo">
+                    <img alt="portfolio Logo" src="/images/Hummingbirds/yellower_logo.png" id="footer-hummingbird-logo">
+                    <p class="whiteText">Larry Le | Digital Portfolio</p>
+                </div>
 
-        <p class="whiteText aboutWebsite">This portfolio was started during the summer of 2022: thanks for visiting!</p>
+                <div class="socials">
+                    <img src="/images/icons/github_white.png" alt="github" id="github">
+                    <img src="/images/icons/linkedin_white.png" alt="linkedIn" id="linkedin">
+                    <img src="/images/icons/discord_white.png" alt="discord" id="discord">
+                    <img src="/images/icons/instagram_white.png" alt="instagram" id="instagram">
+                </div>
+            </div>
+            <div class="whiteText about-website">
+                <p>This portfolio was started during the summer of 2022: thanks for visiting!</p>
+            </div>
 
-        <div class="socials">   
-            <p class="whiteText">Follow me on: </p>
-            <img src="/images/icons/instagram_white.png" alt="instagram" id="instagramIcon">
-            <img src="/images/icons/github_white.png" alt="github" id="githubIcon">
+            <div class="footer-navigation">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/pages/works.html">My Works</a></li>
+                    <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
+                    <li><a href="/pages/contacts.html">Contacts</a></li>
+                    <li><a href="/about.html" id="about_me_navigation_link_footer">About Me</a></li>
+                </ul>
+            </div>
         </div>
 
-        <h5 class="legalFooter">Copyright &copy; 2022 Larry Le Under MIT Licensing</h5>
+        <div class="legalFooter">                
+            <h5>Copyright &copy; 2022 Larry Le Under MIT Licensing</h5>
+        </div>
+    
     </footer>
 
 </html>

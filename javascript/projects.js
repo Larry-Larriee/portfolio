@@ -1,10 +1,5 @@
 // VARIABLES -----------------------------------------------------------------------------------------------------------------------------
 
-const githubIcon = document.getElementById("githubIcon");
-const instaIcon = document.getElementById("instagramIcon");
-
-const logo = document.getElementById("logo");
-
 const project_header_title = document.querySelector(".project_header_title");
 const project_header_description = document.querySelector(".project_description_introduction");
 
@@ -105,17 +100,37 @@ content_observer.observe(project_sections[2]);
 
 // EVENT LISTENERS -----------------------------------------------------------------------------------------------------------------------
 
-logo?.addEventListener("click", () => {
+const navigation_logo = document.getElementById("logo");
+const footerMainLogo = document.getElementById("footer-hummingbird-logo");
+
+const githubIcon = document.getElementById("github");
+const instaIcon = document.getElementById("instagram");
+const discordIcon = document.getElementById("discord");
+const linkedinIcon = document.getElementById("linkedin");
+
+navigation_logo?.addEventListener("click", () => {
     window.location.replace("/");
 });
 
-// Open social media links in new tab
+// Check if the github icon has loaded to prevent null error
 githubIcon?.addEventListener("click", () => {
-    window.open("https://github.com/Larry-Larriee");
+    window.open("https://github.com/Larry-Larriee")
 });
 
-instaIcon?.addEventListener("click", () =>{
+linkedinIcon?.addEventListener("click", () => {
+    window.open("https://www.linkedin.com/in/larry-le-94b565244/")
+});
+
+discordIcon?.addEventListener("click", () => {
+    window.open("https://discordapp.com/users/490277278136270874");
+});
+
+instaIcon?.addEventListener("click", () => {
     window.open("https://www.instagram.com/larry_larriee/");    
+});
+
+footerMainLogo?.addEventListener("click", () => {
+    window.location.replace("/");
 });
 
 // MOBILE MENU --------------------------------------------------------------------------------------------------------------------------

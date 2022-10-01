@@ -240,6 +240,63 @@ body{
     }
 }
 
+.fade-featured-projects-0{
+    animation: fade-featured-projects-1 1.2s both;
+}
+
+.fade-featured-projects-1{
+    animation: fade-featured-projects-2 1.2s both 0.5s; /* 0.5s = delay */
+}
+
+.fade-featured-projects-2{
+    animation: fade-featured-projects-3 1.2s both 1s;
+}
+
+.all-projects-link-animation{
+    animation: all-projects-link-animation 1.2s both 1.5s;
+}
+
+@keyframes fade-featured-projects-1{
+    from{
+        opacity: 0;
+        transform: translateY(6vh);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fade-featured-projects-2{
+    from{
+        opacity: 0;
+        transform: translateY(6vh);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fade-featured-projects-3{
+    from{
+        opacity: 0;
+        transform: translateY(6vh);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes all-projects-link-animation{
+    from{
+        opacity: 0;
+        transform: translateX(-3vw);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /* Navagation Bar --------------------------------------------------------------------------------------------------------------------- */
 
 /* Position the entire navigation bar correctly to style */
@@ -462,33 +519,34 @@ footer{
 
 .footer-content-wrapper{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 
     min-height: 40vh;
+}
+
+.footer-personal-branding{
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5vh;
 }
 
 .footer-logo{
     display: flex;
     gap: 1vw;
 
-    font-size: 3.5vh;
+    font-size: 3.75vh;
 
     justify-content: center;
     align-items: center;
 }
 
 .footer-logo img{
+    max-width: 8.5vh;
+    max-height: 8.5vh;
 
-    max-width: 7vh;
-    min-height: 7vh;
-
-    transition: 1s ease;
-}
-.footer-logo img:hover{
-
-    transition: 1s ;
-    transform: perspective(100px) rotateY(360deg); /* perspective is how far the image is from the user */
+    cursor: pointer;
 }
 
 .indexFooter{
@@ -607,7 +665,7 @@ footer{
 .project-mainpage:hover{
 
     transition: 200ms ease;
-    box-shadow: 0.1vh 0.1vh 1vh 0.3vh var(--darkOrange);
+    box-shadow: 0.05vh 0.05vh 0.5vh 0.1vh var(--darkOrange);
 }
 
 .project-mainpage-description, .project-mainpage-title{
@@ -632,6 +690,7 @@ footer{
 .project-mainpage-languages{
     display: flex;
     gap: 1vw;
+    flex-wrap: wrap;
 }
 .project-mainpage-languages p{
 
@@ -674,7 +733,7 @@ footer{
 .all-projects-link:hover{
 
     transition: 200ms ease;
-    box-shadow: 0.1vh 0.1vh 1vh var(--darkOrange);
+    box-shadow: 0.05vh 0.05vh 0.5vh 0.1vh var(--darkOrange);
 }
 
 .all-projects-link img{
@@ -753,9 +812,6 @@ footer{
 
 /* Changes apply if the device has a width less than or equal to 50rem */
 @media (max-width: 44.5rem) {
-    *{
-        animation: none !important; /* Override all animations */
-    }
 
     /* For main text */
     .contentText{
@@ -780,6 +836,26 @@ footer{
         margin: 0rem 1rem 0rem 1rem;
     }
     .legalFooter{
+        display: none;
+    }
+
+    footer > *{
+        padding: 0rem 1rem 0rem 1rem;
+        gap: 1rem;
+    }
+
+    .footer-navigation{
+        min-width: 25vw;
+    }
+
+    .footer-logo img{
+        max-width: 10vw;
+    }
+
+    .about-website{
+        display: none;
+    }
+    .socials{
         display: none;
     }
 }
@@ -830,7 +906,7 @@ footer{
 @media (max-width: 44.5rem) {
 
     #background_top_index{
-        min-height: max-content;
+        min-height: 95vh;
     }
 
     /* Remove Larry Le | Digital Portoflio, workworkwork, and the down arrow for space */
@@ -842,12 +918,10 @@ footer{
         margin: 2rem 1rem 2rem 0rem;
     }
 
-    .introCaption, #indexMainText{
-        font-size: 1.1rem;
-        max-width: 100%;
-
-        margin-top: 2rem;
+    .introductionCaption{
+        font-size: 2rem;
     }
+
     .introDescription{
         text-align: left;
         font-size: 1rem;
@@ -869,67 +943,36 @@ footer{
 
     .iconContainer img{ 
         margin-top: 2rem; /* Referencing the children of a class has more priority than referencing the child's class */
-        max-width: 20vh;
+        min-width: 15vh;
+        max-width: 15vh;
     }
 
-    /* Main Content */
-    .mainContentContainer{
-        gap: 1rem;
-    }
+    /* Featured Projects ----------------------------------------------------------------------------------------------------- */
 
-    .mainContentContainer video{
-        max-width: 16rem;
-        min-height: 10rem;   
-        object-fit: cover;
-
-        border-radius: 1rem;
-    }
-
-    #roblox_content{
+    .featured-projects-wrapper-mainpage{
+        padding: 1.5rem;
+        
         display: flex;
-        flex-direction: column;
-    }
-
-    #discord_content{
-        display: flex;
-        flex-direction: row-reverse; /* Reverse the order of the text and image */
-
         flex-wrap: wrap;
-        gap: 1rem;
+
+        gap: 3rem;
     }
 
-    #discord_content img{
-        max-width: 16rem;
-        border-radius: 1rem;
+    .project-mainpage{
+
+        border-radius: 2rem;
     }
-    #cyberstart_content {
-        display: grid;
-        grid-template-areas: 
+    .project-mainpage-description{
 
-        "cyber_image_finalist cyberstart_content_text"
-        "cyber_image_semifinalist cyberstart_content_text";
-
-        min-height: 28rem;
-        width: 100%;
-        margin: 0;
-        gap: 0rem;
-
-        place-items: center;
+        margin: 0.75rem !important;
     }
 
-    #cyberstart_content img{
-        max-width: 7rem;
-    }
-    #cyberstart_content img:nth-child(0){
-        grid-area: cyber_image_finalist;
-    }
-    #cyberstart_content img:nth-last-child(1){
-        grid-area: cyber_image_semifinalist;
+    .all-projects-link-wrapper{
+        display: none;
     }
 
-    #cyberstart_content p{
-        max-width: 12rem;
-        grid-area: cyberstart_content_text;
+    .need-a-website-link-to-contacts p{
+        text-align: center;
     }
 }
 
@@ -940,11 +983,11 @@ footer{
     align-items: center;
 
     margin: 1.5rem 0rem 0rem 9rem;
-    gap: 1.8rem;
+    gap: 1.5rem;
 }
 
 .iconWrapper img{
-    max-width: 2.5vw;
+    max-width: 2vw;
 
     transform: rotate(0deg);
     transition: 0.5s ease;
@@ -1008,39 +1051,6 @@ footer{
 
 .skillWrapper img{
     width: 6vw;
-}
-
-.withYouWrapper{
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-
-    min-height: 25rem;
-}
-
-.withYouWrapper h1{
-    margin-top: 4%;
-    margin-bottom: 2.5%;
-}
-
-.withYouWrapper a{
-
-    background-color: white;
-
-    font-family: 'Poppins', Courier, monospace;
-    color: var(--babyBlue);
-
-    text-decoration: none;
-    padding: 1%;
-    outline: 2px solid lightgrey;
-
-    transition: ease 0.25s;
-    margin-top: 3%;
-}
-
-.withYouWrapper a:hover{
-    transition: ease 0.25s;
-    color:rgb(233, 63, 63);
 }
 
 @media (max-width: 44.5rem) {
