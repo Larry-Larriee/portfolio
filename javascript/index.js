@@ -39,7 +39,7 @@ const observer = new IntersectionObserver(entries => {
                     case "featured-projects-wrapper-mainpage":
                         revealContent(targetEntry);
 
-                        let project_mainpage = document.querySelectorAll(".project-mainpage");
+                        const project_mainpage = document.querySelectorAll(".project-mainpage");
                         for (let i = 0; i < 3; i++) {
 
                             revealContent(project_mainpage[i]);
@@ -47,7 +47,7 @@ const observer = new IntersectionObserver(entries => {
                             project_mainpage[i].classList.add(`fade-featured-projects-${i}`); // f-strings
                         }
 
-                        let all_projects_link_wrapper = document.querySelector(".all-projects-link-wrapper");
+                        const all_projects_link_wrapper = document.querySelector(".all-projects-link-wrapper");
                         revealContent(all_projects_link_wrapper);
                         all_projects_link_wrapper.classList.add("all-projects-link-animation");
 

@@ -39,7 +39,6 @@
     padding: 0;
 }
 
-
 body{
     position: relative;
     min-height: 100vh;
@@ -99,7 +98,11 @@ body{
     transition: 0.25s ease;
 
     text-decoration-skip-ink: none; /* Prevent underline skips for letters like 'g' */
+}
+
+.highlighter a{
     text-decoration: underline 0.2rem var(--darkOrange);
+    color: inherit;
 }
 
 .highlighter:hover{
@@ -658,14 +661,14 @@ footer{
     gap: 2vh;
     flex-direction: column;
 
-    transition: 200ms ease;
+    transition: 250ms ease;
     box-shadow: 0 0 0 var(--darkOrange);
 }
 
 .project-mainpage:hover{
 
-    transition: 200ms ease;
-    box-shadow: 0.05vh 0.05vh 0.5vh 0.1vh var(--darkOrange);
+    transition: 250ms ease;
+    box-shadow: 0.4vh 0.4vh 0.3vh 0.1vh var(--darkOrange);
 }
 
 .project-mainpage-description, .project-mainpage-title{
@@ -905,10 +908,6 @@ footer{
 /* Index Page ---------------------------------------------------------------------------------------------------------------------- */
 @media (max-width: 44.5rem) {
 
-    #background_top_index{
-        min-height: 95vh;
-    }
-
     /* Remove Larry Le | Digital Portoflio, workworkwork, and the down arrow for space */
     .logoDiv p, .introWrapper h2, #pointing_arrow{
         display: none; 
@@ -978,11 +977,60 @@ footer{
 
 /* Contacts Page ----------------------------------------------------------------------------------------------------------------------- */
 
-.iconWrapper{
-    display: flex;
-    align-items: center;
+.background-top-contacts-page{
+    min-height: 50vh;
 
-    margin: 1.5rem 0rem 0rem 9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+
+    margin-bottom: 10vh;
+}
+
+.skillset{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 10vh;
+}
+.skillWrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5vw;
+
+    text-align: center;
+    padding-bottom: 10vh;
+}
+
+.skillWrapper p{
+    margin-top: 15%;
+
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: var(--oceanBlue);
+    font-family: 'Poppins', serif;
+}
+
+.skillWrapper img{
+    width: 6vw;
+}
+
+.contact-information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 5vw;
+}
+
+.iconWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+
     gap: 1.5rem;
 }
 
@@ -1002,11 +1050,10 @@ footer{
 
 #contactInfo{
     width: max-content;
-    outline: 2px solid lightgrey;
+    border: 2px solid lightgrey;
     padding: 3vh 6vh 3vh 6vh;
-    box-shadow: 2vh 2vh var(--softBlue);
+    box-shadow: 2vh 2vh 0.1vh var(--softBlue);
 
-    margin: 3%;
     text-align: center;
 
     font-size: 1.2vw;
@@ -1017,46 +1064,15 @@ footer{
     overflow: auto;
 }
 
-.skillset{
-    
-    margin-top: 15vh;
-    padding-bottom: 15vh;
-    background-color: var(--grey);
-    display: grid; /* Similar to display: block but with flexbox-like properties */
-    place-items: center;
-
-    min-height: 30vh;   
-}
-
-.skillset h1{
-    
-    margin: 10vh;
-}
-
-.skillWrapper{
-    column-count: 4;
-    gap: 5vw;
-
-    text-align: center;
-}
-
-.skillWrapper p{
-    margin-top: 15%;
-
-    font-size: 1.2vw;
-    font-weight: 600;
-    color: green;
-    font-family: 'Poppins', serif;
-}
-
-.skillWrapper img{
-    width: 6vw;
-}
-
 @media (max-width: 44.5rem) {
     
+    .contact-information{
+        display: flex;
+        flex-direction: column;
+    }
+
     .iconWrapper{
-        margin: 1.5rem 0rem 1.5rem 2.4rem;
+        margin: 1.5rem 0rem 0rem 0rem;
         gap: 1rem;
     }
     .iconWrapper img{
@@ -1069,7 +1085,6 @@ footer{
         padding: 3vh 5vh 3vh 5vh;
         box-shadow: 2vh 2vh var(--softBlue);
     
-        margin: 3%;
         text-align: center;
     
         font-size: 1rem;
@@ -1082,12 +1097,7 @@ footer{
         margin-top: 3rem;
         padding-bottom: 2.5rem;
     }
-    .blueHeader{
-        font-size: 1.2rem;
-        text-align: center;
 
-        margin: 2.5rem !important;
-    }
     .skillWrapper{
         max-width: max-content;
         display: flex;
