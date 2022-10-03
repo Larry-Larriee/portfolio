@@ -74,12 +74,6 @@ body{
     color: lightcoral;
 } 
 
-.centerWrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .blueHeader{
 
     font-size: 2.6vw;
@@ -1062,6 +1056,11 @@ footer{
     font-family: 'Poppins', serif;
 
     overflow: auto;
+}
+
+#contactInfo a{
+    color: var(--oceanBlue);
+    text-decoration: none;
 }
 
 @media (max-width: 44.5rem) {
