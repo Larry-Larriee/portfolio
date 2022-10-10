@@ -2,13 +2,18 @@
 
 // offsetHeight = innerHeight but for elements // const pageHeight = window.innerHeight;
 const logoDiv = document.getElementsByClassName('logoDiv');
+const footerMainLogo = document.getElementById("footer-hummingbird-logo");
 
 const githubIcon = document.getElementById("github");
 const instaIcon = document.getElementById("instagram");
 const discordIcon = document.getElementById("discord");
 const linkedinIcon = document.getElementById("linkedin");
 
-const footerMainLogo = document.getElementById("footer-hummingbird-logo");
+// Specific project containers on the main page
+const project_mainpage = document.querySelectorAll(".project-mainpage"); 
+
+// Link to all projects
+const all_projects_link_wrapper = document.querySelector(".all-projects-link-wrapper");
 
 // FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
 
@@ -39,15 +44,12 @@ const observer = new IntersectionObserver(entries => {
                     case "featured-projects-wrapper-mainpage":
                         revealContent(targetEntry);
 
-                        let project_mainpage = document.querySelectorAll(".project-mainpage");
                         for (let i = 0; i < 3; i++) {
 
                             revealContent(project_mainpage[i]);
-
                             project_mainpage[i].classList.add(`fade-featured-projects-${i}`); // f-strings
                         }
 
-                        let all_projects_link_wrapper = document.querySelector(".all-projects-link-wrapper");
                         revealContent(all_projects_link_wrapper);
                         all_projects_link_wrapper.classList.add("all-projects-link-animation");
 

@@ -21,8 +21,10 @@ const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
 
-            skillWrapper.classList.remove("content_hiding");
-            skillWrapper.classList.add('fadeFromBottom');   
+            setTimeout(() => {
+                skillWrapper.classList.remove("content_hiding");
+                skillWrapper.classList.add('fadeFromBottom');   
+            }, 500);
         }
     })
 }, spawn_control);
