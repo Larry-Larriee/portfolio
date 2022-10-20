@@ -1380,13 +1380,13 @@ footer{
     border-radius: 1rem;
     border: 0.15rem solid var(--gold);
 
-    color: var(--blackish);
     text-decoration: none;
     transition: 250ms ease;
     box-shadow: 0.1rem 0.2rem var(--gold);
 
-    line-height: 1.4;
 
+
+    position: relative;
 }
 
 .work_content a:hover{
@@ -1396,6 +1396,20 @@ footer{
 
     color: var(--darkOrange);
     transition: 250ms ease;
+}  
+
+.work_content p{
+    color: var(--blackish);
+    line-height: 1.4;
+}
+
+.work_content img{
+    position: absolute;
+    bottom: 2vh;
+    right: 1vw;
+
+    max-width: 2.5vw;
+    min-height: 2.5vh;
 }
 
 @media (max-width: 44.5rem) {
@@ -1413,10 +1427,8 @@ footer{
     position: relative;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;    
-
-    gap: 25vw;
 }
 
 .project_header_title{
