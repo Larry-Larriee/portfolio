@@ -253,6 +253,10 @@ body{
     animation: all-projects-link-animation 1.2s both 1.5s;
 }
 
+.bounce-up{
+    animation: bounce-up 1.2 both 0;
+}
+
 @keyframes fade-featured-projects-1{
     from{
         opacity: 0;
@@ -291,6 +295,15 @@ body{
     to{
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes bounce-up {
+    from{
+        transform: translateY(0vh);
+    }
+    to{
+        transform: translateY(-5vh);
     }
 }
 
@@ -458,6 +471,7 @@ body{
 #pointing_arrow:active{
     transition: 0.5s ease; 
     margin-top: 24vh;
+
 }
 
 .introductionCaption{
@@ -657,12 +671,13 @@ footer{
 
     transition: 250ms ease;
     box-shadow: 0 0 0 var(--darkOrange);
+
 }
 
 .project-mainpage:hover{
 
     transition: 250ms ease;
-    box-shadow: 0.4vh 0.4vh 0.3vh 0.1vh var(--darkOrange);
+    transform: translateY(-1.0vh);
 }
 
 .project-mainpage-description, .project-mainpage-title{
@@ -729,8 +744,8 @@ footer{
 }
 .all-projects-link:hover{
 
-    transition: 200ms ease;
-    box-shadow: 0.05vh 0.05vh 0.5vh 0.1vh var(--darkOrange);
+    transition: 250ms ease;
+    box-shadow: 0.05vh 0.05vh 0.5vh 0.2vh var(--darkOrange);
 }
 
 .all-projects-link img{
@@ -1376,6 +1391,7 @@ footer{
 
     padding: 2em 1em; /* Use em so that padding is relative to font size */
     min-height: 8rem;
+    max-width: calc(25rem - 0.9rem);
 
     border-radius: 1rem;
     border: 0.15rem solid var(--gold);
@@ -1384,9 +1400,9 @@ footer{
     transition: 250ms ease;
     box-shadow: 0.1rem 0.2rem var(--gold);
 
-
-
     position: relative;
+
+    display: flex;
 }
 
 .work_content a:hover{
@@ -1398,9 +1414,25 @@ footer{
     transition: 250ms ease;
 }  
 
-.work_content p{
+.work_content section{
     color: var(--blackish);
     line-height: 1.4;
+
+    font-size: 1.2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.work_content article{
+    font-size: 1rem;
+
+    max-width: inherit;
+}
+
+.work_content article > p{
+    max-width: 19rem;
 }
 
 .work_content img{
