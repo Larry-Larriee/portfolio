@@ -676,8 +676,8 @@ footer{
 
 .project-mainpage:hover{
 
-    transition: 250ms ease;
-    transform: translateY(-1.0vh);
+    transition: 500ms ease;
+    transform: translateY(-0.75vh);
 }
 
 .project-mainpage-description, .project-mainpage-title{
@@ -1481,12 +1481,18 @@ footer{
 
 }
 
-.project_background, .project_background video, .project_background img{
+.project_background{
     width: 100%; /* 100% of the parent */
     height: 100%;
 
-    position: absolute;
+    position: absolute; /* Behind the description content */
     z-index: -1;
+}
+
+.project_background video, .project_background img{
+
+    width: 100%; /* 100% of the parent */
+    height: 100%;
 
     object-fit: cover; /* Video will fill to fit container, cropping if needed */
     opacity: 0.95;

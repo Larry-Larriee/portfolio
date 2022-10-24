@@ -13,7 +13,7 @@ var background; // New background variable
 (document.querySelector("video")) ? background = document.querySelector("video") : background = document.getElementById("background_image");
 
 const controls = {
-    rootMargin: "-150px 0px 0px 0px"
+    rootMargin: "-25% 0% 0% 0%"
 };
 
 // Hide project headers (hidden in the first place to prevent animation from starting AFTER the
@@ -118,7 +118,7 @@ githubIcon?.addEventListener("click", () => {
 });
 
 linkedinIcon?.addEventListener("click", () => {
-    window.open("https://www.linkedin.com/in/larry-le-94b565244/")
+    window.open("https://www.linkedin.com/in/larry-le-94b565244/");
 });
 
 discordIcon?.addEventListener("click", () => {
