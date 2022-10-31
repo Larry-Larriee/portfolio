@@ -19,7 +19,7 @@
     --darkerPeach: #ffd991; 
     --darkOrange: #ffa250;
     --pinkish: #ff97a9;
-    --pinker: #ff8383;
+    --pinker: #ff97a9;
     --lightishRed: #ff5151;
     --newLightCoral: linear-gradient(0deg, coral, lightcoral 20%,coral);
 
@@ -359,6 +359,7 @@ body{
     
     font-size: 1.1vw;
     list-style: none;
+
 }
 
 /* Separate each child in the navigation bar */
@@ -368,8 +369,8 @@ body{
 }
 
 .navLinks li a:hover, .aboutLink:hover{
-    color: var(--oceanBlue);
 
+    color: var(--grey);
     transition: 250ms ease;
 }
 
@@ -621,7 +622,7 @@ footer{
 }
 .footer-navigation a:hover{
 
-    color: var(--oceanBlue);
+    color: var(--grey);
     transition: 250ms ease;
 }
 
@@ -1391,31 +1392,19 @@ footer{
 
     padding: 2em 1em; /* Use em so that padding is relative to font size */
     min-height: 8rem;
-    max-width: calc(25rem - 0.9rem);
+    max-width: calc(25rem + 0.9rem);
 
     border-radius: 1rem;
-    border: 0.15rem solid var(--gold);
+    outline: 0.15rem solid var(--gold);
 
     text-decoration: none;
-    transition: 250ms ease;
-    box-shadow: 0.1rem 0.2rem var(--gold);
 
     position: relative;
-
     display: flex;
 }
 
-.work_content a:hover{
-    
-    background-color: var(--peach);
-    border: 0.15rem solid var(--gold);
-
-    color: var(--darkOrange);
-    transition: 250ms ease;
-}  
-
 .work_content section{
-    color: var(--blackish);
+    color: white;
     line-height: 1.4;
 
     font-size: 1.2rem;
@@ -1423,16 +1412,87 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+
+}
+
+.work_content a::before{ /* before the actual content (General Attributes) */
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    border-radius: 1rem;
+
+    transition: 500ms ease;
+}
+
+.work_content a::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    opacity: 0.4;
+    border-radius: 1rem;
+
+    background: var(--blackish);
+}
+
+.work_content a[id="swamp_defense"]::before{
+    background: no-repeat url(/images/projects/Roblox/swamp-defense/swamp-defense-logo.png);
+    background-size: cover;
+}
+.work_content a[id="museum"]::before{
+    background: no-repeat url(/images/projects/Roblox/museum/museum-logo.png);
+    background-size: cover;
+}
+.work_content a[id="titan_legends"]::before{
+    background: no-repeat url(/images/projects/Roblox/titan-legends/titan-logo.png);
+    background-size: cover;
+}
+
+.work_content a[id="FRC2023"]::before{
+    background: no-repeat url(/images/projects/robotics/kelvry.jpg);
+    background-size: cover;
+}
+
+.work_content a[id="cyberstart2022"]::before{
+    background: no-repeat url(/images/projects/cybersecurity/stackIssue1.png);
+    background-size: cover;
+}
+
+.work_content a[id="cyberpatriot2023"]::before{
+    background: no-repeat url(/images/projects/cybersecurity/cyberpatriot-round-one.png);
+    background-size: cover;
+}
+
+.work_content a[id="JTIC"]::before{
+    background: no-repeat url(/images/projects/cad/photoMERITS.png);
+    background-size: cover;
+}
+
+.work_content a[id="exploravision2022"]::before{
+    background: no-repeat url(/images/projects/cad/explora.JPG);
+    background-size: cover;
+}
+
+.work_content a:hover::before{ /* before the actual content */
+    
+    opacity: 0.70;
+    transition: 500ms ease;
 }
 
 .work_content article{
-    font-size: 1rem;
+    font-size: 0.85rem;
 
-    max-width: inherit;
-}
-
-.work_content article > p{
-    max-width: 19rem;
+    padding-bottom: 0.5rem; /* padding to avoid the position absolute icon */
 }
 
 .work_content img{
@@ -1451,6 +1511,23 @@ footer{
         max-width: 25rem;
     }
 }
+
+/*
+
+.work_content a:hover{
+    
+    background-color: var(--peach);
+    border: 0.15rem solid var(--gold);
+
+    color: var(--darkOrange);
+    transition: 250ms ease;
+}  
+
+.work_content a[id="swamp_defense"]{ look specifically for the swamp defense id in this element
+    background: no-repeat url(/images/projects/Roblox/swamp-defense/swamp-defense-logo.png);
+    background-size: cover;
+}
+*/
 
 /* Project Layout -------------------------------------------------------------------------------------------------------------------- */
 
@@ -1536,15 +1613,15 @@ footer{
     min-height: 37.5vh;
     border-radius: 1rem;
 
-    transition: 500ms ease;
-    border: 0.1rem solid black;
+    transition: 1s ease;
+    outline: 0.1rem solid var(--blackish);
 }
 
 .project_section_image img:hover{
     cursor: pointer;
     transition: 500ms ease;
 
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 @media (max-width: 44.5rem) {
