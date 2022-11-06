@@ -1,14 +1,29 @@
 // VARIABLES -----------------------------------------------------------------------------------------------------------------------------
 
 const logo = document.getElementById("logo");
-
 const cyan_bird = "../images/Hummingbirds/darkcyan_logo.png";
 const black_bird = "../images/Hummingbirds/black_logo.png";
-
 const top_content = document.querySelector(".top_page_description_wrapper");
 const header = document.querySelector("header");
 
 // FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
+
+const images_left = document.getElementsByClassName("images-left-side")[0];
+const images_right = document.getElementsByClassName("images-right-side")[0];
+
+const aboutMeDescription = document.getElementById("about-me-description");
+
+aboutMeDescription.classList.toggle("fadeFromTop");
+
+setTimeout(() => {
+    images_left.classList.toggle("content_hiding");
+    images_right.classList.toggle("content_hiding");
+
+    images_left.classList.toggle("fadeInLeft");
+    images_right.classList.toggle("fadeInRight");
+}, 1000);
+
+// TIMELINE FUNCTIONS --------------------------------------------------------------------------------------------------------------------
 
 const nav_options = {
     rootMargin: "-100px 0px 0px 0px" // -100px as you want to start 100px early
@@ -62,7 +77,6 @@ timeline_observer.observe(time_content[10]);
 timeline_observer.observe(time_content[11]);
 timeline_observer.observe(time_content[12]);
 timeline_observer.observe(time_content[13]);
-
 
 //  event listeners ----------------------------------------------------------------------------------------------------------------------
 

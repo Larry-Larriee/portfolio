@@ -54,7 +54,7 @@ body{
     font-weight: 525;
     font-family: "Kanit", sans-serif;
 
-    padding-top: 3%;
+    padding-top: 3vw;
     color: black;
 }
 
@@ -764,18 +764,22 @@ footer{
 
 .need-a-website-link-to-contacts{
 
+    min-height: calc(70vh - 4.9vh - 3vw);
+
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 5vh;
-
-    margin-top: 15vh;
+    gap: 10vh;
 }
 
 .need-a-website-link-to-contacts p{
     font-family: "Roboto", sans-serif;
     font-size: 3vh;
+
+    line-height: 2rem;
+    text-align: center;
 }
 
 .need-a-website-link-to-contacts a{
@@ -797,6 +801,7 @@ footer{
     background: var(--oceanBlue);
     border: 0.2vw solid var(--oceanBlue);
 }
+
 
 /* Computer History Container ---------------------------------------------------------------------------------------------------------------- */
 
@@ -1155,6 +1160,8 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;    
+
+    gap: 5rem;
 }
 
 #top_page_about_me{
@@ -1173,6 +1180,62 @@ footer{
     color: white;
     font-family: 'Poppins', serif;
 }
+
+.top_page_description_wrapper img{
+    max-width: 4rem;
+}
+
+.images-left-side{
+    position: relative;
+
+    display: grid;
+    grid-template-areas:
+    
+    ". one"
+    "two ."
+    ". thr";
+
+    gap: 2rem;
+}
+.images-left-side img:nth-child(1){
+    grid-area: one;
+    transform: rotate(15deg);
+}
+.images-left-side img:nth-child(2){
+    grid-area: two;
+    transform: rotate(-15deg);
+}
+.images-left-side img:nth-child(3){
+    grid-area: thr;
+    transform: rotate(20deg);
+}
+
+.images-right-side{
+    position: relative;
+
+    display: grid;
+    grid-template-areas:
+    
+    "one ."
+    ". two"
+    "thr .";
+
+    gap: 2rem;
+}
+.images-right-side img:nth-child(1){
+    grid-area: one;
+    transform: rotate(-15deg);
+}
+.images-right-side img:nth-child(2){
+    grid-area: two;
+    transform: rotate(15deg);
+}
+.images-right-side img:nth-child(3){
+    grid-area: thr;
+    transform: rotate(-20deg);
+}
+
+/* Timeline ----------------------------------------------------------------------------------------------------- */
 
 .timeline_content_wrapper{
     font-size: 1.1vw;
@@ -1428,6 +1491,7 @@ footer{
     border-radius: 1rem;
 
     transition: 500ms ease;
+    
 }
 
 .work_content a::after{
@@ -1445,52 +1509,9 @@ footer{
     background: var(--blackish);
 }
 
-.work_content a[id="swamp_defense"]::before{
-    background: no-repeat url(/images/projects/Roblox/swamp-defense/swamp-defense-logo.png);
-    background-size: cover;
-}
-.work_content a[id="museum"]::before{
-    background: no-repeat url(/images/projects/Roblox/museum/museum-logo.png);
-    background-size: cover;
-}
-.work_content a[id="titan_legends"]::before{
-    background: no-repeat url(/images/projects/Roblox/titan-legends/titan-logo.png);
-    background-size: cover;
-}
-
-.work_content a[id="FRC2023"]::before{
-    background: no-repeat url(/images/projects/robotics/kelvry.jpg);
-    background-size: cover;
-}
-
-.work_content a[id="cyberstart2022"]::before{
-    background: no-repeat url(/images/projects/cybersecurity/stackIssue1.png);
-    background-size: cover;
-}
-
-.work_content a[id="cyberpatriot2023"]::before{
-    background: no-repeat url(/images/projects/cybersecurity/cyberpatriot-round-one.png);
-    background-size: cover;
-}
-
-.work_content a[id="JTIC"]::before{
-    background: no-repeat url(/images/projects/cad/photoMERITS.png);
-    background-size: cover;
-}
-
-.work_content a[id="exploravision2022"]::before{
-    background: no-repeat url(/images/projects/cad/explora.JPG);
-    background-size: cover;
-}
-
-.work_content a:hover::before{ /* before the actual content */
-    
-    opacity: 0.70;
-    transition: 500ms ease;
-}
-
 .work_content article{
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    font-family: 'Lato', sans-serif;
 
     padding-bottom: 0.5rem; /* padding to avoid the position absolute icon */
 }
@@ -1504,6 +1525,12 @@ footer{
     min-height: 2.5vh;
 }
 
+.work_content a:hover::before{ /* before the actual content */
+    
+    opacity: 0.80;
+    transition: 500ms ease;
+}
+
 @media (max-width: 44.5rem) {
 
     .work_content{
@@ -1512,22 +1539,68 @@ footer{
     }
 }
 
-/*
+/* Roblox Projects --------------------------------------------------------------------------------------------------------------------------- */   
 
-.work_content a:hover{
-    
-    background-color: var(--peach);
-    border: 0.15rem solid var(--gold);
-
-    color: var(--darkOrange);
-    transition: 250ms ease;
-}  
-
-.work_content a[id="swamp_defense"]{ look specifically for the swamp defense id in this element
-    background: no-repeat url(/images/projects/Roblox/swamp-defense/swamp-defense-logo.png);
+.work_content a[id="swamp_defense"]::before{
+    background: no-repeat url(/images/projects/Roblox/swamp-defense/project-background.png);
     background-size: cover;
 }
-*/
+.work_content a[id="museum"]::before{
+    background: no-repeat url(/images/projects/Roblox/museum/project-background.png);
+    background-size: cover;
+}
+.work_content a[id="titan_legends"]::before{
+    background: no-repeat url(/images/projects/Roblox/titan-legends/project-background.png);
+    background-size: cover;
+}
+
+/* Web Dev Projects --------------------------------------------------------------------------------------------------------------------------- */   
+
+.work_content a[id="critiverse"]::before{
+    background: no-repeat url(/images/projects/web/critiverse/header-background.png);
+    background-size: cover;
+}
+
+.work_content a[id="portfolio"]::before{
+    background: no-repeat url(/images/projects/web/portfolio/project-background.png);
+    background-size: cover;
+}
+
+.work_content a[id="cybersite"]::before{
+    background: no-repeat url(/images/projects/web/cyberlions-web/project-background.png);
+    background-size: cover;
+}
+
+/* Robotics Projects --------------------------------------------------------------------------------------------------------------------------- */   
+
+.work_content a[id="FRC2023"]::before{
+    background: no-repeat url(/images/projects/robotics/project-background.jpg);
+    background-size: cover;
+}
+
+/* CyberSec Projects --------------------------------------------------------------------------------------------------------------------------- */   
+
+.work_content a[id="cyberstart2022"]::before{
+    background: no-repeat url(/images/projects/cybersecurity/cyberstart/project-background.png);
+    background-size: cover;
+}
+
+.work_content a[id="cyberpatriot2023"]::before{
+    background: no-repeat url(/images/projects/cybersecurity/cyberpatriot/project-background.png);
+    background-size: cover;
+}
+
+/* Innovation Projects --------------------------------------------------------------------------------------------------------------------------- */   
+
+.work_content a[id="exploravision2022"]::before{
+    background: no-repeat url(/images/projects/cad/exploravision/project-background.JPG);
+    background-size: cover;
+}
+
+.work_content a[id="JTIC"]::before{
+    background: no-repeat url(/images/projects/cad/jtic/project-background.png);
+    background-size: cover;
+}
 
 /* Project Layout -------------------------------------------------------------------------------------------------------------------- */
 

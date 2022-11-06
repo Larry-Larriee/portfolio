@@ -71,6 +71,10 @@ const observer = new IntersectionObserver(entries => {
                     case "need-a-website-link-to-contacts":
 
                         revealContent(targetEntry);
+
+
+
+
                         targetEntry.classList.add('fadeFromBottom');                        
                         break;
 
