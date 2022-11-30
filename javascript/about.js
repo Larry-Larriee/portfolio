@@ -21,7 +21,7 @@ setTimeout(() => {
 
     images_left.classList.toggle("fadeInLeft");
     images_right.classList.toggle("fadeInRight");
-}, 1000);
+}, 950);
 
 // TIMELINE FUNCTIONS --------------------------------------------------------------------------------------------------------------------
 

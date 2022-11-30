@@ -7,7 +7,7 @@ const project_sections = document.querySelectorAll(".project_section_wrapper");
 
 // BACKGROUND AUTOPLAY ------------------------------------------------------------------------------------------------------------------
 
-var background; // New background variable
+var background = null; // New background variable
 
 // If there is a video, set background to video, else set background to img
 (document.querySelector("video")) ? background = document.querySelector("video") : background = document.getElementById("background_image");

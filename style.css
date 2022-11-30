@@ -1238,7 +1238,7 @@ footer{
 /* Timeline ----------------------------------------------------------------------------------------------------- */
 
 .timeline_content_wrapper{
-    font-size: 1.1vw;
+    font-size: 1rem;
     line-height: 1.5;
 
     font-weight: 500;
@@ -1578,6 +1578,14 @@ footer{
     background-size: cover;
 }
 
+/* Discord Projects --------------------------------------------------------------------------------------------------------------------------- */   
+
+.work_content a[id="ceasar_bot"]::before{
+    background: no-repeat url(/images/projects/discord/ceasar-bot.png);
+    background-size: cover;
+}
+
+
 /* CyberSec Projects --------------------------------------------------------------------------------------------------------------------------- */   
 
 .work_content a[id="cyberstart2022"]::before{
@@ -1695,6 +1703,14 @@ footer{
     transition: 500ms ease;
 
     transform: scale(1.05);
+}
+
+.project_section_video{
+    max-width: 35vw;
+    min-height: 37.5vh;
+    border-radius: 1rem;
+
+    outline: 0.1rem solid var(--blackish);
 }
 
 @media (max-width: 44.5rem) {
