@@ -1,14 +1,29 @@
 // VARIABLES -----------------------------------------------------------------------------------------------------------------------------
 
 const logo = document.getElementById("logo");
-
 const cyan_bird = "../images/Hummingbirds/darkcyan_logo.png";
 const black_bird = "../images/Hummingbirds/black_logo.png";
-
 const top_content = document.querySelector(".top_page_description_wrapper");
 const header = document.querySelector("header");
 
 // FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
+
+const images_left = document.getElementsByClassName("images-left-side")[0];
+const images_right = document.getElementsByClassName("images-right-side")[0];
+
+const aboutMeDescription = document.getElementById("about-me-description");
+
+aboutMeDescription.classList.toggle("fadeFromTop");
+
+setTimeout(() => {
+    images_left.classList.toggle("content_hiding");
+    images_right.classList.toggle("content_hiding");
+
+    images_left.classList.toggle("fadeInLeft");
+    images_right.classList.toggle("fadeInRight");
+}, 950);
+
+// TIMELINE FUNCTIONS --------------------------------------------------------------------------------------------------------------------
 
 const nav_options = {
     rootMargin: "-100px 0px 0px 0px" // -100px as you want to start 100px early
@@ -63,7 +78,6 @@ timeline_observer.observe(time_content[11]);
 timeline_observer.observe(time_content[12]);
 timeline_observer.observe(time_content[13]);
 
-
 //  event listeners ----------------------------------------------------------------------------------------------------------------------
 
 const footerMainLogo = document.getElementById("footer-hummingbird-logo");
@@ -83,7 +97,7 @@ githubIcon?.addEventListener("click", () => {
 });
 
 linkedinIcon?.addEventListener("click", () => {
-    window.open("https://www.linkedin.com/in/larry-le-94b565244/")
+    window.open("https://www.linkedin.com/in/larry-le-94b565244/");
 });
 
 discordIcon?.addEventListener("click", () => {
@@ -106,3 +120,9 @@ hambuger_icon?.addEventListener('click', () => {
     const mobile_nav = document.querySelector('.mobile_nav');
     mobile_nav.classList.toggle("content_hidden");
 });
+
+// REDIRECT -----------------------------------------------------------------------------------------------------------------------------
+
+function redirect(){
+    window.location.replace("/pages/progress.html");
+}

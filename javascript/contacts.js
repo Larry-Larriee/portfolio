@@ -43,7 +43,7 @@ githubIcon?.addEventListener("click", () => {
 });
 
 linkedinIcon?.addEventListener("click", () => {
-    window.open("https://www.linkedin.com/in/larry-le-94b565244/")
+    window.open("https://www.linkedin.com/in/larry-le-94b565244/");
 });
 
 discordIcon?.addEventListener("click", () => {

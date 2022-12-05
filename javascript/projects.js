@@ -7,13 +7,13 @@ const project_sections = document.querySelectorAll(".project_section_wrapper");
 
 // BACKGROUND AUTOPLAY ------------------------------------------------------------------------------------------------------------------
 
-var background; // New background variable
+var background = null; // New background variable
 
 // If there is a video, set background to video, else set background to img
 (document.querySelector("video")) ? background = document.querySelector("video") : background = document.getElementById("background_image");
 
 const controls = {
-    rootMargin: "-150px 0px 0px 0px"
+    rootMargin: "-25% 0% 0% 0%"
 };
 
 // Hide project headers (hidden in the first place to prevent animation from starting AFTER the
@@ -118,7 +118,7 @@ githubIcon?.addEventListener("click", () => {
 });
 
 linkedinIcon?.addEventListener("click", () => {
-    window.open("https://www.linkedin.com/in/larry-le-94b565244/")
+    window.open("https://www.linkedin.com/in/larry-le-94b565244/");
 });
 
 discordIcon?.addEventListener("click", () => {

@@ -25,6 +25,8 @@ function revealContent(targetEntry){
     targetEntry.classList.remove("content_hiding");
 }
 
+let loadedFeatured = false; // Disallow animation from running multiple times
+
 // Check when the local host reaches a certain div --> play animation
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -44,6 +46,11 @@ const observer = new IntersectionObserver(entries => {
                     case "featured-projects-wrapper-mainpage":
                         revealContent(targetEntry);
 
+                        if (loadedFeatured){
+                            break;
+                        }
+                        loadedFeatured = true;
+
                         for (let i = 0; i < 3; i++) {
 
                             revealContent(project_mainpage[i]);
@@ -53,11 +60,21 @@ const observer = new IntersectionObserver(entries => {
                         revealContent(all_projects_link_wrapper);
                         all_projects_link_wrapper.classList.add("all-projects-link-animation");
 
+                        setTimeout(() => { // Remove this animation class after finishing --> allow transform: translateY() to function since the animation forces translateY() to end at 0px
+                            for (let j = 0; j < 3; j++) {
+                                project_mainpage[j].classList.remove(`fade-featured-projects-${j}`); // f-strings
+                            }
+                        }, 3000)
+
                         break;
 
                     case "need-a-website-link-to-contacts":
 
                         revealContent(targetEntry);
+
+
+
+
                         targetEntry.classList.add('fadeFromBottom');                        
                         break;
 
@@ -96,7 +113,7 @@ githubIcon?.addEventListener("click", () => {
 });
 
 linkedinIcon?.addEventListener("click", () => {
-    window.open("https://www.linkedin.com/in/larry-le-94b565244/")
+    window.open("https://www.linkedin.com/in/larry-le-94b565244/");
 });
 
 discordIcon?.addEventListener("click", () => {

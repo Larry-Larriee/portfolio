@@ -64,7 +64,7 @@ web.addEventListener("click", () => {
     web.classList.add("filter_select_section_clicked");
     projectContent[1].classList.remove("content_hidden");
 
-    // Remove the content_hidden class from all the children of the projectButtons[1] element
+    // Remove the content_hidden class from all the children of the projectButtons[1] element AKA the web development section
     remove_class(contentHidden, projectButtons[1].children); 
 
 });
@@ -129,7 +129,7 @@ githubIcon?.addEventListener("click", () => {
 });
 
 linkedinIcon?.addEventListener("click", () => {
-    window.open("https://www.linkedin.com/in/larry-le-94b565244/")
+    window.open("https://www.linkedin.com/in/larry-le-94b565244/");
 });
 
 discordIcon?.addEventListener("click", () => {

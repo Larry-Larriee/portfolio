@@ -18,7 +18,7 @@
 
     </head>
 
-    <body>
+    <body onload="redirect()">
 
         <!-- The header element contains the logo and the navigation bar -->
         <header class="about fixedHeader">
@@ -33,7 +33,7 @@
                 </div>
 
                 <nav>
-                    <ul class="navLinks">
+                    <ul class="navLinks" id="aboutLink">
                         <li><a href="/pages/works.html">My Works</a></li>
                         <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
                         <li><a href="/pages/contacts.html">Contacts</a></li>
@@ -53,14 +53,29 @@
             </header>
 
 
-        <div class="top_page_description_wrapper" id="top_page_about_me">
-            <p class="fadeFromTop">
+    <!--<div class="top_page_description_wrapper" id="top_page_about_me">
+
+            <div class="images-left-side content_hiding">
+                <img alt="css logo" src="/images/icons/css.png">
+                <img alt="bugs" src="/images/icons/bug.png">
+                <img alt="code compare" src="/images/icons/code_compare.png">
+            </div>
+
+            <p id="about-me-description">
                 My favorite hobby is to provide a product or service for others to enjoy. 
-                Below is a timeline of some of my most significant experiences that have matured me into making bigger and better projects for everyone!
+                Below is a timeline of some of my experiences that have matured me into making bigger and better projects for everyone!
 
             </p>
-        </div>
 
+            <div class="images-right-side content_hiding">
+                <img alt="lightbulb" src="/images/icons/lightbulb.png">
+                <img alt="paintbrush" src="/images/icons/brush_green.png">
+                <img alt="cog" src="/images/icons/cog.png">
+            </div>
+
+        </div>
+    -->
+        <!--
         <main id="timeline_wrapper">    
 
             <div class="timeline_content_wrapper" id="time_one">
@@ -68,12 +83,9 @@
 
                 <p class="timeline_content">
                     
-                    Although I wasn’t actively creating projects, I would browse through Scratch a lot on my school-issued chromebook 
-                    whenever I had the chance and remix community projects for fun. I loved playing indie games and had a knack for electronics
-                    as well.   
+                    I would browse through Scratch a lot on my school-issued chromebook 
+                    whenever I had the chance and remix community projects for fun. I loved playing indie games and had a knack for electronics.   
                     
-                    <!-- I find this time as a very important part of my life because it would ultimately help me discover my passion of creating
-                    things for myself and for others. -->
                 </p>
             </div>
             
@@ -92,8 +104,7 @@
 
                 <p class="timeline_content">
                     
-                    I would apply these skills and go on to create my first big project <span class="highlighter"><a href="/pages/projects/web/critiverse.html">CritiVerse</a></span>, a review website with the goal of providing users
-                    second opinions on products ranging from cars to laptops to baby essentials and more.                
+                    I would go on to create my first big project <span class="highlighter"><a href="/pages/projects/web/critiverse.html">CritiVerse</a></span>
                 </p>  
             </div>
             
@@ -102,7 +113,7 @@
 
                 <p class="timeline_content">
                     
-                    The ECS class curriculum would teach me about scratch (drag and drop) level javascript, leading me to learn about API extensions such as motion
+                    My ECS class would further my expertise on Scratch, leading me to learn about API extensions such as motion
                     control and how to make animation.
                 </p>  
             </div>
@@ -112,7 +123,7 @@
 
                 <p class="timeline_content">
                     
-                    Now that I knew the disciplines of programming, I started becoming more and more interested in another childhood game, Roblox. 
+                    I started becoming more and more interested in another childhood game, Roblox. 
                     Roblox also allows the community to create games, and I thought it was amazing how these 3D games worked and behaved. I started
                     trying <cite>Roblox Studio</cite> for the first time.
                 </p>  
@@ -161,7 +172,6 @@
 
                 <p class="timeline_content">
                     
-                    <!-- Bug where margining fails without <br><br><br> -->
                     With the new school year in session, I had to put down Roblox for a while. However, this did not stop me from programming, and
                     I began to pick up Python. Learning from Youtubers such as CodingWithMosh and TechWithTim allowed me to utilize this language 
                     in Discord Bot development. 
@@ -183,7 +193,7 @@
 
                 <p class="timeline_content">
                     
-                    One of my high school teachers, Mr. Pham, recommended me to try out cybersecurity through a nation-wide competition called CyberStart. It 
+                    One of my high school teachers recommended me to try out cybersecurity through a nation-wide competition called CyberStart. It 
                     was through this that I was able to learn about the other side of Computer Science: brute forcing, powerful operating systems like Linux, 
                     SQL injection, and so much more!
                 </p>  
@@ -217,10 +227,11 @@
 
             </div>
         </main>
+    -->
     </body>
 
     <!-- Footer -->
-    <footer class="aboutFooter">
+    <!--<footer class="aboutFooter">
         
         <div class="footer-content-wrapper">
             <div class="footer-personal-branding">
@@ -255,5 +266,5 @@
             <h5>Copyright &copy; 2022 Larry Le Under MIT Licensing</h5>
         </div>
     
-    </footer>
+    </footer> -->
 </html>

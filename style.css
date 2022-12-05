@@ -19,7 +19,7 @@
     --darkerPeach: #ffd991; 
     --darkOrange: #ffa250;
     --pinkish: #ff97a9;
-    --pinker: #ff8383;
+    --pinker: #ff97a9;
     --lightishRed: #ff5151;
     --newLightCoral: linear-gradient(0deg, coral, lightcoral 20%,coral);
 
@@ -54,7 +54,7 @@ body{
     font-weight: 525;
     font-family: "Kanit", sans-serif;
 
-    padding-top: 3%;
+    padding-top: 3vw;
     color: black;
 }
 
@@ -109,6 +109,29 @@ body{
 }
 .content_hiding{
     visibility: hidden !important;
+}
+
+/* Under Construction ------------------------------------------------------------------------------------------------------------- */
+
+.under-construction-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    flex-direction: column;
+    gap: 4vh;
+    min-height: calc(100vh - 40vh - 10vh); /* -40vh for footer, -10vh for header */
+}
+
+.under-construction-container > p{
+    font-family: 'Lato', Courier, monospace;
+    font-size: 3.5vh;
+    text-align: center;
+    max-width: 80vh;
+}
+
+.construction-monkey{
+    font-size: 10vh;
 }
 
 /* Animations --------------------------------------------------------------------------------------------------------------------- */
@@ -253,6 +276,10 @@ body{
     animation: all-projects-link-animation 1.2s both 1.5s;
 }
 
+.bounce-up{
+    animation: bounce-up 1.2 both 0;
+}
+
 @keyframes fade-featured-projects-1{
     from{
         opacity: 0;
@@ -291,6 +318,15 @@ body{
     to{
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes bounce-up {
+    from{
+        transform: translateY(0vh);
+    }
+    to{
+        transform: translateY(-5vh);
     }
 }
 
@@ -346,6 +382,7 @@ body{
     
     font-size: 1.1vw;
     list-style: none;
+
 }
 
 /* Separate each child in the navigation bar */
@@ -355,8 +392,8 @@ body{
 }
 
 .navLinks li a:hover, .aboutLink:hover{
-    color: var(--oceanBlue);
 
+    color: var(--grey);
     transition: 250ms ease;
 }
 
@@ -458,6 +495,7 @@ body{
 #pointing_arrow:active{
     transition: 0.5s ease; 
     margin-top: 24vh;
+
 }
 
 .introductionCaption{
@@ -607,7 +645,7 @@ footer{
 }
 .footer-navigation a:hover{
 
-    color: var(--oceanBlue);
+    color: var(--grey);
     transition: 250ms ease;
 }
 
@@ -657,12 +695,13 @@ footer{
 
     transition: 250ms ease;
     box-shadow: 0 0 0 var(--darkOrange);
+
 }
 
 .project-mainpage:hover{
 
-    transition: 250ms ease;
-    box-shadow: 0.4vh 0.4vh 0.3vh 0.1vh var(--darkOrange);
+    transition: 500ms ease;
+    transform: translateY(-0.75vh);
 }
 
 .project-mainpage-description, .project-mainpage-title{
@@ -729,8 +768,8 @@ footer{
 }
 .all-projects-link:hover{
 
-    transition: 200ms ease;
-    box-shadow: 0.05vh 0.05vh 0.5vh 0.1vh var(--darkOrange);
+    transition: 250ms ease;
+    box-shadow: 0.05vh 0.05vh 0.5vh 0.2vh var(--darkOrange);
 }
 
 .all-projects-link img{
@@ -748,18 +787,22 @@ footer{
 
 .need-a-website-link-to-contacts{
 
+    min-height: calc(70vh - 4.9vh - 3vw);
+
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 5vh;
-
-    margin-top: 15vh;
+    gap: 10vh;
 }
 
 .need-a-website-link-to-contacts p{
     font-family: "Roboto", sans-serif;
     font-size: 3vh;
+
+    line-height: 2rem;
+    text-align: center;
 }
 
 .need-a-website-link-to-contacts a{
@@ -781,6 +824,7 @@ footer{
     background: var(--oceanBlue);
     border: 0.2vw solid var(--oceanBlue);
 }
+
 
 /* Computer History Container ---------------------------------------------------------------------------------------------------------------- */
 
@@ -1139,6 +1183,8 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;    
+
+    gap: 5rem;
 }
 
 #top_page_about_me{
@@ -1158,8 +1204,64 @@ footer{
     font-family: 'Poppins', serif;
 }
 
+.top_page_description_wrapper img{
+    max-width: 4rem;
+}
+
+.images-left-side{
+    position: relative;
+
+    display: grid;
+    grid-template-areas:
+    
+    ". one"
+    "two ."
+    ". thr";
+
+    gap: 2rem;
+}
+.images-left-side img:nth-child(1){
+    grid-area: one;
+    transform: rotate(15deg);
+}
+.images-left-side img:nth-child(2){
+    grid-area: two;
+    transform: rotate(-15deg);
+}
+.images-left-side img:nth-child(3){
+    grid-area: thr;
+    transform: rotate(20deg);
+}
+
+.images-right-side{
+    position: relative;
+
+    display: grid;
+    grid-template-areas:
+    
+    "one ."
+    ". two"
+    "thr .";
+
+    gap: 2rem;
+}
+.images-right-side img:nth-child(1){
+    grid-area: one;
+    transform: rotate(-15deg);
+}
+.images-right-side img:nth-child(2){
+    grid-area: two;
+    transform: rotate(15deg);
+}
+.images-right-side img:nth-child(3){
+    grid-area: thr;
+    transform: rotate(-20deg);
+}
+
+/* Timeline ----------------------------------------------------------------------------------------------------- */
+
 .timeline_content_wrapper{
-    font-size: 1.1vw;
+    font-size: 1rem;
     line-height: 1.5;
 
     font-weight: 500;
@@ -1376,26 +1478,80 @@ footer{
 
     padding: 2em 1em; /* Use em so that padding is relative to font size */
     min-height: 8rem;
+    max-width: calc(25rem + 0.9rem);
 
     border-radius: 1rem;
-    border: 0.15rem solid var(--gold);
+    outline: 0.15rem solid var(--gold);
 
-    color: var(--blackish);
     text-decoration: none;
-    transition: 250ms ease;
-    box-shadow: 0.1rem 0.2rem var(--gold);
 
+    position: relative;
+    display: flex;
+}
+
+.work_content section{
+    color: white;
     line-height: 1.4;
+
+    font-size: 1.2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 
 }
 
-.work_content a:hover{
-    
-    background-color: var(--peach);
-    border: 0.15rem solid var(--gold);
+.work_content a::before{ /* before the actual content (General Attributes) */
+    content: "";
 
-    color: var(--darkOrange);
-    transition: 250ms ease;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    border-radius: 1rem;
+
+    transition: 500ms ease;
+    
+}
+
+.work_content a::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    opacity: 0.4;
+    border-radius: 1rem;
+
+    background: var(--blackish);
+}
+
+.work_content article{
+    font-size: 0.9rem;
+    font-family: 'Lato', sans-serif;
+
+    padding-bottom: 0.5rem; /* padding to avoid the position absolute icon */
+}
+
+.work_content img{
+    position: absolute;
+    bottom: 2vh;
+    right: 1vw;
+
+    max-width: 2.5vw;
+    min-height: 2.5vh;
+}
+
+.work_content a:hover::before{ /* before the actual content */
+    
+    opacity: 0.80;
+    transition: 500ms ease;
 }
 
 @media (max-width: 44.5rem) {
@@ -1406,6 +1562,77 @@ footer{
     }
 }
 
+/* Roblox Projects --------------------------------------------------------------------------------------------------------------------------- */   
+
+.work_content a[id="swamp_defense"]::before{
+    background: no-repeat url(/images/projects/Roblox/swamp-defense/project-background.png);
+    background-size: cover;
+}
+.work_content a[id="museum"]::before{
+    background: no-repeat url(/images/projects/Roblox/museum/project-background.png);
+    background-size: cover;
+}
+.work_content a[id="titan_legends"]::before{
+    background: no-repeat url(/images/projects/Roblox/titan-legends/project-background.png);
+    background-size: cover;
+}
+
+/* Web Dev Projects --------------------------------------------------------------------------------------------------------------------------- */   
+
+.work_content a[id="critiverse"]::before{
+    background: no-repeat url(/images/projects/web/critiverse/header-background.png);
+    background-size: cover;
+}
+
+.work_content a[id="portfolio"]::before{
+    background: no-repeat url(/images/projects/web/portfolio/project-background.png);
+    background-size: cover;
+}
+
+.work_content a[id="cybersite"]::before{
+    background: no-repeat url(/images/projects/web/cyberlions-web/project-background.png);
+    background-size: cover;
+}
+
+/* Robotics Projects --------------------------------------------------------------------------------------------------------------------------- */   
+
+.work_content a[id="FRC2023"]::before{
+    background: no-repeat url(/images/projects/robotics/project-background.jpg);
+    background-size: cover;
+}
+
+/* Discord Projects --------------------------------------------------------------------------------------------------------------------------- */   
+
+.work_content a[id="ceasar_bot"]::before{
+    background: no-repeat url(/images/projects/discord/ceasar-bot.png);
+    background-size: cover;
+}
+
+
+/* CyberSec Projects --------------------------------------------------------------------------------------------------------------------------- */   
+
+.work_content a[id="cyberstart2022"]::before{
+    background: no-repeat url(/images/projects/cybersecurity/cyberstart/project-background.png);
+    background-size: cover;
+}
+
+.work_content a[id="cyberpatriot2023"]::before{
+    background: no-repeat url(/images/projects/cybersecurity/cyberpatriot/project-background.png);
+    background-size: cover;
+}
+
+/* Innovation Projects --------------------------------------------------------------------------------------------------------------------------- */   
+
+.work_content a[id="exploravision2022"]::before{
+    background: no-repeat url(/images/projects/cad/exploravision/project-background.JPG);
+    background-size: cover;
+}
+
+.work_content a[id="JTIC"]::before{
+    background: no-repeat url(/images/projects/cad/jtic/project-background.png);
+    background-size: cover;
+}
+
 /* Project Layout -------------------------------------------------------------------------------------------------------------------- */
 
 .top_page_project_wrapper{
@@ -1413,10 +1640,8 @@ footer{
     position: relative;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;    
-
-    gap: 25vw;
 }
 
 .project_header_title{
@@ -1437,12 +1662,18 @@ footer{
 
 }
 
-.project_background, .project_background video, .project_background img{
+.project_background{
     width: 100%; /* 100% of the parent */
     height: 100%;
 
-    position: absolute;
+    position: absolute; /* Behind the description content */
     z-index: -1;
+}
+
+.project_background video, .project_background img{
+
+    width: 100%; /* 100% of the parent */
+    height: 100%;
 
     object-fit: cover; /* Video will fill to fit container, cropping if needed */
     opacity: 0.95;
@@ -1486,15 +1717,23 @@ footer{
     min-height: 37.5vh;
     border-radius: 1rem;
 
-    transition: 500ms ease;
-    border: 0.1rem solid black;
+    transition: 1s ease;
+    outline: 0.1rem solid var(--blackish);
 }
 
 .project_section_image img:hover{
     cursor: pointer;
     transition: 500ms ease;
 
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+.project_section_video{
+    max-width: 35vw;
+    min-height: 37.5vh;
+    border-radius: 1rem;
+
+    outline: 0.1rem solid var(--blackish);
 }
 
 @media (max-width: 44.5rem) {
