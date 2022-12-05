@@ -120,3 +120,9 @@ hambuger_icon?.addEventListener('click', () => {
     const mobile_nav = document.querySelector('.mobile_nav');
     mobile_nav.classList.toggle("content_hidden");
 });
+
+// REDIRECT -----------------------------------------------------------------------------------------------------------------------------
+
+function redirect(){
+    window.location.replace("/pages/progress.html");
+}
