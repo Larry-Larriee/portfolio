@@ -21,7 +21,9 @@
     --pinkish: #ff97a9;
     --pinker: #ff97a9;
     --lightishRed: #ff5151;
+    --navigationCoral: linear-gradient(200deg, lightcoral, lightcoral 15%,coral);
     --newLightCoral: linear-gradient(0deg, coral, lightcoral 20%,coral);
+    --light-coral: rgb(255, 140, 98);
 
     --lightishGreen: #62e799;
     --darkerCyan: #01A6A6;
@@ -31,6 +33,9 @@
     --gold: #ffb744;
     --lighterYellow: #ffc363;
     --yellowFaded: #ffb744e8;
+
+    --usual-font-size: 1.35rem;
+    --section-height: 80vh;
 }
 
 *{
@@ -43,7 +48,6 @@ body{
     position: relative;
     min-height: 100vh;
     padding-bottom: 40vh;
-
 }
 
 /* Format Content Headers */
@@ -109,6 +113,10 @@ body{
 }
 .content_hiding{
     visibility: hidden !important;
+}
+
+.content-hidden{
+    display: none;
 }
 
 /* Under Construction ------------------------------------------------------------------------------------------------------------- */
@@ -330,219 +338,230 @@ body{
     }
 }
 
-/* Navagation Bar --------------------------------------------------------------------------------------------------------------------- */
+/* ====================================================================================================================================== */
+/* NAVIGATION */
 
-/* Position the entire navigation bar correctly to style */
-.nav_wrapper{
+.nav-background{
+    background: var(--navigationCoral);
 
-    /* Take leftover space and equally distrubute */
-    justify-content: space-between; 
-    
-    /* Top, Right, Bottom, Left */
-    padding: 1.4vh 10% 1.4vh 10%;
     display: flex;
-
-    /* Correctly place all children on the same x-position */
     align-items: center;
+    justify-content: center;
 
-    transition: 100ms ease-in;
+    padding: 1rem 0rem 1rem 0rem;
 }
-
-.fixedHeader{
-    position: -webkit-sticky; position: sticky; /* -webkit-sticky is for safari IOS */
-    top: 0; 
-
-    z-index: 1;
-}
-
-.index{
-    background-image: linear-gradient(200deg, lightcoral, lightcoral 15%,coral);
-}
-.contacts{
-    background: var(--softBlue);
-}
-.works{
+#my-works{
     background: var(--lighterYellow);
 }
-.about{
-    transition: background 250ms ease-in;
-    background: var(--darkerCyan);
+#contacts{
+    background: var(--softBlue);
+}
+#about-me{
+    background: var(--darkestCyan);
 }
 
-.nav_scrolled {
-
-    box-shadow: .1vw .1vw 1vh var(--blackish);    
-
-    transition: background 250ms ease-in;
-    background: var(--blackish) !important; /* !important --> override the id style */
-}
-
-/* Remove the bullet points from the navigation bar */
-.navLinks, .aboutLink{
-    
-    font-size: 1.1vw;
-    list-style: none;
-
-}
-
-/* Separate each child in the navigation bar */
-.navLinks li{
-    display: inline-block;
-    padding-right: 2.5vw;
-}
-
-.navLinks li a:hover, .aboutLink:hover{
-
-    color: var(--grey);
-    transition: 250ms ease;
-}
-
-/* Decorate each child in the navigation bar */
-.navLinks a, .aboutLink{
-
-    font-weight: 600;
-    color: white;
-    text-decoration: none;
+nav{
     font-family: "Lato", sans-serif;
-    
-    transition: 250ms ease;
+    font-weight: 600;
+    font-size: var(--usual-font-size);
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav p{
+    color: white;
+}
+nav ul{
+    list-style: none;
 }
 
-/* Format Logo and Text Banner */
-.logoDiv{
+.nav-reg{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    min-width: 80vw;
+    max-width: 80vw;
+}
+.nav-reg-logo{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.nav-reg-logo img{
+    max-width: 3.5rem;
+}
+
+.nav-reg-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.nav-reg-links a{
+    text-decoration: none;
+}
+
+
+.nav-mob{
+    display: none;
+}
+@media (max-width: 40rem) {
+    .nav-background{
+        padding: 0.5rem 0rem 0.5rem 0rem;
+    }
+    
+    .nav-reg{
+        display: none;
+    }
+    .nav-mob{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        
+        min-width: 22rem;
+        max-width: 22rem;
+    }
+    .nav-mob-burger{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        max-width: 11rem;
+    }
+    .nav-mob-burger img{
+        max-width: 3rem;
+    }
+
+    .nav-mob-logo{
+        display: flex;
+        align-items: center;
+    }
+    .nav-mob-logo img{
+        max-width: 3rem;
+    }
+
+    .nav-mob-links{
+        margin-top: 1rem;
+        max-width: 22rem;
+    }
+    .nav-mob-links ul{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+    }
+    .nav-mob-links li{
+        display: flex;
+        align-items: center;
+    }
+    .nav-mob-links a{
+        font-size: 1rem;
+    }
+}
+
+/* ====================================================================================================================================== */
+/* LANDING HERO */
+
+.landing-hero-background{
+    background: var(--newLightCoral);
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.landing-hero{
 
-/* Portfolio Logo */
-.logoDiv img{    
-    background-color: none;
-    margin-top: 2%; /* Adjust Logo position */
-    margin-right: 5%;
+    min-width: 80vw;
+    max-width: 80vw;
+    gap: 10rem;
 
-    max-width: 5vh;
-    min-height: 5vh;
-}
-
-.logoDiv p, .logo_text{
-
-    font-size: 1.1vw;
-    font-weight: 600;
-    color: white;
-    text-decoration: none;
-    font-family: "Lato", sans-serif;
-
-    white-space: nowrap; 
-    min-width: auto; /* The size of the element is determined by its text-content */
-}
-
-/* All logos other than index.html */
-#logo:hover{
-    cursor: pointer;
-}
-
-/* Title Content --------------------------------------------------------------------------------------------------------------------- */
-
-.emoji-styling{
-    text-shadow: none;
-}
-
-/* Background div includes both the nav bar and the intro content */
-#background_top_index{
-    
-    background: var(--newLightCoral);
-    min-height: 95vh;
-
-    /* Only if the background is a URL */
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-
-.container{
-    box-sizing: border-box;
-    flex-basis: 1; /* even elements in wrapper (for columns, etc) */
     display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 85vh;
+    max-height: 85vh;
+}
+.landing-hero-image{
+    border-radius: 50%;
+    max-width: 35rem;
+
+    transform: rotate(25deg);
 }
 
-.introWrapper{
-    
-    /* Top, Right, Bottom, Left */
-    margin: 4% 0 0 10%;
+.landing-hero-text{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
 
-    position: relative;
-}
-
-#pointing_arrow{
-    transform: rotate(-90deg); /* Rotate image into a down arrow */
-
-    margin-top: 20vh; 
-    width: 3vw;
-
-    outline: 2px solid white;
-    border-radius: 1.5vw;
-
-    opacity: 0.9;
-    transition: 0.5s ease; /* Reset animation position when the arrow is not clicked */
-
-    position: relative;
-    bottom: 10vh;
-    left: 0;
-}
-#pointing_arrow:hover{
-    cursor: pointer;
-}
-#pointing_arrow:active{
-    transition: 0.5s ease; 
-    margin-top: 24vh;
-
-}
-
-.introductionCaption{
-
-    font-family: "Kanit", sans-serif;
-    font-size: 8vh;
     color: white;
-
-    /* offset-x | offset-y | blur-radius | color */
-    text-shadow: 1px 1px 1px var(--grey);
+    font-family: "Kanit", sans-serif;
+    font-size: 2rem;
 }
+.landing-hero-text section{
+    padding: 1.5rem;
+    border: 0.25rem solid var(--light-coral);
+    box-shadow: 0.25rem 0.25rem 0 black;
 
-.introSchoolCaption{
-
-    font-family: "Koulen", sans-serif;
-    font-size: 3vh;
-    max-width: max-content;
+    background: var(--light-coral);
+    transition: 500ms ease;
+}
+.landing-hero-text section h1{
+    font-size: 3.5rem;
+}
+#landing-hero-who{
     color: var(--peach);
 }
 
-.introDescription{
-
-    font-family:'Poppins', serif;
-    font-size: 3vh;
-    font-weight: 550;
-    padding: 9% 0 0 0;
-
-    /* vw: hundredths of the viewport width */
-    max-width: 50vw;
-    
-    color: white;
-
-    /* To Do: https://css-tricks.com/snippets/css/typewriter-effect/ */
+.landing-hero-text section:hover{
+    transform: scale(1.025);
+    transition: 500ms ease;
 }
 
-#larryBeach{
-    max-width: 26vw;
-    max-height: 26vw;
+/* ====================================================================================================================================== */
+/* LANDING HERO */
 
-    border-radius: 13vw;
-    transform: rotate(25deg);
+.compute-background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    margin-left: 7vw;
-    margin-top: 15vh;
+    min-height: var(--section-height);
+    max-height: var(--section-height);
+}
+.compute{
+    min-width: 80vw;
+    max-width: 80vw;
+
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Footer -------------------------------------------------------------------------------------------------------------------------- */
+.compute-images{
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    min-width: 40vw;
+    max-width: 40vw;
+
+    gap: 2rem;
+    align-items: center;
+}
+.compute-images img{
+    min-width: 9rem;
+    max-width: 9rem;
+
+}
+
+/* ====================================================================================================================================== */
+/* FOOTER */
 
 footer{
     position: absolute;
@@ -898,48 +917,6 @@ footer{
     }
     .socials{
         display: none;
-    }
-}
-
-/* Navigation burger */
-/* Hide mobile menu for screens bigger than 44.5rem */
-@media (max-width: 44.5rem){
-
-    .hamburger_icon{
-        display: flex;
-    }
-    header img{
-        max-width: 1.5rem !important;
-        min-height: 1.5rem !important;
-    }
-
-    /* Remove hyperlinks on nav to center hummingbird image and setup burger */
-    nav, #about_me_navigation_link{ 
-        display: none;
-    }
-
-    /* give body a min height of 100vh and fill that 100vh with the header */
-    .hamburger_icon_clicked_body{
-        overflow: hidden; /* Make body unscrollable */
-    }
-
-    .mobile_nav{
-        display: flex;
-        padding: 3vh 10% 3vh 10%;
-    
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-    .mobile_nav li{
-        list-style: none;
-    }
-    .mobile_nav a{
-        color: white;
-        text-decoration: none;
-        font-size: 1.1rem;
-
-        font-weight: 600;
-        font-family: 'Ubuntu', sans-serif;
     }
 }
 

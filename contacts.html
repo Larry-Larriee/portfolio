@@ -21,37 +21,42 @@
     <body>
 
         <div class="background-top-contacts-page">
-            <!-- The header element contains the logo and the navigation bar -->
-            <header class="contacts">
-
-                <!-- Regular navigation for desktops ---------------------------------------------------------------------------------------- -->
-                <div class="nav_wrapper">
-                    <img alt="mobile menu icon" src="/images/icons/mobile-menu.png" class="hamburger_icon">
-
-                    <div class="logoDiv">
-                        <img alt="portfolio Logo" src="/images/Hummingbirds/bluer_logo.png" id="logo">
-                        <a href="/" class="logo_text"><p>Larry Le | Digital Portfolio</p></a>
+            <div class="nav-background" id="contacts">    
+                <nav class="nav-reg">
+                    <div class="nav-reg-logo">
+                        <img alt="portfolio Logo" src="/images/Hummingbirds/red_logo.png" id="logo">
+                        <p>Larry Le | Digital Portfolio</p>
                     </div>
-
-                    <nav>
-                        <ul class="navLinks">
-                            <li><a href="/pages/works.html">My Works</a></li>
+    
+                    <ul class="nav-reg-links">
+                        <li><a href="/works.html">My Works</a></li>
+                        <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
+                        <li><a href="/contacts.html">Contacts</a></li>
+                    </ul>
+    
+                    <a class="aboutLink" href="/about.html">About Me</a>
+                </nav>
+    
+                <nav class="nav-mob">
+                    <div class="nav-mob-logo">
+                        <img alt="portfolio Logo" src="/images/Hummingbirds/red_logo.png" id="logo">
+                    </div>
+    
+                    <div class="nav-mob-burger">
+                        <img alt="mobile burger" src="/images/icons/mobile-menu.png" id="mobile-button">
+                    </div>
+    
+                    <div class="nav-mob-links content-hidden" id="mobile-menu">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/works.html">My Works</a></li>
                             <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
-                            <li><a href="/pages/contacts.html">Contacts</a></li>
+                            <li><a href="/contacts.html">Contacts</a></li>
+                            <li><a class="aboutLink" href="/about.html">About Me</a></li>
                         </ul>
-                    </nav>
-                    <p><a class="aboutLink" href="/about.html" id="about_me_navigation_link">About Me</a></p> 
-                </div>
-
-                <!-- Mobile navigation that fires through media query ----------------------------------------------------------------------- -->
-                <ul class="mobile_nav content_hidden">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/pages/works.html">My Works</a></li>
-                    <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
-                    <li><a href="/pages/contacts.html">Contacts</a></li>
-                    <li><a href="/about.html" id="about_me_mobile_navigation_link">About Me</a></li>
-                </ul>
-            </header>
+                    </div>
+                </nav>
+            </div>
 
             <div class="contact-information">
 
@@ -120,9 +125,9 @@
             <div class="footer-navigation">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
-                    <li><a href="/pages/works.html">My Works</a></li>
+                    <li><a href="/works.html">My Works</a></li>
                     <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
-                    <li><a href="/pages/contacts.html">Contacts</a></li>
+                    <li><a href="/contacts.html">Contacts</a></li>
                     <li><a href="/about.html" id="about_me_navigation_link_footer">About Me</a></li>
                 </ul>
             </div>

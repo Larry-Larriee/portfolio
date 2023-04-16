@@ -124,5 +124,5 @@ hambuger_icon?.addEventListener('click', () => {
 // REDIRECT -----------------------------------------------------------------------------------------------------------------------------
 
 function redirect(){
-    window.location.replace("/pages/progress.html");
+    window.location.replace("/progress.html");
 }

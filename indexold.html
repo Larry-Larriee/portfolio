@@ -1,0 +1,201 @@
+<!-- Declare that this is an HTML5 Website -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <!-- The head element gives information about this page, like "title" -->
+    <head>
+
+        <!-- No corrupt char & compatiable on multiple devices -->
+        <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Larry Le | Digital Portfolio</title>
+        <meta name="description" content="To apply and further develop my web development skills, I decided to create a personal portfolio project during the Summer of 2022. Creating this website has also helped me learn more about GitHub and repositories in addition to HTML, CSS, and JavaScript.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="/images/Hummingbirds/red_logo_model2.png">
+
+        <script src="javascript/index.js" async defer></script> <!-- Script loads before continuting content -->
+
+    </head>
+
+    <body>
+
+        <div id="background_top_index">
+            <!-- The header element contains the logo and the navigation bar -->
+            <header class="index">
+
+                <!-- Regular navigation for desktops ---------------------------------------------------------------------------------------- -->
+                <div class="nav_wrapper">
+                    <img alt="mobile menu icon" src="/images/icons/mobile-menu.png" class="hamburger_icon">
+
+                    <div class="logoDiv">
+                        <img alt="portfolio Logo" src="/images/Hummingbirds/red_logo.png" id="logo">
+                        <p>Larry Le | Digital Portfolio</p>
+                    </div>
+
+                    <nav>
+                        <ul class="navLinks">
+                            <li><a href="/pages/works.html">My Works</a></li>
+                            <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
+                            <li><a href="/pages/contacts.html">Contacts</a></li>
+                        </ul>
+                    </nav>
+                    <a class="aboutLink" href="/about.html" id="about_me_navigation_link">About Me</a>
+                </div>
+
+                <!-- Mobile navigation that fires through media query ----------------------------------------------------------------------- -->
+                <ul class="mobile_nav content_hidden">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/pages/works.html">My Works</a></li>
+                    <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
+                    <li><a href="/pages/contacts.html">Contacts</a></li>
+                    <li><a href="/about.html" id="about_me_mobile_navigation_link">About Me</a></li>
+                </ul>
+            </header>
+            
+            <!-- Top page front content -->
+            <div class="container" id="container">
+
+                <div class="introWrapper">
+                    <p class="introductionCaption fadeFromTop">Hey There! I'm Larry Le. <span class="emoji-styling">👋</span></p>
+                    <p class="introSchoolCaption">I am a Student From HBUHSD in Southern California</p>
+
+                    <p class="introDescription">
+                        I work on software development, along with robotics and cybersecurity. From Discord bots and Roblox 
+                        development to dynamic web applications and FIRST robotics and Linux, I'm a computer science and engineering hobbyist.
+                    </p>
+
+                    <img src="/images/icons/arrow_right.png" alt="Pointing Arrow" id="pointing_arrow">
+
+                </div>
+                    <img src="/images/main_page/profile/beach_larry.png" alt="WHS Larry Le" id="larryBeach">
+            </div>
+        </div>
+
+        <!-- Computing History Div -->
+        <div class="subjectWrapper">
+
+            <p class="contentTitle">My Computing History</p>
+            
+            <div class="iconContainer content_hiding" id="iconContainer">
+                <img class="programLang" src="/images/main_page/computing/html.png" alt="html">
+                <img class="programLang" src="/images/main_page/computing/css.png" alt="css">
+
+                <img class="programLang" src="/images/main_page/computing/python.png" alt="py">
+                <img class="programLang" src="/images/main_page/computing/lua.png" alt="lua">
+                
+                <img class="programLang" src="/images/main_page/computing/java.png" alt="java">
+                <img class="programLang" src="/images/main_page/computing/js.png" alt="js">
+
+            </div>
+        </div>
+
+        <div class="subjectWrapper subjectWrapperPeach">
+
+            <p class="contentTitle">Featured Projects</p>
+
+            <div class="featured-projects-wrapper-mainpage content_hiding">
+                
+                <a class="project-mainpage content_hiding" href="/pages/projects/roblox/swamp_defense.html">
+                    <h1 class="project-mainpage-title">Swamp Defense</h1>
+                    <img src="/images/main_page/roblox-project-icon.png" alt="swamp defense image">
+                    
+                    <div class="project-mainpage-languages">
+                        <p>LUA</p>
+                        <p>Roblox Studio</p>
+                    </div>
+                    
+                    <p class="project-mainpage-description contentText">Swamp Defense is an endless single-player endurance game where you defend a Flordia man's home and get rewarded for it. Go get em tiger!</p>                
+                    
+                </a>
+
+                <a class="project-mainpage content_hiding" href="/pages/projects/web/cyberlions-web.html">
+                    <h1 class="project-mainpage-title">Cyberlions Central</h1>
+                    <img src="/images/main_page/cyberlions-project-icon.png" alt="Cyberlions website image">
+
+                    <div class="project-mainpage-languages">
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JavaScript</p>
+                        <p>Github</p>
+                    </div>
+
+                    <p class="project-mainpage-description contentText">I worked with my local robotics team and help design, prototype, and launch a website to raise team publicity.</p>                    
+                
+                </a>
+
+                <a class="project-mainpage content_hiding"  href="/pages/projects/discord/caesar_bot.html">
+                    <h1 class="project-mainpage-title">Caesar Bot</h1>
+                    <img src="/images/main_page/discord-project-icon.png" alt="caesar bot image">
+
+                    <div class="project-mainpage-languages">
+                        <p>Python</p>
+                        <p>Discord</p>
+                        <p>Github</p>
+                    </div>
+
+                    <p class="project-mainpage-description contentText">All Hail Caesar! With the power of the Roman ruler's bot figure, you now possess the ability to encode and decode strings with Caesar Cipher!</p>                    
+                </a>
+            </div>
+
+            <div class="all-projects-link-wrapper content_hiding">
+                <a class="all-projects-link" href="/pages/works.html">
+                    <p>More Projects</p>
+                    <img alt="arrow sideways" src="/images/icons/arrow_sideways.png">
+                </a>
+            </div>
+        </div>
+
+        <div class="subjectWrapper" id="web-builder-service">
+            <p class="contentTitle">Do You Need a Website Built?</p>
+            
+
+            <div class="need-a-website-link-to-contacts content_hiding">
+
+                <p class="website-building-description">Designing a webpage can frustrating.<br> I would more than happy to help you.</p>
+
+                <a id="link-to-contacts-button" href="/pages/contacts.html">Let Me Know!</a>
+            </div>
+
+        </div>
+
+    </body>
+
+    <!-- Footer -->
+    <footer class="indexFooter">
+        
+        <div class="footer-content-wrapper">
+            <div class="footer-personal-branding">
+                <div class="footer-logo">
+                    <img alt="portfolio Logo" src="/images/Hummingbirds/red_logo_footer.png" id="footer-hummingbird-logo">
+                    <p class="whiteText">Larry Le | Digital Portfolio</p>
+                </div>
+
+                <div class="socials">
+                    <img src="/images/icons/github_white.png" alt="github" id="github">
+                    <img src="/images/icons/linkedin_white.png" alt="linkedIn" id="linkedin">
+                    <img src="/images/icons/discord_white.png" alt="discord" id="discord">
+                    <img src="/images/icons/instagram_white.png" alt="instagram" id="instagram">
+                </div>
+            </div>
+            <div class="whiteText about-website">
+                <p>This portfolio was started during the summer of 2022: thanks for visiting!</p>
+            </div>
+
+            <div class="footer-navigation">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/pages/works.html">My Works</a></li>
+                    <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
+                    <li><a href="/pages/contacts.html">Contacts</a></li>
+                    <li><a href="/about.html" id="about_me_navigation_link_footer">About Me</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="legalFooter">                
+            <h5>Copyright &copy; 2022 Larry Le Under MIT Licensing</h5>
+        </div>
+    
+    </footer>
+</html>

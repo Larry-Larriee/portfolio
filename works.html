@@ -19,37 +19,42 @@
     </head>
 
     <body>
-        <!-- The header element contains the logo and the navigation bar -->
-        <header class="works">
-
-            <!-- Regular navigation for desktops ---------------------------------------------------------------------------------------- -->
-            <div class="nav_wrapper">
-                <img alt="mobile menu icon" src="/images/icons/mobile-menu.png" class="hamburger_icon">
-
-                <div class="logoDiv">
-                    <img alt="portfolio Logo" src="/images/Hummingbirds/yellower_logo.png" id="logo">
-                    <a href="/" class="logo_text"><p>Larry Le | Digital Portfolio</p></a>
+        <div class="nav-background" id="my-works">    
+            <nav class="nav-reg">
+                <div class="nav-reg-logo">
+                    <img alt="portfolio Logo" src="/images/Hummingbirds/red_logo.png" id="logo">
+                    <p>Larry Le | Digital Portfolio</p>
                 </div>
 
-                <nav>
-                    <ul class="navLinks">
-                        <li><a href="/pages/works.html">My Works</a></li>
-                        <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
-                        <li><a href="/pages/contacts.html">Contacts</a></li>
-                    </ul>
-                </nav>
-                <p><a class="aboutLink" href="/about.html" id="about_me_navigation_link">About Me</a></p> 
-            </div>
+                <ul class="nav-reg-links">
+                    <li><a href="/works.html">My Works</a></li>
+                    <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
+                    <li><a href="/contacts.html">Contacts</a></li>
+                </ul>
 
-            <!-- Mobile navigation that fires through media query ----------------------------------------------------------------------- -->
-            <ul class="mobile_nav content_hidden">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/pages/works.html">My Works</a></li>
-                <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
-                <li><a href="/pages/contacts.html">Contacts</a></li>
-                <li><a href="/about.html" id="about_me_mobile_navigation_link">About Me</a></li>
-            </ul>
-            </header>
+                <a class="aboutLink" href="/about.html">About Me</a>
+            </nav>
+
+            <nav class="nav-mob">
+                <div class="nav-mob-logo">
+                    <img alt="portfolio Logo" src="/images/Hummingbirds/red_logo.png" id="logo">
+                </div>
+
+                <div class="nav-mob-burger">
+                    <img alt="mobile burger" src="/images/icons/mobile-menu.png" id="mobile-button">
+                </div>
+
+                <div class="nav-mob-links content-hidden" id="mobile-menu">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/works.html">My Works</a></li>
+                        <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
+                        <li><a href="/contacts.html">Contacts</a></li>
+                        <li><a class="aboutLink" href="/about.html">About Me</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
 
 
         <div class="top_page_description_wrapper" id="top_page_works">
@@ -81,7 +86,7 @@
             <h1 class="blackHeader">Roblox Studio</h1>
 
             <div class="work_content works_font">
-                <a href="../pages/projects/roblox/titan_legends.html" id="titan_legends">
+                <a href="../projects/roblox/titan_legends.html" id="titan_legends">
                     
                     <section>
                         <p>Titan Legends - Simulator Game</p>
@@ -91,7 +96,7 @@
                     <!-- Bottom Right Image -->
                     <img alt="Roblox Icon" src="/images/icons/roblox_icon_transparent.png">    
                 </a>
-                <a href="../pages/projects/roblox/museum_lua.html" id="museum">                    
+                <a href="../projects/roblox/museum_lua.html" id="museum">                    
                 
                     <section>
                         <p>Museum of LUA - Education</p>
@@ -101,7 +106,7 @@
                     <img alt="Roblox Icon" src="/images/icons/roblox_icon_transparent.png">    
                 
                 </a>
-                <a href="../pages/projects/roblox/swamp_defense.html" id="swamp_defense">                
+                <a href="../projects/roblox/swamp_defense.html" id="swamp_defense">                
                                 
                     <section>
                         <p>Swamp Defense - Survival</p>
@@ -120,7 +125,7 @@
             <h1 class="blackHeader">Web Development</h1>
 
             <div class="work_content works_font">
-                <a href="../pages/projects/web/critiverse.html" class="content_hidden" id="critiverse">
+                <a href="../projects/web/critiverse.html" class="content_hidden" id="critiverse">
                     
                     <section>
                         <p>Critiverse: A Review Website</p>
@@ -129,7 +134,7 @@
                     <img alt="Website Icon" src="/images/icons/css.png">
 
                 </a>
-                <a href="../pages/projects/web/portfolio.html" id="portfolio">                    
+                <a href="../projects/web/portfolio.html" id="portfolio">                    
                 
                     <section>
                         <p>Larry Le | Digital Portfolio</p>
@@ -138,7 +143,7 @@
                     <img alt="Website Icon" src="/images/icons/css.png">    
                 
                 </a>
-                <a href="../pages/projects/web/cyberlions-web.html" id="cybersite">                
+                <a href="../projects/web/cyberlions-web.html" id="cybersite">                
                 
                     <section>
                         <p>Team 8521 CyberLions Site</p>
@@ -155,7 +160,7 @@
             <h1 class="blackHeader">Robotics</h1>
 
             <div class="work_content works_font">
-                <a href="../pages/projects/robotics/frc2023.html" id="FRC2023">
+                <a href="../projects/robotics/frc2023.html" id="FRC2023">
         
                     <section>
                         <p>FIRST Robotics Season 2023</p>
@@ -174,7 +179,7 @@
 
             <div class="work_content works_font">
 
-                <a href="../pages/projects/discord/tyrone_bot.html" id="tyrone_bot">
+                <a href="../projects/discord/tyrone_bot.html" id="tyrone_bot">
                 
                     <section>
                         <p>Tyrone Bot - General Multipurpose</p>
@@ -184,7 +189,7 @@
                 
                 </a>
 
-                <a href="../pages/projects/discord/caesar_bot.html" id="ceasar_bot">
+                <a href="../projects/discord/caesar_bot.html" id="ceasar_bot">
                 
                     <section>
                         <p>Caesar Bot: Caesar Cipher</p>
@@ -194,7 +199,7 @@
 
                 </a>
 
-                <a href="../pages/projects/discord/reaction_bot.html" id="reaction_bot">
+                <a href="../projects/discord/reaction_bot.html" id="reaction_bot">
                 
                     <section>
                         <p>Reaction Bot - Emojis Chat</p>
@@ -213,7 +218,7 @@
 
             <div class="work_content works_font">
                 
-                <a href="../pages/projects/cybersecurity/cyberstart2022.html" id="cyberstart2022">
+                <a href="../projects/cybersecurity/cyberstart2022.html" id="cyberstart2022">
                     
                     <section>
                         <p>CyberStart America 2022</p>
@@ -242,7 +247,7 @@
 
             <div class="work_content works_font">
 
-                <a href="../pages/projects/cad/jacobs.html" id="JTIC">
+                <a href="../projects/cad/jacobs.html" id="JTIC">
 
                     <section>
                         <p>Jacobs Teen Innovation Challenge (JTIC) 2022</p>
@@ -252,7 +257,7 @@
                 
                 </a>
 
-                <a href="../pages/projects/cad/exploravision2022.html" id="exploravision2022">
+                <a href="../projects/cad/exploravision2022.html" id="exploravision2022">
                 
                     <section>
                         <p>Toshiba Exploravision 2022</p>
@@ -261,7 +266,7 @@
                     <img alt="Innovation Icon" src="/images/icons/lightbulb.png">                  
                 </a>
 
-                <a href="../pages/projects/cad/whs_tables.html" id="cs_tables">
+                <a href="../projects/cad/whs_tables.html" id="cs_tables">
                                 
                     <section>
                         <p>CS Room Table Redesign - Westminster High School</p>
@@ -299,9 +304,9 @@
             <div class="footer-navigation">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
-                    <li><a href="/pages/works.html">My Works</a></li>
+                    <li><a href="/works.html">My Works</a></li>
                     <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
-                    <li><a href="/pages/contacts.html">Contacts</a></li>
+                    <li><a href="/contacts.html">Contacts</a></li>
                     <li><a href="/about.html" id="about_me_navigation_link_footer">About Me</a></li>
                 </ul>
             </div>
