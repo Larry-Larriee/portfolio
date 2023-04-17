@@ -34,8 +34,10 @@
     --lighterYellow: #ffc363;
     --yellowFaded: #ffb744e8;
 
-    --usual-font-size: 1.35rem;
-    --section-height: 80vh;
+    --usual-font-size: 1.1rem;
+    --section-height: 95vh;
+    --usual-gap: 8rem;
+    --header-size: 2.35rem;
 }
 
 *{
@@ -348,7 +350,7 @@ body{
     align-items: center;
     justify-content: center;
 
-    padding: 1rem 0rem 1rem 0rem;
+    padding: 0.75rem 0rem 0.5rem 0rem;
 }
 #my-works{
     background: var(--lighterYellow);
@@ -392,7 +394,7 @@ nav ul{
     gap: 2rem;
 }
 .nav-reg-logo img{
-    max-width: 3.5rem;
+    max-width: 2.5rem;
 }
 
 .nav-reg-links{
@@ -477,7 +479,7 @@ nav ul{
 
     min-width: 80vw;
     max-width: 80vw;
-    gap: 10rem;
+    gap: var(--usual-gap);
 
     display: flex;
     justify-content: center;
@@ -488,7 +490,7 @@ nav ul{
 }
 .landing-hero-image{
     border-radius: 50%;
-    max-width: 35rem;
+    max-width: 25rem;
 
     transform: rotate(25deg);
 }
@@ -500,30 +502,34 @@ nav ul{
 
     color: white;
     font-family: "Kanit", sans-serif;
-    font-size: 2rem;
 }
 .landing-hero-text section{
     padding: 1.5rem;
     border: 0.25rem solid var(--light-coral);
-    box-shadow: 0.25rem 0.25rem 0 black;
 
     background: var(--light-coral);
-    transition: 500ms ease;
+    transition: 250ms ease;
 }
 .landing-hero-text section h1{
-    font-size: 3.5rem;
+    font-size: 2.25rem;
+}
+.landing-hero-text section p{
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
 }
 #landing-hero-who{
     color: var(--peach);
+    font-size: 1.35rem;
+    font-family: 'Lato', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .landing-hero-text section:hover{
-    transform: scale(1.025);
-    transition: 500ms ease;
+    box-shadow: 0.25rem 0.25rem 0 var(--darkerPeach);
+    transition: 250ms ease;
 }
 
 /* ====================================================================================================================================== */
-/* LANDING HERO */
+/* COMPUTE HISTORY */
 
 .compute-background{
     display: flex;
@@ -538,7 +544,7 @@ nav ul{
     max-width: 80vw;
 
     display: flex;
-    gap: 10rem;
+    gap: var(--usual-gap);
     justify-content: center;
     align-items: center;
 }
@@ -548,16 +554,174 @@ nav ul{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    min-width: 40vw;
-    max-width: 40vw;
+    min-width: 35vw;
+    max-width: 35vw;
 
     gap: 2rem;
     align-items: center;
 }
 .compute-images img{
-    min-width: 9rem;
-    max-width: 9rem;
+    min-width: 5.5rem;
+    max-width: 5.5rem;
+    transition: 250ms ease;
+}
+.compute-images img:hover{
+    transform: scale(1.1);
+    transition: 250ms ease;
+}
+.compute-text{
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
 
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.compute-text h1{
+    font-size: var(--header-size);
+}
+.compute-text p{
+    font-size: 1.3rem;
+}
+
+/* ====================================================================================================================================== */
+/* FEATURED PROJECTS */
+
+.projects-background{
+    min-height: var(--section-height);
+    background: var(--peach);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projects{
+    min-width: 80vw;
+    max-width: 80vw;
+
+    gap: 4rem;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.projects-hero{
+    font-size: var(--header-size);
+}
+.projects-content{
+    display: flex;
+    gap: 5rem;
+}
+.projects-content-item{
+    display: flex;
+    flex-direction: column;
+
+    background: var(--darkerPeach);
+    max-width: 23rem;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 0.15rem solid var(--darkOrange)
+}
+.projects-content-item img{
+    max-width: 7rem;
+    border-radius: 50%;
+    border: 0.25rem solid var(--gold);
+}
+
+.projects-content-item-tools{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.projects-content-item-tools p{
+    padding: 0.25rem;
+    border-radius: 0.75rem;
+    border: 0.1rem solid var(--blackish);  
+    background: var(--blackish); 
+    color: white;
+}
+
+.projects-content-item-links{
+    display: flex;
+    gap: 2rem;
+}
+.projects-content-item-links img{
+    max-width: 3rem;
+    border: none;
+    background: var(--peach);
+    transition: 250ms ease;
+}
+.projects-content-item-links img:hover{
+    transition: 250ms ease;
+    transform: scale(1.1);
+    cursor: pointer;
+    background: white;
+}
+
+/* ====================================================================================================================================== */
+/* ADVERTISEMENT SERVICE */
+
+.service-background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: var(--section-height);
+}
+.service{
+    min-width: 80vw;
+    max-width: 80vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: var(--usual-gap);  
+}
+.service img{
+    max-width: 20rem;
+    border: 0.15rem solid var(--gold);
+    transition: 250ms ease;
+    box-shadow: 0.75rem 0.75rem 0 var(--peach);
+}
+
+.service-hero{
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.service-hero-link-button{
+    display: inline-block;
+
+    border: 0.15rem solid black;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+
+    font-size: 1.5rem;
+    transition: 250ms ease;
+}
+.service-hero-link-button:hover{
+    transform: scale(1.1);
+    transition: 250ms ease;
+    border: 0.15rem solid var(--lightishGreen);
+    background: var(--lightishGreen);
+    color: white;
+    cursor: pointer;
+}
+
+.service-hero-text{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.service-hero-text h1{
+    font-size: var(--header-size);
+}
+.service-hero-text p{
+    font-size: 1.3rem;
 }
 
 /* ====================================================================================================================================== */
