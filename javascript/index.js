@@ -19,6 +19,13 @@ const links = {
     "service": document.getElementById("ref-fiverr")
 };
 
+const socialMedia = {
+    "discord": document.getElementById("ref-discord"),
+    "github": document.getElementById("ref-github"),
+    "instagram": document.getElementById("ref-instagram"),
+    "linkedin": document.getElementById("ref-linkedin")
+}
+
 // =============================================================================================================================================
 // FUNCTIONS
 
@@ -48,3 +55,8 @@ links.ocsef.website.addEventListener("click", () => openLink("https://ocsef-iat.
 links.roblox.website.addEventListener("click", () => openLink("https://www.roblox.com/games/7218691177/Swamp-Defense-BETA"));
 
 links.service.addEventListener("click", () => openLink("https://www.fiverr.com/larry_larriee/build-you-a-website-and-put-it-on-google-and-the-internet"));
+
+socialMedia.discord.addEventListener("click", () => openLink("https://discord.com/users/490277278136270874"));
+socialMedia.github.addEventListener("click", () => openLink("https://github.com/Larry-Larriee"));
+socialMedia.instagram.addEventListener("click", () => openLink("https://www.instagram.com/larry_larriee/"));
+socialMedia.linkedin.addEventListener("click", () => openLink("https://www.linkedin.com/in/larry-le-94b565244/"));

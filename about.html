@@ -1,29 +1,20 @@
-<!-- Declare that this is an HTML5 Website -->
 <!DOCTYPE html>
-
 <html lang="en">
-
-    <!-- The head element gives information about this page, like "title" -->
     <head>
-
-        <!-- No corrupt char & compatiable on multiple devices -->
-        <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Larry Le | Contacts</title>
-        <meta name="description" content="Contact Larry Le">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Larry Le</title>
+        <meta name="description" content="Hello! My name is Larry Le. I'm a High School student that does front-end and full-stack development to make dynamic web applications. I also like working with data and robots to make things mooooove.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../style.css">
-        <link rel="icon" href="../images/Hummingbirds/red_logo_model2.png">
+        <link rel="stylesheet" href="/style.css">
 
-        <script src="/javascript/about.js" async defer></script> <!-- Script loads before continuting content -->
-
+        <link rel="icon" href="/images/Hummingbirds/black_logo.png">
     </head>
-
-    <body onload="redirect()">
 
         <div class="nav-background" id="about-me">    
             <nav class="nav-reg">
                 <div class="nav-reg-logo">
-                    <img alt="portfolio Logo" src="/images/Hummingbirds/red_logo.png" id="logo">
+                    <img alt="portfolio Logo" src="/images/Hummingbirds/red_logo.png" id="logo-navigation">
                     <p>Larry Le | Digital Portfolio</p>
                 </div>
 
@@ -57,219 +48,67 @@
             </nav>
         </div>
 
+        <main>
 
-    <!--<div class="top_page_description_wrapper" id="top_page_about_me">
+            <div class="about-background">
+                <div class="about">
+                    <article class="about-about-me">
+                        <h1>About Me</h1>
+                        <p>Hello! My name is Larry Le. I want my future to be involved in technology and computer science, the STEM field I've been interested in ever since I began my freshman year of high school. </p>
+                    </article>
 
-            <div class="images-left-side content_hiding">
-                <img alt="css logo" src="/images/icons/css.png">
-                <img alt="bugs" src="/images/icons/bug.png">
-                <img alt="code compare" src="/images/icons/code_compare.png">
+                    <article class="about-how-did-i-get-here">
+                        <h1>How Did I Get Here?</h1>
+                        <section>
+                            <p>The spark to my interest started in my Exploring Computer Science class, a mandatory course I had to do because of the program I was in. It may have been a blessing in disguise, because I never would have considered CS. I would eventually learn the basic skills needed to create a static website. However, I often went above and beyond the course description, constantly going on W3Schools to learn about more properties.</p>
+                            <p>By the time my freshman summer rolled around, I found myself branching out beyond web design, curious to see what else I could create with CS. I ended up pursuing LUA and Roblox Development, because something in me wanted to find out more about how that shooting mechanic worked, how those zombies knew exactly how to follow me, and all the other features that made a Roblox game so cool. 😃</p>
+                            <p>By my Sophomore year, I learned Python to program Discord bots, in addition to cybersecurity through a program called CyberStart. After exploring my options, I've decided that I want to specialize in full-stack development, centering my Junior year on learning how to do things like launch a server to send POST requests.</p>
+                        </section>
+                    </article>
+
+                    <article class="about-whats-the-point">
+                        <h1>What's The Point?</h1>
+                        <p>The point is very simple. Pursuing full-stack development means that I can create services, whether that be on browser, desktop, or phone, to positively impact the community and leave this place better than I found it. This is all I want, and I will do everything I can to make it happen.</p>
+                    </article>
+                </div>    
             </div>
 
-            <p id="about-me-description">
-                My favorite hobby is to provide a product or service for others to enjoy. 
-                Below is a timeline of some of my experiences that have matured me into making bigger and better projects for everyone!
-
-            </p>
-
-            <div class="images-right-side content_hiding">
-                <img alt="lightbulb" src="/images/icons/lightbulb.png">
-                <img alt="paintbrush" src="/images/icons/brush_green.png">
-                <img alt="cog" src="/images/icons/cog.png">
-            </div>
-
-        </div>
-    -->
-        <!--
-        <main id="timeline_wrapper">    
-
-            <div class="timeline_content_wrapper" id="time_one">
-                <article class="date">Prior to High School</article>
-
-                <p class="timeline_content">
-                    
-                    I would browse through Scratch a lot on my school-issued chromebook 
-                    whenever I had the chance and remix community projects for fun. I loved playing indie games and had a knack for electronics.   
-                    
-                </p>
-            </div>
-            
-            <div class="timeline_content_wrapper content_hiding" id="time_two">
-                <article class="date">September-December 2020</article>
-
-                <p class="timeline_content">
-                    
-                    I decided to take an Exploring Computer Science (ECS) class that my school offered me. In this class, I would learn about how
-                    websites were built as well as a little bit of HTML and CSS.                
-                </p>
-            </div>
-
-            <div class="timeline_content_wrapper content_hiding" id="time_three">
-                <article class="date">January 2021</article>
-
-                <p class="timeline_content">
-                    
-                    I would go on to create my first big project <span class="highlighter"><a href="/projects/web/critiverse.html">CritiVerse</a></span>
-                </p>  
-            </div>
-            
-            <div class="timeline_content_wrapper content_hiding" id="time_four">
-                <article class="date">February-April 2021</article>
-
-                <p class="timeline_content">
-                    
-                    My ECS class would further my expertise on Scratch, leading me to learn about API extensions such as motion
-                    control and how to make animation.
-                </p>  
-            </div>
-
-            <div class="timeline_content_wrapper content_hiding" id="time_five">
-                <article class="date">May 2021</article>
-
-                <p class="timeline_content">
-                    
-                    I started becoming more and more interested in another childhood game, Roblox. 
-                    Roblox also allows the community to create games, and I thought it was amazing how these 3D games worked and behaved. I started
-                    trying <cite>Roblox Studio</cite> for the first time.
-                </p>  
-            </div>
-
-            <div class="timeline_content_wrapper content_hiding" id="time_six">
-                <article class="date">June 2021</article>
-
-                <p class="timeline_content">
-                    
-                    For a while, I felt really overwhelmed with Roblox scripting: all I did was take free models made by the community. 
-                    However, as I got more used to the environment, I started making an effort to watch tutorials about LUA from Youtubers 
-                    like Alvinblox and TheDevKing. These individuals acted as mentors for me.
-                </p>  
-            </div>
-
-            <div class="timeline_content_wrapper content_hiding" id="time_sevenP1">
-                <article class="date">July 2021</article>
-
-                <p class="timeline_content">
-                    
-                    As I sought to learn more about Roblox LUA, such as client and server events, player scripts, workspace scripts, and more, I
-                    started forming my first major creation: <span class="highlighter"><a href="/projects/roblox/titan_legends.html">Titan Legends</a></span>. The main goal of the game is to grow and defeat other players.                
-                </p>  
-            </div>
-
-            <div class="timeline_content_wrapper content_hiding" id="time_sevenP2">
-                <p class="timeline_content">
-                    
-                    I also took notes during this time on properties such as data saving in a separate game called the Museum of LUA.                 </p>  
-                </p>
-            </div>
-
-            <div class="timeline_content_wrapper content_hiding" id="time_eight">
-                <article class="date">August 2021</article>
-
-                <p class="timeline_content">
-                    
-                    To put my skills to the test, I decided to start a new game called <span class="highlighter"><a href="/projects/roblox/swamp_defense.html">Swamp Defense</a></span>. The goal is to survive against a hoard of
-                    endless and angry crocodiles trying to attack your home: you are provided with a shotgun you can upgrade over time.                 
-                </p>  
-            </div>
-
-            <div class="timeline_content_wrapper content_hiding" id="time_nineP1">
-                <article class="date">September-December 2021</article>
-
-                <p class="timeline_content">
-                    
-                    With the new school year in session, I had to put down Roblox for a while. However, this did not stop me from programming, and
-                    I began to pick up Python. Learning from Youtubers such as CodingWithMosh and TechWithTim allowed me to utilize this language 
-                    in Discord Bot development. 
-             
-                </p>  
-            </div>
-
-            <div class="timeline_content_wrapper content_hiding" id="time_nineP2">
-
-                <p class="timeline_content">
-                    
-                    Additionally, I got to expand my knowledge with server uptime and data storage, something I was never concerned with before. 
-                    TechWithTim specifically, helped me learn how to use mongoDB and Heroku to give my Discord bot more ability to help and entertain users.                 </p>
-                </p>
-            </div>
-
-            <div class="timeline_content_wrapper content_hiding" id="time_tenP1">
-                <article class="date">January-April 2022</article>
-
-                <p class="timeline_content">
-                    
-                    One of my high school teachers recommended me to try out cybersecurity through a nation-wide competition called CyberStart. It 
-                    was through this that I was able to learn about the other side of Computer Science: brute forcing, powerful operating systems like Linux, 
-                    SQL injection, and so much more!
-                </p>  
-            </div>
-
-            <div class="timeline_content_wrapper content_hiding" id="time_tenP2">
-
-                <p class="timeline_content">
-                    
-                    I also began working with peers to design and prototype an invention that solves a global problem for UC San Diego's 2022 
-                    <span class="highlighter"><a href="/projects/cad/jacobs.html">JTIC event</a></span>. 
-                    
-                    Targeting primarily landlocked people in Africa, we brainstormed and created the "Camel Cart" to make storing, moving, and filtering 
-                    water more efficent. 
-                </p>
-            </div>
-
-            <div class="timeline_content_wrapper content_hiding" id="time_eleven">
-                <article class="date">June-August 2022</article>
-
-                <p class="timeline_content">
-                    
-                    I decided to reflect on the skills I have learned so far: one of the reasons why I started this website! Doing so has allowed
-                    me to expand my knowledge on features such as website animations and Javascript observers, and well as how to use github environments, pull requests, etc. 
-                </p>  
-            </div>
-
-
-            <div class="timeline_center">
-                <article class="timeline_circle"></article>
-
-            </div>
         </main>
-    -->
-    </body>
-
-    <!-- Footer -->
-    <!--<footer class="aboutFooter">
         
-        <div class="footer-content-wrapper">
-            <div class="footer-personal-branding">
-                <div class="footer-logo">
-                    <img alt="portfolio Logo" src="/images/Hummingbirds/darkcyan_logo.png" id="footer-hummingbird-logo">
-                    <p class="whiteText">Larry Le | Digital Portfolio</p>
-                </div>
+        <footer class="footer-background" id="about-me">
+            <div class="footer">
+                <article class="footer-branding">
 
-                <div class="socials">
-                    <img src="/images/icons/github_white.png" alt="github" id="github">
-                    <img src="/images/icons/linkedin_white.png" alt="linkedIn" id="linkedin">
-                    <img src="/images/icons/discord_white.png" alt="discord" id="discord">
-                    <img src="/images/icons/instagram_white.png" alt="instagram" id="instagram">
-                </div>
-            </div>
-            <div class="whiteText about-website">
-                <p>This portfolio was started during the summer of 2022: thanks for visiting!</p>
-            </div>
+                    <section class="footer-branding-logo">
+                        <img alt="portfolio Logo" src="/images/Hummingbirds/red_logo_footer.png" id="logo-footer">
+                        <p class="whiteText">Larry Le | Digital Portfolio</p>    
+                    </section>
 
-            <div class="footer-navigation">
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/works.html">My Works</a></li>
-                    <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
-                    <li><a href="/contacts.html">Contacts</a></li>
-                    <li><a href="/about.html" id="about_me_navigation_link_footer">About Me</a></li>
-                </ul>
-            </div>
-        </div>
+                    <section class="footer-branding-socials">
+                        <img src="/images/icons/github_white.png" alt="github" id="ref-github">
+                        <img src="/images/icons/linkedin_white.png" alt="linkedIn" id="ref-linkedin">
+                        <img src="/images/icons/discord_white.png" alt="discord" id="ref-discord">
+                        <img src="/images/icons/instagram_white.png" alt="instagram" id="ref-instagram">
+                    </section>
+                </article>
 
-        <div class="legalFooter">                
-            <h5>Copyright &copy; 2022 Larry Le Under MIT Licensing</h5>
-        </div>
-    
-    </footer> -->
+                <article class="footer-quote">
+                    <p>This portfolio was started during the summer of 2022: thanks for visiting!</p>
+                </article>
+
+                <article class="footer-nav">
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/pages/works.html">My Works</a></li>
+                        <li><a href="https://docs.google.com/document/d/1VOy2u3XwasOCgU1KiX9SYaCySoiXh-jDZJ_pVHEhpw4/edit" rel="noopener" target="_blank">Resume</a></li>
+                        <li><a href="/pages/contacts.html">Contacts</a></li>
+                        <li><a href="/about.html">About Me</a></li>
+                    </ul>
+                </article>
+
+                <h5 class="legalFooter">Copyright &copy; 2023 Larry Le Under MIT Licensing</h5>
+            </div>
+        </footer>
+
+        <script src="/javascript/about.js" async defer></script>
 </html>

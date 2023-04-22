@@ -14,6 +14,7 @@
     --grey: #F6F6F6;
     --darkGrey: #9f9f9f;
     --blackish: #444444;
+    --super-light-grey: #d6d6d6;
 
     --peach: #ffe8bc;
     --darkerPeach: #ffd991; 
@@ -391,7 +392,7 @@ nav ul{
     display: flex;    
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 .nav-reg-logo img{
     max-width: 2.5rem;
@@ -789,6 +790,12 @@ footer a{
 }
 .footer-branding-socials img{
     max-width: 2rem;
+    transition: 250ms ease;
+}
+.footer-branding-socials img:hover{
+    transform: rotate(-30deg);
+    cursor: pointer;
+    transition: 250ms ease;
 }
 
 .footer-quote{
@@ -1293,241 +1300,55 @@ footer a{
     }
 }
 
-/* about Page ----------------------------------------------------------------------------------------------------------------------- */
+/* ====================================================================================================================================== */
+/* ABOUT ME */
 
-.top_page_description_wrapper{
-    min-height: 60vh;
-    margin-bottom: 10vh;
-
+.about-background{
     display: flex;
     justify-content: center;
-    align-items: center;    
 
-    gap: 5rem;
+    min-height: 100vh;
 }
 
-#top_page_about_me{
-    background-color: var(--darkestCyan);
-}
-#top_page_works{
-    background:var(--gold);
-}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.top_page_description_wrapper p{
-    text-align: center;
-    max-width: 40vw;
-    font-size: 1.6vw;
+    flex-direction: column;
+    gap: 3rem;
 
-    font-weight: 600;
-    color: white;
-    font-family: 'Poppins', serif;
+    min-width: 80vw;
+    max-width: 80vw;
+
+    font-family: 'Lato', Courier, monospace;
+
+    /* North East South West */
+    padding: 5rem 0rem 5rem 0rem;
 }
-
-.top_page_description_wrapper img{
-    max-width: 4rem;
-}
-
-.images-left-side{
-    position: relative;
-
-    display: grid;
-    grid-template-areas:
-    
-    ". one"
-    "two ."
-    ". thr";
-
-    gap: 2rem;
-}
-.images-left-side img:nth-child(1){
-    grid-area: one;
-    transform: rotate(15deg);
-}
-.images-left-side img:nth-child(2){
-    grid-area: two;
-    transform: rotate(-15deg);
-}
-.images-left-side img:nth-child(3){
-    grid-area: thr;
-    transform: rotate(20deg);
-}
-
-.images-right-side{
-    position: relative;
-
-    display: grid;
-    grid-template-areas:
-    
-    "one ."
-    ". two"
-    "thr .";
-
-    gap: 2rem;
-}
-.images-right-side img:nth-child(1){
-    grid-area: one;
-    transform: rotate(-15deg);
-}
-.images-right-side img:nth-child(2){
-    grid-area: two;
-    transform: rotate(15deg);
-}
-.images-right-side img:nth-child(3){
-    grid-area: thr;
-    transform: rotate(-20deg);
-}
-
-/* Timeline ----------------------------------------------------------------------------------------------------- */
-
-.timeline_content_wrapper{
-    font-size: 1rem;
-    line-height: 1.5;
-
-    font-weight: 500;
-    color: black;
-    font-family: 'Ubuntu', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.date{
-    font-family: 'Ubuntu', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 600;
+.about h1{
+    font-size: 2rem;
     color: var(--darkerCyan);
-
-    font-size: 0.95vw;
-    margin-bottom: 2vh;
+}
+.about p{
+    font-size: 1.2rem;
+    line-height: 1.75rem;
 }
 
-#timeline_wrapper{
-    margin: 10vh 20vh 10vh 20vh;
-    gap: 2rem;
+.about-about-me, .about-how-did-i-get-here, .about-whats-the-point{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+.about-how-did-i-get-here section{
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
 
-    display: grid;
-
-    grid-auto-rows: 1fr;
-    grid-template-areas: 
-    
-    "one timeline ."
-    ". timeline two"
-    "three timeline ."
-    ". timeline four"
-    "five timeline ."
-    ". timeline six"
-    "sevenP1 timeline ."
-    "sevenP2 timeline ."
-    ". timeline eight"
-    "nineP1 timeline ."
-    "nineP2 timeline ."
-    ". timeline tenP1"
-    ". timeline tenP2"
-    "eleven timeline .";
+    padding-left: 1.80rem;
+    border-left: 1.2rem solid var(--babyBlue);
 }
 
-.timeline_center{
-    background-color: var(--darkGrey);
-    width: 0.5vw;
-
-    border-radius: 1vh;
-    justify-self: center;
-    grid-area: timeline;
-
-    position: relative;
-}
-
-.timeline_circle{
-    width: 2vw;
-    height: 2vw;
-
-    border-radius: 1vw;
-    background-color: var(--darkestCyan);
-
-    /* Move left 50% relative to body then translateX -50% relative it itself */
-    position: absolute; 
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#time_one{
-    grid-area: one;
-}
-#time_two{
-    grid-area: two;
-}
-#time_three{
-    grid-area: three;
-}
-#time_four{
-    grid-area: four;
-}
-#time_five{
-    grid-area: five;
-}
-#time_six{
-    grid-area: six;
-}
-#time_sevenP1{
-    grid-area: sevenP1;
-}
-#time_sevenP2{
-    grid-area: sevenP2;
-}
-#time_eight{
-    grid-area: eight;
-}
-#time_nineP1{
-    grid-area: nineP1;
-}
-#time_nineP2{
-    grid-area: nineP2;
-}
-#time_tenP1{
-    grid-area: tenP1;
-}
-#time_tenP2{
-    grid-area: tenP2;
-}
-#time_eleven{
-    grid-area: eleven;
-}
-
-@media (max-width: 44.5rem) {
-
-    .top_page_description_wrapper p{
-        max-width: max-content;
-        font-size: 1rem;
-        margin: 0rem 3rem 0rem 3rem;
-    }
-
-    #timeline_wrapper{
-        margin: 2rem 2rem 2rem 2rem;
-        grid-auto-rows: auto; /* Each grid element takes up as much space as it needs */
-
-        grid-template-areas: 
-        
-        "timeline one"        
-        "timeline two"
-        "timeline three"
-        "timeline four"
-        "timeline five"
-        "timeline six"
-        "timeline sevenP1"
-        "timeline sevenP2"
-        "timeline eight"
-        "timeline nineP1"
-        "timeline nineP2"
-        "timeline tenP1"
-        "timeline tenP2"
-        "timeline eleven";
-    }
-    
-    .timeline_content_wrapper{
-        font-size: 1rem;
-        overflow: wrap;
-    }
-    .date{
-        font-size: 0.9rem;
-    }
-
-}
 
 /* Works pages -------------------------------------------------------------------------------------------------------------------------- */
 
