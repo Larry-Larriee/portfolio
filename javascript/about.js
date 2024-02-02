@@ -11,6 +11,13 @@ const urlList = {
     "contacts": "/contacts.html"
 }
 
+const socialMedia = {
+    "discord": document.getElementById("ref-discord"),
+    "github": document.getElementById("ref-github"),
+    "instagram": document.getElementById("ref-instagram"),
+    "linkedin": document.getElementById("ref-linkedin")
+}
+
 // =============================================================================================================================================
 // FUNCTIONS
 
@@ -25,7 +32,22 @@ const detectLogo = (url) => {
     }
 }
 
+const returnHome = () => {
+    window.location.href = "../index.html";
+}
+
+const openLink = (link) => {
+    window.open(link);
+}
+
 // =============================================================================================================================================
 // MAINSETUP
 
-detectLogo(window.location.pathname);
+// detectLogo(window.location.pathname);
+
+navigationLogo.addEventListener("click", returnHome);
+
+socialMedia.discord.addEventListener("click", () => openLink("https://discord.com/users/490277278136270874"));
+socialMedia.github.addEventListener("click", () => openLink("https://github.com/Larry-Larriee"));
+socialMedia.instagram.addEventListener("click", () => openLink("https://www.instagram.com/larry_larriee/"));
+socialMedia.linkedin.addEventListener("click", () => openLink("https://www.linkedin.com/in/larry-le-94b565244/"));

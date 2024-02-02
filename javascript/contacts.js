@@ -6,10 +6,19 @@ const skillWrapper = document.getElementsByClassName("skillWrapper")[0];
 const logo = document.getElementById("logo");
 const footerMainLogo = document.getElementById("footer-hummingbird-logo");
 
-const githubIcon = document.getElementById("github");
-const instaIcon = document.getElementById("instagram");
-const discordIcon = document.getElementById("discord");
-const linkedinIcon = document.getElementById("linkedin");
+const urlList = {
+    "home": "/",
+    "about": "/about.html",
+    "works": "/works.html",
+    "contacts": "/contacts.html"
+}
+
+const socialMedia = {
+    "discord": document.getElementById("ref-discord"),
+    "github": document.getElementById("ref-github"),
+    "instagram": document.getElementById("ref-instagram"),
+    "linkedin": document.getElementById("ref-linkedin")
+}
 
 // FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------
 
@@ -29,7 +38,24 @@ const observer = new IntersectionObserver(entries => {
     })
 }, spawn_control);
 
+skillWrapper.classList.add("content_hiding");
 observer.observe(skillWrapper);
+
+const openLink = (link) => {
+    window.open(link);
+}
+
+const detectLogo = (url) => {
+
+    if (url === urlList.contacts) {
+        console.log(url, urlList.contacts);
+
+        logo.src = "../images/Hummingbirds/bluer_logo.png";
+        footerMainLogo.src = "../images/Hummingbirds/bluer_logo.png";
+    }
+}
+
+// detectLogo(window.location.pathname);
 
 // SOCIAL MEDIA ----------------------------------------------------------------------------------------------------------------------------
 
@@ -37,44 +63,11 @@ logo?.addEventListener("click", () => {
     window.location.replace("/");
 });
 
-// Check if the github icon has loaded to prevent null error
-githubIcon?.addEventListener("click", () => {
-    window.open("https://github.com/Larry-Larriee")
-});
-
-linkedinIcon?.addEventListener("click", () => {
-    window.open("https://www.linkedin.com/in/larry-le-94b565244/");
-});
-
-discordIcon?.addEventListener("click", () => {
-    window.open("https://discordapp.com/users/490277278136270874");
-});
-
-instaIcon?.addEventListener("click", () => {
-    window.open("https://www.instagram.com/larry_larriee/");    
-});
-
-footerMainLogo?.addEventListener("click", () => {
-    window.location.replace("/");
-});
-
-// CONTACTS --------------------------------------------------------------------------------------------------------------------------------
-
-iconWrapper[0]?.addEventListener("click", () => {
-    window.open("https://github.com/Larry-Larriee")
-});
-
-iconWrapper[1]?.addEventListener("click", () => {
-    window.open("https://www.linkedin.com/in/larry-le-94b565244/")
-});
-
-iconWrapper[2]?.addEventListener("click", () => {
-    window.open("https://discordapp.com/users/490277278136270874");
-});
-
-iconWrapper[3]?.addEventListener("click", () => {
-    window.open("https://www.instagram.com/larry_larriee/");    
-});
+// Optional Chaining
+socialMedia.discord?.addEventListener("click", () => openLink("https://discord.com/users/490277278136270874"));
+socialMedia.github?.addEventListener("click", () => openLink("https://github.com/Larry-Larriee"));
+socialMedia.instagram?.addEventListener("click", () => openLink("https://www.instagram.com/larry_larriee/"));
+socialMedia.linkedin?.addEventListener("click", () => openLink("https://www.linkedin.com/in/larry-le-94b565244/"));
 
 // MOBILE MENU --------------------------------------------------------------------------------------------------------------------------
 

@@ -408,6 +408,9 @@ nav ul{
     text-decoration: none;
 }
 
+#logo-navigation, #logo{
+    cursor: pointer;
+}
 
 .nav-mob{
     display: none;
@@ -490,10 +493,10 @@ nav ul{
     max-height: 85vh;
 }
 .landing-hero-image{
-    border-radius: 50%;
+ 
     max-width: 25rem;
-
-    transform: rotate(25deg);
+    max-height: 25rem;
+    border-radius: 12.5rem;
 }
 
 .landing-hero-text{
@@ -1141,14 +1144,22 @@ footer a{
 
 /* Contacts Page ----------------------------------------------------------------------------------------------------------------------- */
 
+.contacts-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    min-height: 85vh;
+    gap: 15vh;
+}
+
 .background-top-contacts-page{
-    min-height: 50vh;
+    /* min-height: 30vh; */
 
     display: flex;
     flex-direction: column;
     gap: 10vh;
-
-    margin-bottom: 10vh;
 }
 
 .skillset{
@@ -1166,7 +1177,6 @@ footer a{
     gap: 5vw;
 
     text-align: center;
-    padding-bottom: 10vh;
 }
 
 .skillWrapper p{
@@ -1712,4 +1722,22 @@ footer a{
     .project_section_features_wrapper h1{
         font-size: 2.5rem;
     }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+.construction-notice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 50vh;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.construction-notice p{
+    font-size: 1rem;
+    font-family: 'Lato', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
 }
