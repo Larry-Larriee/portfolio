@@ -121,7 +121,7 @@ export default function Home() {
 
           <div className="w-charlie-custom flex flex-col items-center gap-12 rounded-2xl bg-primary-2 py-14">
             <article className="flex w-10/12 items-center gap-10">
-              <p className="text-white font-league text-9xl font-bold">
+              <p className="font-league text-9xl font-bold text-white">
                 Here-Charlie
               </p>
               <Image
@@ -133,7 +133,7 @@ export default function Home() {
               />
             </article>
 
-            <p className="text-white w-10/12 font-league text-4xl leading-relaxed">
+            <p className="w-10/12 font-league text-4xl leading-relaxed text-white">
               An AI-powered robotic service dog engineered for people with{" "}
               <span className="text-primary-3 transition duration-200 ease-in-out hover:cursor-pointer hover:text-primary-2">
                 <Link href={"https://here-charlie.web.app/"}>
@@ -159,7 +159,7 @@ export default function Home() {
             <Project
               title="OCSEF Experiment"
               description="Records the reaction time of students and teachers as they associate words to diagnose the possibility of learned helplessness."
-              link="https://team8521.com"
+              link="https://github.com/OCSEF-IAT/OCSEF-IAT.github.io"
             />
           </article>
         </section>
@@ -221,7 +221,7 @@ export default function Home() {
 
         <ul className="absolute right-16 flex list-none gap-10">
           <li>
-            <p className="font-league text-3xl text-primary-2">
+            <p className="font-league text-3xl text-primary-2 hover:text-primary-4">
               <Link href={"mailto:larryle704@gmail.com"}>Email</Link>
             </p>
           </li>
