@@ -221,18 +221,18 @@ export default function Home() {
 
         <ul className="absolute right-16 flex list-none gap-10">
           <li>
-            <p className="font-league text-3xl text-primary-2 hover:text-primary-4">
+            <p className="font-league text-3xl text-primary-2 transition duration-200 ease-in-out hover:text-primary-4">
               <Link href={"mailto:larryle704@gmail.com"}>Email</Link>
             </p>
           </li>
           <li>
-            <p className="font-league text-3xl text-primary-2 hover:text-primary-4">
+            <p className="font-league text-3xl text-primary-2 transition duration-200 ease-in-out hover:text-primary-4">
               {" "}
               <Link href={"https://github.com/Larry-Larriee"}>Github</Link>
             </p>
           </li>
           <li>
-            <p className="font-league text-3xl text-primary-2 hover:text-primary-4">
+            <p className="font-league text-3xl text-primary-2 transition duration-200 ease-in-out hover:text-primary-4">
               {" "}
               <Link href={"https://www.linkedin.com/in/le-larry"}>
                 Linkedin
