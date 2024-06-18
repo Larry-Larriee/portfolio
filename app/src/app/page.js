@@ -226,13 +226,13 @@ export default function Home() {
             </p>
           </li>
           <li>
-            <p className="font-league text-3xl text-primary-2">
+            <p className="font-league text-3xl text-primary-2 hover:text-primary-4">
               {" "}
               <Link href={"https://github.com/Larry-Larriee"}>Github</Link>
             </p>
           </li>
           <li>
-            <p className="font-league text-3xl text-primary-2">
+            <p className="font-league text-3xl text-primary-2 hover:text-primary-4">
               {" "}
               <Link href={"https://www.linkedin.com/in/le-larry"}>
                 Linkedin
