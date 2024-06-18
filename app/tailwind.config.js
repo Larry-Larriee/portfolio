@@ -6,11 +6,25 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    backgroundColor: (theme) => ({
+      primary: "#fffef9",
+      "primary-2": "#B0403E",
+    }),
+    maxWidth: {
+      xxs: "7rem",
+      xxxs: "5rem",
+      xxxxs: "2.75rem",
+    },
+    textColor: {
+      "primary-2": "#004AAD",
+      "primary-3": "#00C7FD",
+      "primary-4": "#FF9900",
+      white: "#ffffff",
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        league: ["League Spartan"],
+        martel: ["Martel"],
       },
     },
   },

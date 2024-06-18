@@ -1,113 +1,246 @@
+import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
+import ClickableImage from "@/components/ClickableImage.js";
+
+import portfolioLogo from "../assets/portfilio-logo.png";
+import hereCharlieLogo from "../assets/here-charlie-logo.jpg";
+import amazonLogo from "../assets/amazon-logo.png";
+import intelLogo from "../assets/intel-logo.png";
+import emailLogo from "../assets/email-logo.png";
+import githubLogo from "../assets/github-logo.png";
+import linkedinLogo from "../assets/linkedin-logo.jpg";
+
+import Project from "../components/Project";
+import Option from "../components/Option";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main className="relative w-11/12">
+      <Head>
+        <link rel="icon" href="../../public/favicon.ico" />
+      </Head>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+      <nav className="flex w-11/12 items-center">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src={portfolioLogo}
+          alt="logo"
+          // given a default width of 500px which will be overridden by tailwind
+          width={500}
+          draggable={false}
+          className="m-8 w-20"
         />
+      </nav>
+
+      <div className="ml-48 flex flex-col gap-40">
+        <section className="relative flex justify-between">
+          <section className="flex flex-col gap-5">
+            <p className="text-black font-martel text-7xl">
+              Hey, I&apos;m Larry Le.
+            </p>
+
+            <ul className="flex list-none flex-col gap-2">
+              <li>
+                <p className="text-black font-martel text-2xl">
+                  {" "}
+                  Full-Stack Developer{" "}
+                </p>
+              </li>
+              <li>
+                <p className="text-black font-martel text-2xl">Engineer</p>
+              </li>
+              <li>
+                <p className="text-black font-martel text-2xl">
+                  Computer Science B.S., 2028
+                </p>
+              </li>
+            </ul>
+          </section>
+
+          <article className="absolute right-16 flex flex-col gap-9">
+            <ClickableImage
+              link={"mailto:larryle704@gmail.com"}
+              image={emailLogo}
+              alt={"email logo"}
+            />
+            <ClickableImage
+              link={"https://github.com/Larry-Larriee"}
+              image={githubLogo}
+              alt={"Github logo"}
+            />{" "}
+            <ClickableImage
+              link={"https://www.linkedin.com/in/le-larry"}
+              image={linkedinLogo}
+              alt={"Linkedin logo"}
+            />
+          </article>
+        </section>
+
+        <section>
+          <p className="font-martel text-4xl leading-relaxed">
+            I&apos;m a recent high school grad who&apos;s been doing Software
+            Development for a little over four years. I&apos;m a sucker for
+            <span className="text-primary-2">
+              {" "}
+              creating new things
+            </span> and <span className="text-primary-2">building apps.</span>
+          </p>
+        </section>
+
+        <section className="relative flex flex-col gap-7">
+          <p className="font-league text-4xl">I&apos;m also an..</p>
+          <p className="text-6-5xl font-league">
+            <span className="font-league text-primary-3">Intel</span> AI For
+            Accessibility Global Winner &apos;23
+          </p>
+          <p className="text-6-5xl font-league">
+            <span className="font-league text-primary-4">Amazon</span> Future
+            Engineer &apos;24
+          </p>
+          <p className="font-league text-lg">please look me up haha :D</p>
+          <Image
+            className="absolute bottom-20 right-64 max-w-xxxs"
+            src={intelLogo}
+            alt="intel logo"
+            width={500}
+            height={500}
+          />
+          <Image
+            className="absolute bottom-16 right-24 max-w-xxs"
+            src={amazonLogo}
+            alt="amazon logo"
+            width={500}
+            height={500}
+          />
+        </section>
+
+        <section className="flex flex-col gap-10">
+          <p className="font-league text-5xl">
+            And say hello to my latest project!
+          </p>
+
+          <div className="w-charlie-custom flex flex-col items-center gap-12 rounded-2xl bg-primary-2 py-14">
+            <article className="flex w-10/12 items-center gap-10">
+              <p className="text-white font-league text-9xl font-bold">
+                Here-Charlie
+              </p>
+              <Image
+                src={hereCharlieLogo}
+                alt="here-charlie logo"
+                width={500}
+                height={500}
+                className="w-32"
+              />
+            </article>
+
+            <p className="text-white w-10/12 font-league text-4xl leading-relaxed">
+              An AI-powered robotic service dog engineered for people with{" "}
+              <span className="text-primary-3 transition duration-200 ease-in-out hover:cursor-pointer hover:text-primary-2">
+                <Link href={"https://here-charlie.web.app/"}>
+                  visual disabilities
+                </Link>
+              </span>
+            </p>
+          </div>
+        </section>
+
+        <section className="flex w-10/12 gap-20">
+          <section className="flex w-72 justify-end">
+            <p className="font-league text-3xl text-primary-2">
+              Other Projects
+            </p>
+          </section>
+          <article className="flex w-full flex-col gap-10">
+            <Project
+              title="FIRST Robotics Scouting App"
+              description="Record and view data on different robotics teams to enhance strategy in the 2024 Crescendo competition."
+              link="https://github.com/CyberLions-8521/scouting-app"
+            />
+            <Project
+              title="OCSEF Experiment"
+              description="Records the reaction time of students and teachers as they associate words to diagnose the possibility of learned helplessness."
+              link="https://team8521.com"
+            />
+          </article>
+        </section>
+
+        <section className="flex w-10/12 gap-20">
+          <section className="flex w-72 justify-end">
+            <p className="font-league text-3xl text-primary-2">Skills</p>
+          </section>
+          <article className="flex w-full gap-20">
+            <Option
+              title="Languages"
+              description={{
+                1: "Javascript",
+                2: "Python",
+                3: "Java",
+                4: "Lua",
+                5: "CSS",
+                6: "HTML",
+              }}
+            />
+            <Option
+              title="Frameworks"
+              description={{
+                1: "Next.js",
+                2: "React Native",
+                3: "Express.js",
+                4: "Tailwind",
+              }}
+            />
+            <Option
+              title="Tools"
+              description={{
+                1: "Github",
+                2: "MongoDB",
+                3: "Postman",
+                4: "Nginx",
+                5: "Firebase",
+                6: "Vercel",
+                7: "Google Cloud",
+                8: "Android Studio",
+                9: "Xcode",
+              }}
+            />
+            <Option
+              title="Design"
+              description={{
+                1: "Figma",
+                2: "Canva",
+                3: "Invision",
+                4: "Wireframing",
+              }}
+            />
+          </article>
+        </section>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API Testing.
-          </p>
-        </a>
+      <footer className="relative mb-5 mt-32 flex w-full justify-between">
+        <p className="font-league text-2xl">©2024 Larry Le MIT License</p>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <ul className="absolute right-16 flex list-none gap-10">
+          <li>
+            <p className="font-league text-3xl text-primary-2">
+              <Link href={"mailto:larryle704@gmail.com"}>Email</Link>
+            </p>
+          </li>
+          <li>
+            <p className="font-league text-3xl text-primary-2">
+              {" "}
+              <Link href={"https://github.com/Larry-Larriee"}>Github</Link>
+            </p>
+          </li>
+          <li>
+            <p className="font-league text-3xl text-primary-2">
+              {" "}
+              <Link href={"https://www.linkedin.com/in/le-larry"}>
+                Linkedin
+              </Link>
+            </p>
+          </li>
+        </ul>
+      </footer>
     </main>
   );
 }

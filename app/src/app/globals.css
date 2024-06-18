@@ -1,11 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Martel:wght@200;300;400;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-background: #fffef9;
+  --primary-color: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,13 +18,29 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--primary-background);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+p {
+  color: var(--primary-color);
+}
+
+.text-6-5xl {
+  font-size: 4.1rem;
+  line-height: 4rem;
+}
+.py-14 {
+  padding-top: 3.25rem;
+  padding-bottom: 3.25rem;
+}
+.w-charlie-custom {
+  width: 72rem;
 }
 
 @layer utilities {
