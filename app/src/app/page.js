@@ -13,6 +13,7 @@ import linkedinLogo from "../assets/linkedin-logo.jpg";
 
 import Project from "../components/Project";
 import Option from "../components/Option";
+import Featured from "@/components/Featured";
 
 export default function Home() {
   return (
@@ -119,29 +120,13 @@ export default function Home() {
             And say hello to my latest project!
           </p>
 
-          <div className="w-charlie-custom flex flex-col items-center gap-12 rounded-2xl bg-primary-2 py-14">
-            <article className="flex w-10/12 items-center gap-10">
-              <p className="font-league text-9xl font-bold text-white">
-                Here-Charlie
-              </p>
-              <Image
-                src={hereCharlieLogo}
-                alt="here-charlie logo"
-                width={500}
-                height={500}
-                className="w-32"
-              />
-            </article>
-
-            <p className="w-10/12 font-league text-4xl leading-relaxed text-white">
-              An AI-powered robotic service dog engineered for people with{" "}
-              <span className="text-primary-3 transition duration-200 ease-in-out hover:cursor-pointer hover:text-primary-2">
-                <Link href={"https://here-charlie.web.app/"}>
-                  visual disabilities
-                </Link>
-              </span>
-            </p>
-          </div>
+          <Featured
+            title="Here-Charlie"
+            image={hereCharlieLogo}
+            link={"https://here-charlie.web.app/"}
+            description="An AI-powered robotic service dog engineered for people with visual disabilities"
+            linkPosition={"visual disabilities"}
+          />
         </section>
 
         <section className="flex w-10/12 gap-20">
