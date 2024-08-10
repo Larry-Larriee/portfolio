@@ -4,7 +4,7 @@ import Image from "next/image";
 import ClickableImage from "@/components/ClickableImage.js";
 
 import portfolioLogo from "../assets/portfilio-logo.png";
-import hereCharlieLogo from "../assets/here-charlie-logo.jpg";
+import nextLlama from "../assets/next-llama.png";
 import amazonLogo from "../assets/amazon-logo.png";
 import intelLogo from "../assets/intel-logo.png";
 import emailLogo from "../assets/email-logo.png";
@@ -81,21 +81,19 @@ export default function Home() {
           <p className="font-martel text-4xl leading-relaxed">
             I&apos;m a recent high school grad who&apos;s been doing Software
             Development for a little over four years. I&apos;m a sucker for
-            <span className="text-primary-2">
-              {" "}
-              creating new things
-            </span> and <span className="text-primary-2">building apps.</span>
+            <span className="text-prim-2"> creating new things</span> and{" "}
+            <span className="text-prim-2">building apps.</span>
           </p>
         </section>
 
         <section className="relative flex flex-col gap-7">
           <p className="font-league text-4xl">I&apos;m also an..</p>
           <p className="text-6-5xl font-league">
-            <span className="font-league text-primary-3">Intel</span> AI For
+            <span className="text-prim-3 font-league">Intel</span> AI For
             Accessibility Global Winner &apos;23
           </p>
           <p className="text-6-5xl font-league">
-            <span className="font-league text-primary-4">Amazon</span> Future
+            <span className="text-prim-4 font-league">Amazon</span> Future
             Engineer &apos;24
           </p>
           <p className="font-league text-lg">please look me up haha :D</p>
@@ -121,37 +119,50 @@ export default function Home() {
           </p>
 
           <Featured
-            title="Here-Charlie"
-            image={hereCharlieLogo}
-            link={"https://here-charlie.web.app/"}
-            description="An AI-powered robotic service dog engineered for people with visual disabilities"
-            linkPosition={"visual disabilities"}
+            title={"Tailwind Llama"}
+            image={nextLlama}
+            link={"https://tailwind-llama.vercel.app/"}
+            description={
+              "Make learning Tailwind easy. Replicate cool designs, climb levels, and get useful information about your code."
+            }
+            linkPosition={"learning Tailwind easy"}
+            bg={"bg-prim-6"}
           />
         </section>
 
         <section className="flex w-10/12 gap-20">
           <section className="flex w-72 justify-end">
-            <p className="font-league text-3xl text-primary-2">
-              Other Projects
-            </p>
+            <p className="text-prim-2 font-league text-3xl">Other Projects</p>
           </section>
           <article className="flex w-full flex-col gap-10">
             <Project
-              title="FIRST Robotics Scouting App"
-              description="Record and view data on different robotics teams to enhance strategy in the 2024 Crescendo competition."
-              link="https://github.com/CyberLions-8521/scouting-app"
+              title={"Here-Charlie"}
+              description={
+                "An AI-powered robotic service dog engineered for people with visual disabilities. Endorsed by Intel from the AI Global Impact Festival."
+              }
+              link={"https://here-charlie.web.app/"}
+            />
+
+            <Project
+              title={"FIRST Robotics Scouting App"}
+              description={
+                "Record and view data on different robotics teams to enhance strategy in the 2024 Crescendo competition."
+              }
+              link={"https://github.com/CyberLions-8521/scouting-app"}
             />
             <Project
-              title="OCSEF Experiment"
-              description="Records the reaction time of students and teachers as they associate words to diagnose the possibility of learned helplessness."
-              link="https://github.com/OCSEF-IAT/OCSEF-IAT.github.io"
+              title={"OCSEF Experiment"}
+              description={
+                "Records the reaction time of students and teachers as they associate words to diagnose the possibility of learned helplessness."
+              }
+              link={"https://github.com/OCSEF-IAT/OCSEF-IAT.github.io"}
             />
           </article>
         </section>
 
         <section className="flex w-10/12 gap-20">
           <section className="flex w-72 justify-end">
-            <p className="font-league text-3xl text-primary-2">Skills</p>
+            <p className="text-prim-2 font-league text-3xl">Skills</p>
           </section>
           <article className="flex w-full gap-20">
             <Option
@@ -206,18 +217,18 @@ export default function Home() {
 
         <ul className="absolute right-16 flex list-none gap-10">
           <li>
-            <p className="font-league text-3xl text-primary-2 transition duration-200 ease-in-out hover:text-primary-4">
+            <p className="text-prim-2 hover:text-prim-4 font-league text-3xl transition duration-200 ease-in-out">
               <Link href={"mailto:larryle704@gmail.com"}>Email</Link>
             </p>
           </li>
           <li>
-            <p className="font-league text-3xl text-primary-2 transition duration-200 ease-in-out hover:text-primary-4">
+            <p className="text-prim-2 hover:text-prim-4 font-league text-3xl transition duration-200 ease-in-out">
               {" "}
               <Link href={"https://github.com/Larry-Larriee"}>Github</Link>
             </p>
           </li>
           <li>
-            <p className="font-league text-3xl text-primary-2 transition duration-200 ease-in-out hover:text-primary-4">
+            <p className="text-prim-2 hover:text-prim-4 font-league text-3xl transition duration-200 ease-in-out">
               {" "}
               <Link href={"https://www.linkedin.com/in/le-larry"}>
                 Linkedin

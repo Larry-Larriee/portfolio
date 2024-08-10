@@ -7,6 +7,11 @@
 :root {
   --primary-background: #fffef9;
   --primary-color: #000000;
+  --primary-color-2: #004aad;
+  --primary-color-3: #00c7fd;
+  --primary-color-4: #ff9900;
+  --primary-color-5: #0b1121;
+  --primary-color-6: #203b6f;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,5 +51,53 @@ p {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  .text-prim-2 {
+    color: var(--primary-color-2);
+  }
+  .text-prim-3 {
+    color: var(--primary-color-3);
+  }
+  .text-prim-4 {
+    color: var(--primary-color-4);
+  }
+  .text-prim-5 {
+    color: var(--primary-color-5);
+  }
+  .text-prim-6 {
+    color: var(--primary-color-6);
+  }
+}
+
+@layer utilities {
+  .bg-prim-2 {
+    background-color: var(--primary-color-2);
+  }
+  .bg-prim-3 {
+    background-color: var(--primary-color-3);
+  }
+  .bg-prim-4 {
+    background-color: var(--primary-color-4);
+  }
+  .bg-prim-5 {
+    background-color: var(--primary-color-5);
+  }
+  .bg-prim-6 {
+    background-color: var(--primary-color-6);
+  }
+}
+
+@layer utilities {
+  .max-w-xxs {
+    max-width: 7rem;
+  }
+  .max-w-xxxs {
+    max-width: 5rem;
+  }
+  .max-w-xxxxs {
+    max-width: 2.75rem;
   }
 }
