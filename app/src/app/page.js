@@ -18,10 +18,6 @@ import Featured from "@/components/Featured";
 export default function Home() {
   return (
     <main className="relative w-11/12">
-      <Head>
-        <link rel="icon" href="../../public/favicon.ico" />
-      </Head>
-
       <nav className="flex w-11/12 items-center">
         <Image
           src={portfolioLogo}
@@ -29,36 +25,37 @@ export default function Home() {
           // given a default width of 500px which will be overridden by tailwind
           width={500}
           draggable={false}
-          className="m-8 w-20"
+          className="mb-12 ml-8 mt-8 w-16 xl:mb-8 xl:w-20"
         />
       </nav>
-
-      <div className="ml-48 flex flex-col gap-40">
+      <div className="ml-8 flex w-auto flex-col gap-16 xl:ml-48 xl:gap-40">
         <section className="relative flex justify-between">
           <section className="flex flex-col gap-5">
-            <p className="text-black font-martel text-7xl">
-              Hey, I&apos;m Larry Le.
+            <p className="w-auto font-martel text-4xl text-black lg:text-7xl">
+              Hey, I&apos;m <br className="lg:hidden" />
+              <span className="text-6xl md:text-7xl">Larry Le.</span>
             </p>
 
-            <ul className="flex list-none flex-col gap-2">
+            <ul className="flex list-none flex-col gap-1 xl:gap-2">
               <li>
-                <p className="text-black font-martel text-2xl">
-                  {" "}
-                  Full-Stack Developer{" "}
+                <p className="font-martel text-lg text-black xl:text-2xl">
+                  Full-Stack Developer
                 </p>
               </li>
               <li>
-                <p className="text-black font-martel text-2xl">Engineer</p>
+                <p className="font-martel text-lg text-black xl:text-2xl">
+                  Engineer
+                </p>
               </li>
               <li>
-                <p className="text-black font-martel text-2xl">
+                <p className="font-martel text-lg text-black xl:text-2xl">
                   Computer Science B.S., 2028
                 </p>
               </li>
             </ul>
           </section>
 
-          <article className="absolute right-16 flex flex-col gap-9">
+          <article className="absolute right-16 hidden flex-col gap-9 xl:flex">
             <ClickableImage
               link={"mailto:larryle704@gmail.com"}
               image={emailLogo}
@@ -78,7 +75,8 @@ export default function Home() {
         </section>
 
         <section>
-          <p className="font-martel text-4xl leading-relaxed">
+          {/* break points can change the importance of certain classes, like with leading-relaxed */}
+          <p className="font-martel text-3xl leading-relaxed xl:text-4xl xl:leading-relaxed">
             I&apos;m a recent high school grad who&apos;s been doing Software
             Development for a little over four years. I&apos;m a sucker for
             <span className="text-prim-2"> creating new things</span> and{" "}
@@ -86,26 +84,28 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="relative flex flex-col gap-7">
-          <p className="font-league text-4xl">I&apos;m also an..</p>
-          <p className="text-6-5xl font-league">
+        <section className="relative flex flex-col gap-5 xl:gap-7">
+          <p className="font-league text-3xl xl:text-4xl">I&apos;m also an..</p>
+          <p className="3xl:text-6-5xl text-4-5xl font-league xl:text-5xl 2xl:text-6xl">
             <span className="text-prim-3 font-league">Intel</span> AI For
             Accessibility Global Winner &apos;23
           </p>
-          <p className="text-6-5xl font-league">
+          <p className="3xl:text-6-5xl text-4-5xl font-league xl:text-5xl 2xl:text-6xl">
             <span className="text-prim-4 font-league">Amazon</span> Future
             Engineer &apos;24
           </p>
-          <p className="font-league text-lg">please look me up haha :D</p>
+          <p className="font-league text-base xl:text-lg">
+            please look me up haha :D
+          </p>
           <Image
-            className="absolute bottom-20 right-64 max-w-xxxs"
+            className="max-w-xxxs absolute bottom-20 right-64 hidden xl:block"
             src={intelLogo}
             alt="intel logo"
             width={500}
             height={500}
           />
           <Image
-            className="absolute bottom-16 right-24 max-w-xxs"
+            className="max-w-xxs absolute bottom-16 right-24 hidden xl:block"
             src={amazonLogo}
             alt="amazon logo"
             width={500}
@@ -114,7 +114,7 @@ export default function Home() {
         </section>
 
         <section className="flex flex-col gap-10">
-          <p className="font-league text-5xl">
+          <p className="font-league text-4xl 2xl:text-5xl">
             And say hello to my latest project!
           </p>
 
@@ -130,8 +130,8 @@ export default function Home() {
           />
         </section>
 
-        <section className="flex w-10/12 gap-20">
-          <section className="flex w-72 justify-end">
+        <section className="flex flex-col gap-8 xl:w-11/12 xl:flex-row xl:gap-20 2xl:w-10/12">
+          <section className="flex xl:w-72 xl:justify-end">
             <p className="text-prim-2 font-league text-3xl">Other Projects</p>
           </section>
           <article className="flex w-full flex-col gap-10">
@@ -160,11 +160,11 @@ export default function Home() {
           </article>
         </section>
 
-        <section className="flex w-10/12 gap-20">
-          <section className="flex w-72 justify-end">
+        <section className="flex w-full flex-col gap-8 xl:w-10/12 xl:flex-row xl:gap-20">
+          <section className="flex w-72 xl:justify-end">
             <p className="text-prim-2 font-league text-3xl">Skills</p>
           </section>
-          <article className="flex w-full gap-20">
+          <article className="grid w-full grid-cols-2 gap-5 xl:flex xl:gap-20">
             <Option
               title="Languages"
               description={{
@@ -211,25 +211,24 @@ export default function Home() {
           </article>
         </section>
       </div>
+      <footer className="relative mb-1 mt-32 flex w-full flex-col justify-between gap-2 xl:mb-3 xl:flex-row xl:gap-0 2xl:mb-5">
+        <p className="order-2 font-league text-base lg:order-1 lg:text-2xl">
+          ©2024 Larry Le MIT License
+        </p>
 
-      <footer className="relative mb-5 mt-32 flex w-full justify-between">
-        <p className="font-league text-2xl">©2024 Larry Le MIT License</p>
-
-        <ul className="absolute right-16 flex list-none gap-10">
+        <ul className="static order-1 flex list-none justify-between lg:absolute lg:right-3 lg:order-2 lg:gap-5 xl:right-12 xl:gap-9">
           <li>
-            <p className="text-prim-2 hover:text-prim-4 font-league text-3xl transition duration-200 ease-in-out">
+            <p className="text-prim-2 hover:text-prim-4 font-league text-3xl transition duration-200 ease-in-out lg:text-2xl xl:text-3xl">
               <Link href={"mailto:larryle704@gmail.com"}>Email</Link>
             </p>
           </li>
           <li>
-            <p className="text-prim-2 hover:text-prim-4 font-league text-3xl transition duration-200 ease-in-out">
-              {" "}
+            <p className="text-prim-2 hover:text-prim-4 font-league text-3xl transition duration-200 ease-in-out lg:text-2xl xl:text-3xl">
               <Link href={"https://github.com/Larry-Larriee"}>Github</Link>
             </p>
           </li>
           <li>
-            <p className="text-prim-2 hover:text-prim-4 font-league text-3xl transition duration-200 ease-in-out">
-              {" "}
+            <p className="text-prim-2 hover:text-prim-4 font-league text-3xl transition duration-200 ease-in-out lg:text-2xl xl:text-3xl">
               <Link href={"https://www.linkedin.com/in/le-larry"}>
                 Linkedin
               </Link>

@@ -8,9 +8,9 @@ export default function Option({ title, description }) {
   let desc = Object.keys(description).map((key) => [key, description[key]]);
 
   return (
-    <section className="flex flex-col gap-5">
+    <section className="flex flex-col gap-2 xl:gap-5">
       <p className="font-league text-3xl">{title}</p>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-2 xl:gap-3">
         {desc.map((item) => (
           <p key={item[0]} className="font-league text-lg">
             {item[1]}

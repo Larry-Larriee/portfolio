@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Project({ title, description, link }) {
   return (
     <div className="flex flex-col gap-5">
-      <p className="hover:text-prim-2 font-league text-3xl transition duration-200 ease-in-out hover:translate-x-5">
+      <p className="hover:text-prim-2 font-league text-xl font-medium transition duration-200 ease-in-out hover:translate-x-5 2xl:text-3xl 2xl:font-normal">
         <Link href={link}>{title} →</Link>
       </p>
 
