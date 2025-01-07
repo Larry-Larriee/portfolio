@@ -94,9 +94,9 @@ export default function Home() {
             <span className="text-prim-4 font-league">Amazon</span> Future
             Engineer &apos;24
           </p>
-          <p className="font-league text-base xl:text-lg">
+          {/* <p className="font-league text-base xl:text-lg">
             please look me up haha :D
-          </p>
+          </p> */}
           <Image
             className="max-w-xxxs absolute bottom-20 right-64 hidden xl:block"
             src={intelLogo}
