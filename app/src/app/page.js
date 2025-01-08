@@ -98,14 +98,14 @@ export default function Home() {
             please look me up haha :D
           </p> */}
           <Image
-            className="max-w-xxxs absolute bottom-20 right-64 hidden xl:block"
+            className="max-w-xxxs absolute bottom-6 right-64 hidden xl:block"
             src={intelLogo}
             alt="intel logo"
             width={500}
             height={500}
           />
           <Image
-            className="max-w-xxs absolute bottom-16 right-24 hidden xl:block"
+            className="max-w-xxs absolute bottom-3 right-24 hidden xl:block"
             src={amazonLogo}
             alt="amazon logo"
             width={500}
@@ -180,9 +180,9 @@ export default function Home() {
               title="Frameworks"
               description={{
                 1: "Next.js",
-                2: "React Native",
+                2: "React Native Expo",
                 3: "Express.js",
-                4: "Tailwind",
+                4: "Tailwind CSS",
               }}
             />
             <Option
@@ -204,8 +204,7 @@ export default function Home() {
               description={{
                 1: "Figma",
                 2: "Canva",
-                3: "Invision",
-                4: "Wireframing",
+                3: "Wireframing",
               }}
             />
           </article>
